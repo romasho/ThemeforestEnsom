@@ -1,57 +1,64 @@
 @font-face {
-    font-family: Roboto;
-    font-weight: 100;
-    src: url("./assets/fonts/Roboto/Roboto-Thin.ttf");
+    font-family: Manrope;
+    font-weight: 200;
+    src: url("./assets/fonts/Manrope/Manrope-ExtraLight.ttf");
 }
 
 @font-face {
-    font-family: Roboto;
+    font-family: Manrope;
     font-style: normal;
     font-weight: 300;
-    src: url("./assets/fonts/Roboto/Roboto-Light.ttf");
+    src: url("./assets/fonts/Manrope/Manrope-Light.ttf");
 }
 
 @font-face {
-    font-family: Roboto;
+    font-family: Manrope;
     font-weight: 400;
-    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+    src: url("./assets/fonts/Manrope/Manrope-Regular.ttf");
 }
 
 @font-face {
-    font-family: Roboto;
+    font-family: Manrope;
     font-weight: 500;
-    src: url("./assets/fonts/Roboto/Roboto-Medium.ttf");
+    src: url("./assets/fonts/Manrope/Manrope-Medium.ttf");
 }
 
 @font-face {
-    font-family: Roboto;
+    font-family: Manrope;
+    font-weight: 600;
+    src: url("./assets/fonts/Manrope/Manrope-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: Manrope;
     font-weight: 700;
-    src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+    src: url("./assets/fonts/Manrope/Manrope-Bold.ttf");
 }
 
 @font-face {
-    font-family: Ubuntu;
-    font-weight: 300;
-    src: url("./assets/fonts/Ubuntu/Ubuntu-L.ttf");
+    font-family: Manrope;
+    font-weight: 800;
+    src: url("./assets/fonts/Manrope/Manrope-ExtraBold.ttf");
 }
 
 @font-face {
-    font-family: Ubuntu;
+    font-family: 'Open Sans';
     font-weight: 400;
-    src: url("./assets/fonts/Ubuntu/Ubuntu-R.ttf");
+    src: url("./assets/fonts/OpenSans/OpenSans-Regular.ttf");
 }
 
 @font-face {
-    font-family: Ubuntu;
-    font-weight: 500;
-    src: url("./assets/fonts/Ubuntu/Ubuntu-M.ttf");
-}
-
-@font-face {
-    font-family: Ubuntu;
+    font-family: 'Open Sans';
     font-weight: 700;
-    src: url("./assets/fonts/Ubuntu/Ubuntu-B.ttf");
+    src: url("./assets/fonts/OpenSans/OpenSans-Bold.ttf");
 }
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    src: url("./assets/fonts/OpenSans/OpenSans-SemiBold.ttf");
+}
+
 
 *,
 *::before,
@@ -60,11 +67,12 @@
 }
 
 html {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Manrope", "Open Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Ubuntu", "Helvetica", "Arial", sans-serif;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
 }
 
 body {

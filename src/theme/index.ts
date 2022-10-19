@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { DefaultTheme } from 'styled-components';
 
 const font = 'Manrope';
 
@@ -13,7 +14,10 @@ export const palette = {
   grey: '#9497A1',
   background: '#F1F6FA',
   error: '#C14040',
+  white: '#FFFFFF',
 };
+
+export type paletteType = typeof palette;
 
 const boxShadows = {
   shadowButton:
@@ -25,6 +29,8 @@ const boxShadows = {
     'box-shadow: 0px 1px 2px 0px rgba(0, 43, 78, 0.3), 0px 2px 6px 0px rgba(0, 43, 78, 0.15);',
 };
 
+export type boxShadowsType = typeof boxShadows;
+
 const size = {
   xs: 550,
   small: 768,
@@ -32,29 +38,26 @@ const size = {
   large: 1200,
 };
 
-const above = Object.keys(size).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${size[label]}px) {
-      ${css(...args)}
-    }
-  `;
-  return acc;
-}, {});
+// const above = Object.keys(size).reduce((acc, label) => {
+//   acc[label] = (...args) => css`
+//     @media (min-width: ${size[label]}px) {
+//       ${css(...args)}
+//     }
+//   `;
+//   return acc;
+// }, {});
 
-const below = Object.keys(size).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (max-width: ${size[label]}px) {
-      ${css(...args)}
-    }
-  `;
-  return acc;
-}, {});
+// const below = Object.keys(size).reduce((acc, label) => {
+//   acc[label] = (...args) => css`
+//     @media (max-width: ${size[label]}px) {
+//       ${css(...args)}
+//     }
+//   `;
+//   return acc;
+// }, {});
 
-export default {
-  above,
-  below,
+export const theme: DefaultTheme = {
   boxShadows,
-  font,
   spaces: [0, 4, 8, 16, 32, 64, 128],
   fontSizes: [46, 38, 30, 22, 20, 16, 14],
   colors: {
