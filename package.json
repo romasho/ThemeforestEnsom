@@ -1,6 +1,6 @@
 {
-  "name": "weather-app",
-  "homepage": "https://romasho.github.io/weather-app/",
+  "name": "themeforest",
+  "homepage": "https://romasho.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.0",
     "@types/styled-components": "^5.1.26"
   }
 }
