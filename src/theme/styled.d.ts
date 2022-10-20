@@ -1,6 +1,6 @@
 import 'styled-components';
 
-import { boxShadowsType, paletteType } from '.';
+import { boxShadowsType, paletteType, fontType } from '.';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -8,5 +8,6 @@ declare module 'styled-components' {
     colors: paletteType;
     spaces: number[];
     fontSizes: number[];
+    font: fontType;
   }
 }
