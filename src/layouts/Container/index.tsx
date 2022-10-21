@@ -12,6 +12,14 @@ export const Container = styled.div`
   row-gap: 50px;
 `;
 
+export const HeaderContainer = styled(Container)`
+  padding: 40px 0;
+`;
+
+export const FooterContainer = styled(Container)`
+  padding: 50px 0;
+`;
+
 export const CenterAlignContainer = styled(Container)`
   justify-content: center;
   align-items: center;

@@ -7,9 +7,10 @@ export const FooterWrapper = styled.footer`
   background-color: ${(props) => props.theme.colors.secondary};
 `;
 
-export const FooterContainer = styled(Container)`
+export const FooterBorder = styled(Container)`
   border-top: solid 1px ${(props) => props.theme.colors.helperBlue2};
   padding-top: 35px;
+  padding-bottom: 30px;
 `;
 
 export const SocialWrapper = styled.div`

@@ -6,6 +6,7 @@ import { Benefits } from '@/components/Benefits';
 import { Testimonials } from '@/components/Testimonials';
 import { Pricing } from '@/components/Pricing';
 import { Blog } from '@/components/Blog';
+import { Contacts } from '@/components/Contacts';
 
 export const Home = () => {
   return (
@@ -17,6 +18,7 @@ export const Home = () => {
       <Testimonials />
       <Pricing />
       <Blog />
+      <Contacts />
     </PageLayout>
   );
 };

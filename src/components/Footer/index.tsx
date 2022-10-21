@@ -1,19 +1,17 @@
 import { Paragraph } from '../Paragraph';
 import { Img } from '../Header/components.styled';
-import { Icon } from '../Icon';
 import { Socials } from '../Socials';
 
 import logo from '@/assets/Logo.png';
-import { ReactComponent as facebookIcon } from '@/assets/svg/socials/icon_facebook.svg';
-import { Container } from '@/layouts/Container';
+import { FooterContainer } from '@/layouts/Container';
 import { theme } from '@/theme';
 
-import { FooterContainer, FooterWrapper, SocialWrapper } from './styled';
+import { FooterBorder, FooterWrapper, SocialWrapper } from './styled';
 
 export const Footer = () => {
   return (
     <FooterWrapper>
-      <Container>
+      <FooterContainer>
         <SocialWrapper>
           <Img src={logo} alt="" />
           <Paragraph size={'p3'} color={theme.colors.helperBlue2}>
@@ -22,8 +20,8 @@ export const Footer = () => {
           </Paragraph>
           <Socials />
         </SocialWrapper>
-      </Container>
-      <FooterContainer>
+      </FooterContainer>
+      <FooterBorder>
         <Paragraph size={'p3'} color={theme.colors.helperBlue2}>
           Ensome© 2022 All Rights Reserved
         </Paragraph>
@@ -35,7 +33,7 @@ export const Footer = () => {
             Terms of us
           </Paragraph>
         </div>
-      </FooterContainer>
+      </FooterBorder>
     </FooterWrapper>
   );
 };
