@@ -21,8 +21,8 @@ const boxShadows = {
   shadowButton:
     'box-shadow: 0px 1px 2px 0px rgba(0, 43, 78, 0.3),0px 12px 30px 0px rgba(24, 92, 255, 0.18);',
   shadowCard: '0px 1px 2px 0px rgba(0, 43, 78, 0.3), 0px 2px 20px 17px rgba(24, 92, 255, 0.04);',
-  shadowCard2: '0px 1px 2px 0px rgba(0, 43, 78, 0.3), 0px 12px 30px 17px rgba(24, 92, 255, 0.04);',
-  shadowCard3: '0px 1px 2px 0px rgba(0, 43, 78, 0.3), 0px 4px 12px 0px rgba(12, 68, 204, 0.1);',
+  shadowCard2: '0px 12px 30px 17px rgba(24, 92, 255, 0.04);',
+  shadowCard3: '0px 4px 12px rgba(12, 68, 204, 0.1);',
   shadowDropdown:
     'box-shadow: 0px 1px 2px 0px rgba(0, 43, 78, 0.3), 0px 2px 6px 0px rgba(0, 43, 78, 0.15);',
 };
@@ -43,8 +43,8 @@ const font = {
   paragraph: {
     paragraph1: 'normal 400 20px/33px Open Sans, sans-serif',
     paragraph2: 'normal 400 16px/28px Open Sans, sans-serif',
-    paragraph3: 'normal 700 16px/28px Open Sans, sans-serif',
-    paragraph4: 'normal 400 14px/24px Open Sans, sans-serif',
+    paragraph2bold: 'normal 700 16px/28px Open Sans, sans-serif',
+    paragraph3: 'normal 400 14px/24px Open Sans, sans-serif',
     paragraph5: 'normal 600 14px/24px Open Sans, sans-serif',
   },
 };
