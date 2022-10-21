@@ -5,6 +5,7 @@ import { ParagraphType } from '.';
 type TypographyType = {
   contained?: boolean;
   size: ParagraphType;
+  color?: string;
 };
 
 export const Typography = styled.p<TypographyType>`
@@ -13,6 +14,8 @@ export const Typography = styled.p<TypographyType>`
   display: flex;
   align-items: center;
   letter-spacing: -0.015em;
+  margin: 0;
+  color: ${(props) => (props.color ? props.color : 'none')};
   ${(props) => {
     switch (props.size) {
       case 'p1':
@@ -37,5 +40,5 @@ export const Typography = styled.p<TypographyType>`
         font-size: 14px;
         line-height: 24px;`;
     }
-  }}
+  }};
 `;

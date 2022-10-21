@@ -5,16 +5,18 @@ import { Container } from '@/layouts/Container';
 import { ReactComponent as play } from '@/assets/svg/icon_play_circle.svg';
 import logo from '@/assets/logo_blue.png';
 
-import { Img } from './components.styled';
+import { Img, HeaderWrapper } from './components.styled';
 
 export const Header = () => {
   return (
-    <header>
+    <HeaderWrapper>
       <Container>
         <Img src={logo} alt="" />
         <NavBar />
-        <Buttons icon={play}>Watch the demo</Buttons>
+        <Buttons variant="withIcon" icon={play}>
+          Watch the demo
+        </Buttons>
       </Container>
-    </header>
+    </HeaderWrapper>
   );
 };

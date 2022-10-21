@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-import { TypographyType } from '.';
+import { TypographyType, HtmlTag } from '.';
 
 type ButtonPropsType = {
   contained?: boolean;
-  as: TypographyType;
+  as?: HtmlTag;
+  size: TypographyType;
 };
 
-export const Typography = styled.h1<ButtonPropsType>`
+export const Typography = styled.h6<ButtonPropsType>`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
@@ -15,7 +16,7 @@ export const Typography = styled.h1<ButtonPropsType>`
   align-items: center;
   letter-spacing: -0.015em;
   ${(props) => {
-    switch (props.as) {
+    switch (props.size) {
       case 'h1':
         return `
         font-size: 46px;

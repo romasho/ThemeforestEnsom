@@ -26,6 +26,15 @@ export const Button = styled.button<ButtonPropsType>`
   justify-content: ${({ icon }) => (icon ? 'center' : 'space-around')};
   font: ${(props) => props.theme.font.headline.headline6};
 
+  &:hover {
+    text-decoration: none;
+    background-color: #467dff;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
   ${(props) => {
     switch (props.variant) {
       case 'fill':
@@ -61,17 +70,18 @@ export const Button = styled.button<ButtonPropsType>`
           border-radius: 50%;
         }
           `;
+      case 'little':
+        return `width: 100%;
+        padding: 10px 14px; 
+        font: ${props.theme.font.headline.headline7};
+        box-shadow: none;
+        &:hover {
+          background-color: ${props.theme.colors.primary};
+          box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);;
+        }
+        `;
     }
   }}
-
-  &:hover {
-    text-decoration: none;
-    background-color: #467dff;
-  }
-
-  &:active {
-    box-shadow: none;
-  }
 
   &:disabled {
     background-color: ${(props) => props.theme.colors.grey};
