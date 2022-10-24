@@ -20,3 +20,22 @@ export const SocialWrapper = styled.div`
   max-width: 285px;
   row-gap: 20px;
 `;
+
+export const ContactLink = styled.a`
+  text-decoration: none;
+  font: ${(props) => props.theme.font.paragraph.paragraph3};
+  color: ${(props) => props.theme.colors.grey};
+`;
+
+export const FooterHeadline = styled.h6`
+  margin: 0;
+  font: ${(props) => props.theme.font.headline.headline6};
+  color: ${(props) => props.theme.colors.white};
+  margin-bottom: 30px;
+`;
+
+export const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;

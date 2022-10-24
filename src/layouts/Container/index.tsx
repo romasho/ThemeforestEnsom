@@ -18,6 +18,7 @@ export const HeaderContainer = styled(Container)`
 
 export const FooterContainer = styled(Container)`
   padding: 50px 0;
+  align-items: flex-start;
 `;
 
 export const SubscribeContainer = styled(Container)`
