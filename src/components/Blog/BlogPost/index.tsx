@@ -1,10 +1,19 @@
+import { FC } from 'react';
+
 import { Headline } from '@/components/Headline';
 import { Link } from '@/components/Link';
 import { Paragraph } from '@/components/Paragraph';
 
 import { BlogInfo, PostContainer } from './styled';
 
-export const BlogPost = ({ img, data, headline, description }) => {
+interface BlogPostType {
+  img: string;
+  data: string;
+  headline: string;
+  description: string;
+}
+
+export const BlogPost: FC<BlogPostType> = ({ img, data, headline, description }) => {
   return (
     <PostContainer>
       <img src={img} alt="blog_img" />

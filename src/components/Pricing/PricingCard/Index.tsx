@@ -36,8 +36,10 @@ export const PricingCard: FC<PricingCardProps> = ({ access, price, advantages })
       <HeadlineContainer>
         <Headline size="h6">{access}</Headline>
         <PriceContainer>
-          <Headline size="h3">{`$${active === 'Month' ? price : +price * 10}`}</Headline>
-          <Tabs first={setActiveMonth} second={setActiveYear} current={active} />
+          <Headline size="h3">{`${isNaN(+price) ? '' : '$'}${
+            active === 'Month' ? price : isNaN(+price) ? price : +price * 10
+          }`}</Headline>
+          <Tabs firstHandler={setActiveMonth} secondHandler={setActiveYear} currentValue={active} />
         </PriceContainer>
       </HeadlineContainer>
       <Buttons variant="little">Choose plan</Buttons>
