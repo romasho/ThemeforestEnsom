@@ -22,11 +22,12 @@ interface ButtonProps {
   icon?: typeof ReactComponent;
   disabled?: boolean;
   variant: ButtonType;
+  onClick?: () => void;
 }
 
-export const Buttons: FC<ButtonProps> = ({ children, icon, disabled, variant }) => {
+export const Buttons: FC<ButtonProps> = ({ children, icon, disabled, variant, onClick }) => {
   return (
-    <Button variant={variant} disabled={disabled}>
+    <Button variant={variant} disabled={disabled} onClick={onClick}>
       {icon && <Icon icon={icon} />}
       {children}
     </Button>
