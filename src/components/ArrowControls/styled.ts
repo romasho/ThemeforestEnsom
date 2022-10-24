@@ -22,6 +22,8 @@ export const ArrowButton = styled.button`
   }
 
   &:disabled {
-    background-color: ${(props) => props.theme.colors.helperBlue3};
+    svg {
+      fill: ${(props) => props.theme.colors.helperBlue3};
+    }
   }
 `;

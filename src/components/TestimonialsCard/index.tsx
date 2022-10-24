@@ -29,7 +29,7 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
           <Headline size="h7m">{position}</Headline>
         </div>
       </HeadContainer>
-      <Paragraph size="p3">{description}</Paragraph>
+      <Paragraph size="p2">{description}</Paragraph>
     </CardContainer>
   );
 };

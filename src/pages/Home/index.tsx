@@ -7,6 +7,7 @@ import { Testimonials } from '@/components/Testimonials';
 import { Pricing } from '@/components/Pricing';
 import { Blog } from '@/components/Blog';
 import { Contacts } from '@/components/Contacts';
+import { Subscribe } from '@/components/Subscribe';
 
 export const Home = () => {
   return (
@@ -19,6 +20,7 @@ export const Home = () => {
       <Pricing />
       <Blog />
       <Contacts />
+      <Subscribe />
     </PageLayout>
   );
 };

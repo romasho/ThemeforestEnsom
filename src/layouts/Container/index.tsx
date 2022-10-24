@@ -20,6 +20,11 @@ export const FooterContainer = styled(Container)`
   padding: 50px 0;
 `;
 
+export const SubscribeContainer = styled(Container)`
+  padding: 80px 0;
+  color: ${(props) => props.theme.colors.white};
+`;
+
 export const CenterAlignContainer = styled(Container)`
   justify-content: center;
   align-items: center;

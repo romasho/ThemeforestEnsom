@@ -58,24 +58,6 @@ const size = {
   large: 1200,
 };
 
-// const above = Object.keys(size).reduce((acc, label) => {
-//   acc[label] = (...args) => css`
-//     @media (min-width: ${size[label]}px) {
-//       ${css(...args)}
-//     }
-//   `;
-//   return acc;
-// }, {});
-
-// const below = Object.keys(size).reduce((acc, label) => {
-//   acc[label] = (...args) => css`
-//     @media (max-width: ${size[label]}px) {
-//       ${css(...args)}
-//     }
-//   `;
-//   return acc;
-// }, {});
-
 export const theme: DefaultTheme = {
   boxShadows,
   font,

@@ -7,6 +7,7 @@ export const CardContainer = styled.div`
   row-gap: 25px;
   box-shadow: ${(props) => props.theme.boxShadows.shadowCard3};
   width: 350px;
+  margin: 10px;
 `;
 
 export const HeadContainer = styled.div`

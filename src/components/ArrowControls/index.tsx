@@ -1,18 +1,18 @@
 import { Icon } from '../Icon';
 
-import { ReactComponent as left } from '@/assets/svg/icon_arrow__left.svg';
-import { ReactComponent as right } from '@/assets/svg/icon_arrow_right.svg';
+import { ReactComponent as leftIcon } from '@/assets/svg/icon_arrow__left.svg';
+import { ReactComponent as rightIcon } from '@/assets/svg/icon_arrow_right.svg';
 
 import { ArrowContainer, ArrowButton } from './styled';
 
-export const ArrowControls = () => {
+export const ArrowControls = ({ left, right }) => {
   return (
     <ArrowContainer>
-      <ArrowButton>
-        <Icon icon={left} />
+      <ArrowButton ref={left}>
+        <Icon icon={leftIcon} />
       </ArrowButton>
-      <ArrowButton>
-        <Icon icon={right} />
+      <ArrowButton ref={right}>
+        <Icon icon={rightIcon} />
       </ArrowButton>
     </ArrowContainer>
   );
