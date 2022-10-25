@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Headline } from '../Headline';
 import { Paragraph } from '../Paragraph';
 
@@ -9,6 +11,12 @@ import { theme } from '@/theme';
 import { DescriptionWrapper, PositionedButton, BackgroundSection } from './styled';
 
 export const Information = () => {
+  const navigate = useNavigate();
+
+  const navigateToServices = () => {
+    navigate('/services');
+  };
+
   return (
     <>
       <Section background="light">
@@ -23,7 +31,9 @@ export const Information = () => {
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
             </Paragraph>
-            <PositionedButton variant="circle">Learn more</PositionedButton>
+            <PositionedButton variant="circle" onClick={navigateToServices}>
+              Learn more
+            </PositionedButton>
           </DescriptionWrapper>
         </Container>
       </Section>
