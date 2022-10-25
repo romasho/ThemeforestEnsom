@@ -1,12 +1,16 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Home } from './pages/Home';
+import { Solutions } from './pages/Solutions';
 
 function App() {
   return (
     <BrowserRouter>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/solutions" element={<Solutions />} />
+      </Routes>
     </BrowserRouter>
   );
 }

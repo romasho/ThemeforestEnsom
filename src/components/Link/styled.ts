@@ -17,9 +17,9 @@ export const Button = styled.button`
   transition: 0.3s;
 
   svg {
-    fill: ${(props) => props.theme.colors.primary};
     width: 20px;
     height: 20px;
+    fill: ${(props) => props.theme.colors.primary};
   }
 
   &:hover {

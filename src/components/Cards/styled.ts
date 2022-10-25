@@ -25,4 +25,8 @@ export const CardContainer = styled.div`
     fill: ${(props) => props.theme.colors.primary};
     margin-bottom: 5px;
   }
+
+  p {
+    color: ${(props) => props.theme.colors.grey};
+  }
 `;

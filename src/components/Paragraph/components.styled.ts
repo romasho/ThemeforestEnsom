@@ -14,7 +14,6 @@ export const Typography = styled.p<TypographyType>`
   display: flex;
   align-items: center;
   letter-spacing: -0.015em;
-  margin: 0;
   color: ${(props) => (props.color ? props.color : 'none')};
   ${(props) => {
     switch (props.size) {

@@ -5,6 +5,7 @@ import { Paragraph } from '../Paragraph';
 import { HeadlineWrapper, InfoBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
+import img from '@/assets/img/02_img_10.png';
 
 import { BackgroundHalfSection } from './styled';
 
@@ -15,7 +16,7 @@ export const Features = () => {
         <Container>
           <HeadlineWrapper>
             <Headline as="h1" size="h1">
-              The newest business analytics platform
+              The <span>newest</span> business analytics platform
             </Headline>
           </HeadlineWrapper>
           <InfoBlock>
@@ -29,7 +30,7 @@ export const Features = () => {
         </Container>
       </Section>
       <Section background="dark">
-        <BackgroundHalfSection background="dark" />
+        <BackgroundHalfSection background="dark" img={img} />
         <InfoBlock>
           <Headline as="h2" size="h2">
             Radically new solutions for data

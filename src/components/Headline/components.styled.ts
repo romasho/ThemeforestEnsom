@@ -12,8 +12,6 @@ export const Typography = styled.h6<ButtonPropsType>`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  display: flex;
-  align-items: center;
   letter-spacing: -0.015em;
   ${(props) => {
     switch (props.size) {
@@ -52,4 +50,8 @@ export const Typography = styled.h6<ButtonPropsType>`
             line-height: 24px;`;
     }
   }}
+
+  span {
+    color: ${(props) => props.theme.colors.primary};
+  }
 `;

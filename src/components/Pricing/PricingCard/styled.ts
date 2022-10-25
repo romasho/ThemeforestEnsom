@@ -14,7 +14,6 @@ export const CardContainer = styled.div`
 `;
 
 export const AdvantagesList = styled.ul`
-  margin: 0;
   list-style: none;
   padding: 0;
   display: flex;

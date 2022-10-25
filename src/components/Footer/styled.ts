@@ -28,7 +28,6 @@ export const ContactLink = styled.a`
 `;
 
 export const FooterHeadline = styled.h6`
-  margin: 0;
   font: ${(props) => props.theme.font.headline.headline6};
   color: ${(props) => props.theme.colors.white};
   margin-bottom: 30px;
