@@ -23,3 +23,7 @@ export const Section = styled.section<SectionProps>`
 export const SectionWithBorder = styled(Section)`
   border-bottom: 1px solid ${(props) => props.theme.colors.helperBlue2};
 `;
+
+export const SectionColumn = styled(Section)`
+  flex-direction: column;
+`;

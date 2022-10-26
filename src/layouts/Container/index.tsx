@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   row-gap: 50px;
+  position: relative;
 `;
 
 export const HeaderContainer = styled(Container)`

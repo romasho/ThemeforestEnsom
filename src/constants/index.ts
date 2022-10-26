@@ -1,6 +1,6 @@
 export const ROUTE_NAMES = {
-  HOME: 'home',
+  HOME: '/',
   SOLUTIONS: 'solutions',
-  BLOG: 'blog',
+  SERVICES: 'services',
   CONTACTS: 'contacts',
 };

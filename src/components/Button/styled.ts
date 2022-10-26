@@ -71,10 +71,12 @@ export const Button = styled.button<ButtonPropsType>`
         }
           `;
       case 'little':
-        return `width: 100%;
+        return `width: 137px;
+        height: auto;
         padding: 10px 14px; 
         font: ${props.theme.font.headline.headline7};
         box-shadow: none;
+        letter-spacing: -0.01em;
         &:hover {
           background-color: ${props.theme.colors.primary};
           box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);;

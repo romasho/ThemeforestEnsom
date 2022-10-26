@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Button } from '../Button/styled';
 import { Headline } from '../Headline';
 import { Paragraph } from '../Paragraph';
@@ -10,6 +12,12 @@ import img from '@/assets/img/02_img_10.png';
 import { BackgroundHalfSection } from './styled';
 
 export const Features = () => {
+  const navigate = useNavigate();
+
+  const navigateToSolutions = () => {
+    navigate('/solutions');
+  };
+
   return (
     <>
       <Section background="light">
@@ -40,7 +48,9 @@ export const Features = () => {
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
             architecto beatae vitae dicta sunt explicabo.
           </Paragraph>
-          <Button variant="fill">Learn more</Button>
+          <Button variant="fill" onClick={navigateToSolutions}>
+            Learn more
+          </Button>
         </InfoBlock>
       </Section>
     </>

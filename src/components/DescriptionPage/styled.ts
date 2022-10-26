@@ -16,3 +16,10 @@ export const PageDescriptionWrapper = styled.div`
   padding-bottom: 0;
   padding-top: 100px;
 `;
+
+export const PageDescriptionContainer = styled.div`
+  max-width: 1110px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  position: relative;
+`;

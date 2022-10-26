@@ -24,7 +24,7 @@ export const Input = styled.input`
   border: 0;
   outline: none;
   position: relative;
-  font: ${(props) => props.theme.font.paragraph.paragraph5};
+  font: ${(props) => props.theme.font.paragraph.paragraph3bold};
   padding: 25px 15px;
   color: ${(props) => props.theme.colors.black};
 `;

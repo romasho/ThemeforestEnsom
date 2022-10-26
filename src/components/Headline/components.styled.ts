@@ -48,6 +48,10 @@ export const Typography = styled.h6<ButtonPropsType>`
         return `font-weight: 500;
             font-size: 14px;
             line-height: 24px;`;
+      case 'extraLarge':
+        return `font-weight: 800;
+        font-size: 80px;
+        line-height: 110%;`;
     }
   }}
 

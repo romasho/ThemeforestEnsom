@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+
 import { DescriptionPage } from '@/components/DescriptionPage';
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
@@ -7,6 +9,9 @@ import { CompanyOverview } from '@/components/CompanyOverview';
 import { ServicesSection } from '@/components/ServicesSection';
 
 export const Services = () => {
+  const obj = useLocation();
+  console.log(obj);
+
   return (
     <PageLayout>
       <Section background="light">

@@ -45,7 +45,7 @@ const font = {
     paragraph2: 'normal 400 16px/28px Open Sans, sans-serif',
     paragraph2bold: 'normal 700 16px/28px Open Sans, sans-serif',
     paragraph3: 'normal 400 14px/24px Open Sans, sans-serif',
-    paragraph5: 'normal 600 14px/24px Open Sans, sans-serif',
+    paragraph3bold: 'normal 600 14px/24px Open Sans, sans-serif',
   },
 };
 
