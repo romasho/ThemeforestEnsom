@@ -1,10 +1,10 @@
-import { Card } from '../Cards';
 import { Headline } from '../Headline';
 import { Paragraph } from '../Paragraph';
 
 import { InfoBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
+import { Card } from '@/layouts/Card';
 
 import { benefitsData } from './data';
 import { CardContainer } from './styled';
@@ -25,7 +25,13 @@ export const Benefits = () => {
         </InfoBlock>
         <CardContainer>
           {benefitsData.map(({ icon, headline, description }) => (
-            <Card icon={icon} headline={headline} description={description} key={headline} />
+            <Card
+              variant="small_card"
+              icon={icon}
+              headline={headline}
+              description={description}
+              key={headline}
+            />
           ))}
         </CardContainer>
       </Container>
