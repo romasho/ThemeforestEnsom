@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   margin: 0 auto;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 120px 0;
+  gap: 30px;
 `;

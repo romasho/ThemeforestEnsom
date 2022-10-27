@@ -57,7 +57,7 @@ export const DataAnalyticsSolutions = [
   {
     id: '2',
     icon: calendarDatabase,
-    title: 'Data integration 2',
+    title: 'Data management',
     description:
       'Data preparation and management; machine learning (ML); designing and implanting artificial intelligence (AI) solutions.',
     solutionDescription: [

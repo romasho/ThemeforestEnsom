@@ -20,7 +20,7 @@ export const CardContainer = styled.div<Partial<CardProps>>`
         height: auto;
         display: flex;
         gap: 20px;
-        padding: 35px 20px;`;
+        padding: 20px 35px;`;
       case 'small_card':
         return `  &:nth-child(2) {
           margin-top: 55px;

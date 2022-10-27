@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 export const SolutionDescriptionContainer = styled.div`
   width: 100%;
-  max-width: 634px;
+  max-width: 635px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-bottom: 20px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 
   img {
     height: 250px;
