@@ -39,7 +39,13 @@ export const Blog = () => {
           <Swiper slidesPerView={3} onBeforeInit={onBeforeInit} spaceBetween={30}>
             {data.map(({ img, data, headline, description, id }) => (
               <SwiperSlide key={id}>
-                <BlogPost img={img} data={data} headline={headline} description={description} />
+                <BlogPost
+                  variant="small"
+                  img={img}
+                  data={data}
+                  headline={headline}
+                  description={description}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

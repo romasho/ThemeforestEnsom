@@ -22,7 +22,7 @@ export const ServicesCard: FC<ServicesCardProps> = ({ icon, headline, descriptio
       <Paragraph size="p2" color={theme.colors.grey}>
         {description}
       </Paragraph>
-      <Link />
+      <Link to={headline} />
     </ServicesCardContainer>
   );
 };

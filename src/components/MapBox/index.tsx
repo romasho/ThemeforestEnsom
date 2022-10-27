@@ -22,7 +22,7 @@ export function MapboxMap() {
       accessToken: MAP_BOX_TOKEN,
       style: 'mapbox://styles/mapbox/light-v10',
       center: pointJackson,
-      zoom: 13,
+      zoom: 12,
     });
 
     setMap(mapboxMap);

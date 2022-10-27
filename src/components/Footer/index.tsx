@@ -41,7 +41,6 @@ export const Footer = () => {
         <ContactContainer>
           <FooterHeadline>Service</FooterHeadline>
           <ContactLink>Pages</ContactLink>
-          <ContactLink>Elements</ContactLink>
           <ContactLink>Pricing</ContactLink>
           <ContactLink>Site map</ContactLink>
         </ContactContainer>

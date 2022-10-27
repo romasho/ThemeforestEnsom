@@ -7,6 +7,7 @@ import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { HeadlineWrapper } from '@/pages/Home/styled';
 import { theme } from '@/theme';
+import { ROUTE_NAMES } from '@/constants';
 
 import { DescriptionWrapper, PositionedButton, BackgroundSection } from './styled';
 
@@ -14,7 +15,7 @@ export const Information = () => {
   const navigate = useNavigate();
 
   const navigateToServices = () => {
-    navigate('/services');
+    navigate(ROUTE_NAMES.SOLUTIONS);
   };
 
   return (

@@ -6,6 +6,9 @@ import { Solutions } from './pages/Solutions';
 import { Services } from './pages/Services';
 import { Contacts } from './pages/Contacts';
 import { ScrollToTop } from './components/ScrollToTop';
+import { Blog } from './pages/Blog';
+import { ROUTE_NAMES } from './constants';
+import { Solution } from './pages/Solution';
 
 function App() {
   return (
@@ -13,9 +16,11 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route path={ROUTE_NAMES.SOLUTIONS} element={<Solutions />} />
+        <Route path="solutions/:userId" element={<Solution />} />
+        <Route path={ROUTE_NAMES.SERVICES} element={<Services />} />
+        <Route path={ROUTE_NAMES.CONTACTS} element={<Contacts />} />
+        <Route path={ROUTE_NAMES.BLOG} element={<Blog />} />
       </Routes>
     </BrowserRouter>
   );

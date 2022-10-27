@@ -8,6 +8,7 @@ import { HeadlineWrapper, InfoBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import img from '@/assets/img/02_img_10.png';
+import { ROUTE_NAMES } from '@/constants';
 
 import { BackgroundHalfSection } from './styled';
 
@@ -15,7 +16,7 @@ export const Features = () => {
   const navigate = useNavigate();
 
   const navigateToSolutions = () => {
-    navigate('/solutions');
+    navigate(ROUTE_NAMES.SOLUTIONS);
   };
 
   return (
