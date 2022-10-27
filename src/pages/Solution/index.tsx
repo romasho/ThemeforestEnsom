@@ -8,10 +8,8 @@ import { CenterAlignContainer } from '@/layouts/Container';
 import { Headline } from '@/components/Headline';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { DataAnalyticsSolutions } from '@/components/SolutionsCards/data';
-import { SolutionDescription } from '@/components/SolutionDescription';
-import { SolutionSidebar } from '@/components/SolutionSidebar';
 
-import { Container } from './styled';
+import { SolutionSection } from './SolutionSection';
 
 export const Solution = () => {
   const { userId } = useParams();
@@ -27,22 +25,7 @@ export const Solution = () => {
           <Breadcrumbs position="bottom" />
         </CenterAlignContainer>
       </Section>
-      <Section background="light">
-        <Container>
-          <SolutionSidebar data={solutionDescription} />
-          <div>
-            {solutionDescription.map(({ headline, paragraph, img, types }, index) => (
-              <SolutionDescription
-                key={index}
-                headline={headline}
-                paragraph={paragraph}
-                img={img}
-                types={types}
-              />
-            ))}
-          </div>
-        </Container>
-      </Section>
+      <SolutionSection solutionDescription={solutionDescription} />
       <Contacts />
       <Subscribe />
     </PageLayout>
