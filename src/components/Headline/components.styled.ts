@@ -1,14 +1,8 @@
 import styled from 'styled-components';
 
-import { TypographyType, HtmlTag } from '.';
+import { HeadlineProps } from './types';
 
-type ButtonPropsType = {
-  contained?: boolean;
-  as?: HtmlTag;
-  size: TypographyType;
-};
-
-export const Typography = styled.h6<ButtonPropsType>`
+export const Typography = styled.h6<HeadlineProps>`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
@@ -54,6 +48,7 @@ export const Typography = styled.h6<ButtonPropsType>`
         line-height: 110%;`;
     }
   }}
+  color: ${(props) => props.color};
 
   span {
     color: ${(props) => props.theme.colors.primary};
