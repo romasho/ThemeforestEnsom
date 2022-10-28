@@ -10,7 +10,6 @@ import { ServicesSection } from '@/components/ServicesSection';
 
 export const Services = () => {
   const obj = useLocation();
-  console.log(obj);
 
   return (
     <PageLayout>

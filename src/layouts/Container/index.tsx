@@ -36,4 +36,5 @@ export const CenterAlignContainer = styled(Container)`
 
 export const WithoutPaddingContainer = styled(Container)`
   padding: 0;
+  justify-content: center;
 `;

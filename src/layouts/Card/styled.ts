@@ -29,6 +29,13 @@ export const CardContainer = styled.div<Partial<CardProps>>`
         &:nth-child(3) {
           margin-top: -50px;
         }`;
+      case 'center_text':
+        return `width: 350px;
+        height: 353px;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0px 10px 10px;
+        `;
     }
   }}
   max-width: 540px;

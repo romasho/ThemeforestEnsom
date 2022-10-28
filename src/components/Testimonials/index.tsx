@@ -9,6 +9,7 @@ import { TestimonialCard } from '../TestimonialsCard';
 
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
+import { SwiperWrapper } from '@/layouts';
 
 import { testimonialsData } from './data';
 import { TestimonialsWrapper } from './styled';
@@ -37,18 +38,20 @@ export const Testimonials = () => {
         </Headline>
         <ArrowControls left={navPrevButton} right={navNextButton} />
         <TestimonialsWrapper>
-          <Swiper slidesPerView={3} onBeforeInit={onBeforeInit}>
-            {testimonialsData.map(({ avatar, name, position, description }) => (
-              <SwiperSlide key={name}>
-                <TestimonialCard
-                  avatar={avatar}
-                  name={name}
-                  position={position}
-                  description={description}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <SwiperWrapper>
+            <Swiper slidesPerView={3} onBeforeInit={onBeforeInit}>
+              {testimonialsData.map(({ avatar, name, position, description }) => (
+                <SwiperSlide key={name}>
+                  <TestimonialCard
+                    avatar={avatar}
+                    name={name}
+                    position={position}
+                    description={description}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </SwiperWrapper>
         </TestimonialsWrapper>
       </Container>
     </Section>

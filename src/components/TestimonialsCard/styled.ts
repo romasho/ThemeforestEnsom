@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
   padding: 35px;
   row-gap: 25px;
   box-shadow: ${(props) => props.theme.boxShadows.shadowCard3};
-  width: 350px;
+  max-width: 540px;
   margin: 10px;
 `;
 

@@ -24,7 +24,7 @@ export const Card: FC<CardProps> = ({ variant, icon, headline, description }) =>
         {headline}
       </Headline>
       <Paragraph size={variant === 'small_card' ? 'p3' : 'p2'}>{description}</Paragraph>
-      {(variant === 'center_text' || variant === 'big_icon') && <Link to={headline} />}
+      {variant === 'big_icon' && <Link to={headline} />}
     </CardContainer>
   );
 };

@@ -8,6 +8,7 @@ import { Headline } from '../Headline';
 
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
+import { SwiperWrapper } from '@/layouts';
 
 import { BlogPost } from './BlogPost';
 import { PostsContainer } from './styled';
@@ -36,19 +37,21 @@ export const Blog = () => {
         </Headline>
         <ArrowControls left={navPrevButton} right={navNextButton} />
         <PostsContainer>
-          <Swiper slidesPerView={3} onBeforeInit={onBeforeInit} spaceBetween={30}>
-            {data.map(({ img, data, headline, description, id }) => (
-              <SwiperSlide key={id}>
-                <BlogPost
-                  variant="small"
-                  img={img}
-                  data={data}
-                  headline={headline}
-                  description={description}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <SwiperWrapper>
+            <Swiper slidesPerView={3} onBeforeInit={onBeforeInit} spaceBetween={30}>
+              {data.map(({ img, data, headline, description, id }) => (
+                <SwiperSlide key={id}>
+                  <BlogPost
+                    variant="small"
+                    img={img}
+                    data={data}
+                    headline={headline}
+                    description={description}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </SwiperWrapper>
         </PostsContainer>
       </Container>
     </Section>

@@ -10,6 +10,7 @@ import { Blog } from '@/pages/Blog';
 import { ROUTE_NAMES } from '@/constants';
 import { Solution } from '@/pages/Solution';
 import { Service } from '@/pages/Service';
+import { AboutUs } from '@/pages/AboutUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="services/:userId" element={<Service />} />
         <Route path={ROUTE_NAMES.CONTACTS} element={<Contacts />} />
         <Route path={ROUTE_NAMES.BLOG} element={<Blog />} />
+        <Route path={ROUTE_NAMES.ABOUT_US} element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   );

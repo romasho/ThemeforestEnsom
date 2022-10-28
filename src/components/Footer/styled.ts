@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Container } from '@/layouts/Container';
@@ -19,6 +20,12 @@ export const SocialWrapper = styled.div`
   flex-wrap: nowrap;
   max-width: 285px;
   row-gap: 20px;
+`;
+
+export const NavigationLink = styled(NavLink)`
+  text-decoration: none;
+  font: ${(props) => props.theme.font.paragraph.paragraph3};
+  color: ${(props) => props.theme.colors.grey};
 `;
 
 export const ContactLink = styled.a`

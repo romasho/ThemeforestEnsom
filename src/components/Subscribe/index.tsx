@@ -3,7 +3,7 @@ import { Paragraph } from '../Paragraph';
 
 import { SubscribeContainer } from '@/layouts/Container';
 import { SectionWithBorder } from '@/layouts/Section';
-import { InfoBlock } from '@/pages/Home/styled';
+import { BaseBlock } from '@/pages/Home/styled';
 
 import { Input, Button, Form } from './styled';
 
@@ -11,7 +11,7 @@ export const Subscribe = () => {
   return (
     <SectionWithBorder background="secondary">
       <SubscribeContainer>
-        <InfoBlock>
+        <BaseBlock>
           <Headline as="h2" size="h2">
             Subscribe to our newsletter
           </Headline>
@@ -19,7 +19,7 @@ export const Subscribe = () => {
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium.
           </Paragraph>
-        </InfoBlock>
+        </BaseBlock>
         <Form>
           <Input placeholder="Your email" />
           <Button>Send</Button>

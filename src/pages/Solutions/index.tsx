@@ -1,4 +1,4 @@
-import { InfoBlock } from '../Home/styled';
+import { BaseBlock } from '../Home/styled';
 
 import { DescriptionPage } from '@/components/DescriptionPage';
 import { Testimonials } from '@/components/Testimonials';

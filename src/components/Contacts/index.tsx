@@ -4,13 +4,13 @@ import { Buttons } from '../Button';
 
 import { CenterAlignContainer } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
-import { InfoBlockCenter } from '@/pages/Home/styled';
+import { BaseBlockCenter } from '@/pages/Home/styled';
 
 export const Contacts = () => {
   return (
     <Section background="dark">
       <CenterAlignContainer>
-        <InfoBlockCenter>
+        <BaseBlockCenter>
           <Headline as="h2" size="h2">
             Do you need help?
           </Headline>
@@ -19,7 +19,7 @@ export const Contacts = () => {
             laboriosam, nisi ut aliquid ex ea commodi.
           </Paragraph>
           <Buttons variant="fill">Contact Us</Buttons>
-        </InfoBlockCenter>
+        </BaseBlockCenter>
       </CenterAlignContainer>
     </Section>
   );

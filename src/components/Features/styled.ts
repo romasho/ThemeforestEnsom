@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { Section } from '@/layouts/Section';
-import img2 from '@/assets/img/02_img_10.png';
 
 interface BackgroundHalfSectionProps {
   img: string;

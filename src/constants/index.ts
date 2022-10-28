@@ -1,7 +1,9 @@
 export const ROUTE_NAMES = {
   HOME: '/',
-  SOLUTIONS: '/solutions',
-  SERVICES: '/services',
-  CONTACTS: '/contacts',
-  BLOG: '/blog',
+  SOLUTIONS: '/Solutions',
+  SERVICES: '/Services',
+  SERVICE: '/Services/',
+  CONTACTS: '/Contacts',
+  BLOG: '/Blog',
+  ABOUT_US: '/About%20Us',
 };

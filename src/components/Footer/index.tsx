@@ -5,12 +5,14 @@ import { Socials } from '../Socials';
 import logo from '@/assets/Logo.png';
 import { FooterContainer } from '@/layouts/Container';
 import { theme } from '@/theme';
+import { ROUTE_NAMES } from '@/constants';
 
 import {
   FooterBorder,
   FooterWrapper,
   SocialWrapper,
   ContactLink,
+  NavigationLink,
   FooterHeadline,
   ContactContainer,
 } from './styled';
@@ -29,20 +31,20 @@ export const Footer = () => {
         </SocialWrapper>
         <ContactContainer>
           <FooterHeadline>Quick link</FooterHeadline>
-          <ContactLink>Home</ContactLink>
-          <ContactLink>Solutions</ContactLink>
-          <ContactLink>Blog</ContactLink>
-          <ContactLink>Contacts</ContactLink>
-          <ContactLink>Our team</ContactLink>
-          <ContactLink>About us</ContactLink>
-          <ContactLink>Services</ContactLink>
-          <ContactLink>FAQ</ContactLink>
+          <NavigationLink to={ROUTE_NAMES.HOME}>Home</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.SOLUTIONS}>Solutions</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.BLOG}>Blog</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Contacts</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Our team</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.ABOUT_US}>About us</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.SERVICES}>Services</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.CONTACTS}>FAQ</NavigationLink>
         </ContactContainer>
         <ContactContainer>
           <FooterHeadline>Service</FooterHeadline>
-          <ContactLink>Pages</ContactLink>
-          <ContactLink>Pricing</ContactLink>
-          <ContactLink>Site map</ContactLink>
+          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Pages</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Pricing</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Site map</NavigationLink>
         </ContactContainer>
         <ContactContainer>
           <FooterHeadline>Contact info</FooterHeadline>

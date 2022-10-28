@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Button } from '../Button/styled';
 
 import { Section } from '@/layouts/Section';
-import img from '@/assets/img/img_11.png';
 
 export const DescriptionWrapper = styled.div`
   position: relative;
@@ -16,8 +15,12 @@ export const PositionedButton = styled(Button)`
   bottom: -150%;
 `;
 
-export const BackgroundSection = styled(Section)`
-  background-image: url(${img});
+interface BackgroundSectionProps {
+  img: string;
+}
+
+export const BackgroundSection = styled(Section)<BackgroundSectionProps>`
+  background-image: url(${(props) => props.img});
   width: 100%;
   height: 590px;
   background-position-x: center;

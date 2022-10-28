@@ -1,7 +1,7 @@
 import { Headline } from '../Headline';
 import { Paragraph } from '../Paragraph';
 
-import { InfoBlock } from '@/pages/Home/styled';
+import { BaseBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { Card } from '@/layouts/Card';
@@ -13,7 +13,7 @@ export const Benefits = () => {
   return (
     <Section background="dark">
       <Container>
-        <InfoBlock>
+        <BaseBlock>
           <Headline as="h2" size="h2">
             The benefits of Ensome{' '}
           </Headline>
@@ -22,7 +22,7 @@ export const Benefits = () => {
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
             architecto beatae vitae dicta sunt explicabo.
           </Paragraph>
-        </InfoBlock>
+        </BaseBlock>
         <CardContainer>
           {benefitsData.map(({ icon, headline, description }) => (
             <Card

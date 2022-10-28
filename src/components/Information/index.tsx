@@ -8,6 +8,7 @@ import { Container } from '@/layouts/Container';
 import { HeadlineWrapper } from '@/pages/Home/styled';
 import { theme } from '@/theme';
 import { ROUTE_NAMES } from '@/constants';
+import img from '@/assets/img/img_11.png';
 
 import { DescriptionWrapper, PositionedButton, BackgroundSection } from './styled';
 
@@ -38,7 +39,7 @@ export const Information = () => {
           </DescriptionWrapper>
         </Container>
       </Section>
-      <BackgroundSection background="dark" />
+      <BackgroundSection background="dark" img={img} />
     </>
   );
 };

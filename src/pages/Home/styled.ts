@@ -5,7 +5,7 @@ export const HeadlineWrapper = styled.div`
   margin: -50px 0 -30px 0;
 `;
 
-export const InfoBlock = styled.div`
+export const BaseBlock = styled.div`
   max-width: 540px;
   display: flex;
   align-items: flex-start;
@@ -19,11 +19,17 @@ export const InfoBlock = styled.div`
   }
 `;
 
-export const InfoBlockRow = styled(InfoBlock)`
+export const BaseBlockWidth = styled(BaseBlock)`
+  max-width: 730px;
+  align-items: center;
+  text-align: center;
+`;
+
+export const BaseBlockRow = styled(BaseBlock)`
   flex-direction: row;
 `;
 
-export const InfoBlockCenter = styled(InfoBlock)`
+export const BaseBlockCenter = styled(BaseBlock)`
   align-items: center;
   margin: -20px auto;
 
@@ -32,7 +38,7 @@ export const InfoBlockCenter = styled(InfoBlock)`
   }
 `;
 
-export const InfoBlockRowImages = styled(InfoBlockRow)`
+export const BaseBlockRowImages = styled(BaseBlockRow)`
   overflow-x: hidden;
   max-width: 100%;
 `;

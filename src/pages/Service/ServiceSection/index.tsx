@@ -5,10 +5,10 @@ import { Link, ServiceSidebar } from '../styled';
 import { Headline } from '@/components/Headline';
 import { Icon } from '@/components/Icon';
 import { ServiceDescription } from '@/components/ServiceDescription';
-import { Container } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
 import { ReactComponent as arrow } from '@/assets/svg/icon_chevron_right.svg';
 import { servicesData } from '@/components/ServicesSection/data';
+import { Container } from '@/pages/Solution/SolutionSection/styled';
 
 interface ServiceSectionProps {
   serviceInformation: { headline: string; paragraph: string; img?: string; marks?: string[] }[];

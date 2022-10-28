@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const Text = styled.p`
   font: ${(props) => props.theme.font.paragraph.paragraph1};
   color: ${(props) => props.theme.colors.grey};
-  max-width: 540px;
+  max-width: 730px;
   text-align: center;
+  letter-spacing: -0.015em;
 `;
 
 export const PageDescriptionWrapper = styled.div`

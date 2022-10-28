@@ -1,4 +1,4 @@
-import { InfoBlock } from '../Home/styled';
+import { BaseBlock } from '../Home/styled';
 
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Container } from '@/layouts/Container';
@@ -15,11 +15,11 @@ export const Contacts = () => {
       <SectionColumn background="light">
         <Container style={{ alignItems: 'flex-start' }}>
           <Breadcrumbs />
-          <InfoBlock>
+          <BaseBlock>
             <Headline size="extraLarge">
               How can we <span>help you?</span>
             </Headline>
-          </InfoBlock>
+          </BaseBlock>
           <ContactForm />
           <ContactCards direction="column" />
         </Container>

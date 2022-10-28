@@ -8,6 +8,7 @@ export const Section = styled.section<SectionProps>`
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   background-color: ${(props) => {
     switch (props.background) {
       case 'dark':
