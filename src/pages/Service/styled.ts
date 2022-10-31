@@ -6,6 +6,7 @@ export const ContainerHeadline = styled(Container)`
   padding-bottom: 90px;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: flex-start;
 `;
 
 export const Link = styled.a`

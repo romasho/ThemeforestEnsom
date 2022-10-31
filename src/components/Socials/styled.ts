@@ -21,4 +21,5 @@ export const SocialsContainer = styled.ul`
   justify-content: space-between;
   list-style: none;
   margin 0;
+  gap: 15px;
 `;

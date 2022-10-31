@@ -11,6 +11,8 @@ import { ROUTE_NAMES } from '@/constants';
 import { Solution } from '@/pages/Solution';
 import { Service } from '@/pages/Service';
 import { AboutUs } from '@/pages/AboutUs';
+import { OurTeam } from '@/pages/OurTeam';
+import { TeamMember } from '@/pages/TeamMember';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path={ROUTE_NAMES.CONTACTS} element={<Contacts />} />
         <Route path={ROUTE_NAMES.BLOG} element={<Blog />} />
         <Route path={ROUTE_NAMES.ABOUT_US} element={<AboutUs />} />
+        <Route path={ROUTE_NAMES.OUR_TEAM} element={<OurTeam />} />
+        <Route path={'Our%20Team/:userId'} element={<TeamMember />} />
       </Routes>
     </BrowserRouter>
   );

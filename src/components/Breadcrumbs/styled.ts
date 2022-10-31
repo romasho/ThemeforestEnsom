@@ -19,4 +19,8 @@ export const BreadcrumbsContainer = styled.div<BreadcrumbsProps>`
     justify-content: center;
     margin-top: -20px;`
       : ''}
+
+  svg {
+    fill: ${(props) => props.theme.colors.grey};
+  }
 `;

@@ -6,4 +6,5 @@ export const ROUTE_NAMES = {
   CONTACTS: '/Contacts',
   BLOG: '/Blog',
   ABOUT_US: '/About%20Us',
+  OUR_TEAM: '/Our%20Team',
 };

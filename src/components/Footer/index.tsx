@@ -27,7 +27,16 @@ export const Footer = () => {
             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.
           </Paragraph>
-          <Socials />
+          <Socials
+            socials={{
+              facebook: undefined,
+              twitter: undefined,
+              linkedin: undefined,
+              youtube: undefined,
+              dribbble: undefined,
+              behance: undefined,
+            }}
+          />
         </SocialWrapper>
         <ContactContainer>
           <FooterHeadline>Quick link</FooterHeadline>
@@ -35,7 +44,7 @@ export const Footer = () => {
           <NavigationLink to={ROUTE_NAMES.SOLUTIONS}>Solutions</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.BLOG}>Blog</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.CONTACTS}>Contacts</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Our team</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.OUR_TEAM}>Our team</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.ABOUT_US}>About us</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.SERVICES}>Services</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.CONTACTS}>FAQ</NavigationLink>

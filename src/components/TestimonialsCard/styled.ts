@@ -22,4 +22,7 @@ export const Avatar = styled.img`
   width: 80px;
   height: 80px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
 `;

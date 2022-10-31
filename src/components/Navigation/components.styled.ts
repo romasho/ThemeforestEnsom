@@ -11,11 +11,13 @@ export const NavListItem = styled(NavLink)`
   color: ${(props) => props.theme.colors.grey};
 
   &:hover {
-    color: ${(props) => props.theme.colors.black};
+    color: ${(props) =>
+      props.color === 'white' ? props.theme.colors.white : props.theme.colors.black};
   }
 
   &.active {
-    color: ${(props) => props.theme.colors.black};
+    color: ${(props) =>
+      props.color === 'white' ? props.theme.colors.white : props.theme.colors.black};
     font-weight: 600;
   }
 `;

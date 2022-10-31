@@ -8,7 +8,7 @@ import { ReactComponent as Divider } from '@/assets/svg/icon_divider.svg';
 import { BreadcrumbsContainer } from './styled';
 import { BreadcrumbsProps } from './types';
 
-export const Breadcrumbs: FC<BreadcrumbsProps> = ({ position }) => {
+export const Breadcrumbs: FC<BreadcrumbsProps> = ({ position, color = 'black' }) => {
   const { pathname } = useLocation();
 
   const pageName = (str: string) => {
@@ -18,12 +18,14 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({ position }) => {
   };
 
   return (
-    <BreadcrumbsContainer position={position}>
-      <NavListItem to="/" end>
+    <BreadcrumbsContainer position={position} color={color}>
+      <NavListItem color={color} to="/" end>
         Home
       </NavListItem>
       <Divider />
-      <NavListItem to={pathname}>{pageName(pathname)}</NavListItem>
+      <NavListItem color={color} to={pathname}>
+        {pageName(pathname)}
+      </NavListItem>
     </BreadcrumbsContainer>
   );
 };
