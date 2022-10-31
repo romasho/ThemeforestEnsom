@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Headline } from '@/components/Headline';
 import { Paragraph } from '@/components/Paragraph';
 import { theme } from '@/theme';
-import { servicesData } from '@/components/ServicesSection/data';
+import { servicesData } from '@/pages/Services/ServicesSection/data';
 
 import { ContainerHeadline } from './styled';
 import { ServiceSection } from './ServiceSection';

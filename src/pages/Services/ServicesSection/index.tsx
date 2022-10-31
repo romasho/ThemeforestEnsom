@@ -1,7 +1,7 @@
 import { Section } from '@/layouts/Section';
+import { ServicesCard } from '@/pages/Services/ServicesCard';
 
 import { servicesData } from './data';
-import { ServicesCard } from './ServicesCard';
 import { Container } from './styled';
 
 export const ServicesSection = () => {

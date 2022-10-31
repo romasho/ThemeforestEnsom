@@ -1,12 +1,12 @@
-import { BackgroundHalfSection } from '../Features/styled';
+import { Advantages } from '../Advantages';
 
 import { Headline } from '@/components/Headline';
-import { benefitsData } from '@/components/Benefits/data';
+import { benefitsData } from '@/pages/Home/Benefits/data';
 import { Section } from '@/layouts/Section';
 import img from '@/assets/img/img_0011.png';
 import { BaseBlock } from '@/pages/Home/styled';
+import { BackgroundHalfSection } from '@/pages/Home/Features/styled';
 
-import { Advantages } from './Advantages';
 import { AdvantagesContainer } from './styled';
 
 export const AdvantagesSection = () => {

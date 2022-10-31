@@ -1,5 +1,5 @@
-import { Headline } from '../Headline';
-import { Paragraph } from '../Paragraph';
+import { Headline } from '../../../components/Headline';
+import { Paragraph } from '../../../components/Paragraph';
 
 import { BaseBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';

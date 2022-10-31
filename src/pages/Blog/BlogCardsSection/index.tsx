@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { SectionColumn } from '@/layouts/Section';
 import { DescriptionPage } from '@/components/DescriptionPage';
 import { Container } from '@/layouts/Container';
-import { BlogPost } from '@/components/Blog/BlogPost';
-import { data } from '@/components/Blog/data';
+import { BlogPost } from '@/pages/Home/BlogPost';
+import { data } from '@/pages/Home/Blog/data';
 import { Buttons } from '@/components/Button';
 
 import { AlignToCenter } from './styled';

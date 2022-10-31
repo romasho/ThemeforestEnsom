@@ -1,6 +1,6 @@
 import { PageLayout } from '@/layouts/Pages';
 import { Subscribe } from '@/components/Subscribe';
-import { BlogCardsSection } from '@/components/BlogCardsSection';
+import { BlogCardsSection } from '@/pages/Blog/BlogCardsSection';
 
 export const Blog = () => {
   return (

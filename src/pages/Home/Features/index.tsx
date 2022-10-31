@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from '../Button/styled';
-import { Headline } from '../Headline';
-import { Paragraph } from '../Paragraph';
+import { Button } from '../../../components/Button/styled';
+import { Headline } from '../../../components/Headline';
+import { Paragraph } from '../../../components/Paragraph';
 
 import { HeadlineWrapper, BaseBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';

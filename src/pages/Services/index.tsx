@@ -6,7 +6,7 @@ import { Section } from '@/layouts/Section';
 import { Contacts } from '@/components/Contacts';
 import { Subscribe } from '@/components/Subscribe';
 import { CompanyOverview } from '@/components/CompanyOverview';
-import { ServicesSection } from '@/components/ServicesSection';
+import { ServicesSection } from '@/pages/Services/ServicesSection';
 
 export const Services = () => {
   const obj = useLocation();

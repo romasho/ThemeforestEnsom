@@ -15,7 +15,7 @@ import { Headline } from '@/components/Headline';
 import { CompanyNumbers } from '@/components/CompanyNumbers';
 import { Paragraph } from '@/components/Paragraph';
 import { Card } from '@/layouts/Card';
-import { servicesData } from '@/components/ServicesSection/data';
+import { servicesData } from '@/pages/Services/ServicesSection/data';
 import { ROUTE_NAMES } from '@/constants';
 import { SwiperWrapper } from '@/layouts';
 

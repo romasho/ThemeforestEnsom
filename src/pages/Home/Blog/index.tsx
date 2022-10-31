@@ -3,14 +3,14 @@ import SwiperCore, { Navigation } from 'swiper';
 import { useRef } from 'react';
 import { NavigationOptions } from 'swiper/types';
 
-import { ArrowControls } from '../ArrowControls';
-import { Headline } from '../Headline';
+import { ArrowControls } from '../../../components/ArrowControls';
+import { Headline } from '../../../components/Headline';
 
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { SwiperWrapper } from '@/layouts';
 
-import { BlogPost } from './BlogPost';
+import { BlogPost } from '../BlogPost';
 import { PostsContainer } from './styled';
 import 'swiper/css';
 import { data } from './data';

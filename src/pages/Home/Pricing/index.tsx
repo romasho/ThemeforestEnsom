@@ -1,9 +1,8 @@
-import { Headline } from '../Headline';
-
+import { Headline } from '@/components/Headline';
 import { WithoutPaddingContainer } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
+import { PricingCard } from '@/pages/Home/PricingCard/Index';
 
-import { PricingCard } from './PricingCard/Index';
 import { data } from './data';
 import { CardContainer } from './styled';
 

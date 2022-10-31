@@ -7,7 +7,8 @@ import { Section } from '@/layouts/Section';
 import { Contacts } from '@/components/Contacts';
 import { Subscribe } from '@/components/Subscribe';
 import { SolutionsCards } from '@/components/SolutionsCards';
-import { AdvantagesSection } from '@/components/AdvantagesSection';
+
+import { AdvantagesSection } from './AdvantagesSection';
 
 export const Solutions = () => {
   return (
