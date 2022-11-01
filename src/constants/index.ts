@@ -7,4 +7,5 @@ export const ROUTE_NAMES = {
   BLOG: '/Blog',
   ABOUT_US: '/About%20Us',
   OUR_TEAM: '/Our%20Team',
+  FAQS: '/FAQs',
 };

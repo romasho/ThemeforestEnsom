@@ -47,7 +47,7 @@ export const Footer = () => {
           <NavigationLink to={ROUTE_NAMES.OUR_TEAM}>Our team</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.ABOUT_US}>About us</NavigationLink>
           <NavigationLink to={ROUTE_NAMES.SERVICES}>Services</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.CONTACTS}>FAQ</NavigationLink>
+          <NavigationLink to={ROUTE_NAMES.FAQS}>FAQ</NavigationLink>
         </ContactContainer>
         <ContactContainer>
           <FooterHeadline>Service</FooterHeadline>
