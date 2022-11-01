@@ -48,6 +48,13 @@ export const PopularNewsContainer = styled.div`
   max-width: 445px;
 `;
 
+export const TagsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+`;
+
 export const TagsContainer = styled.div`
   display: flex;
   gap: 10px;

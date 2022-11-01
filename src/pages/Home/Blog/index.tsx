@@ -11,14 +11,15 @@ import { Headline } from '@/components/Headline';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { SwiperWrapper } from '@/layouts';
+import { useAppSelector } from '@/hooks/redux';
 
 import { PostsContainer } from './styled';
 import 'swiper/css';
-import { dataBlog } from './data';
 
 SwiperCore.use([Navigation]);
 
 export const Blog = memo(() => {
+  const { data } = useAppSelector((state) => state.blogSlice);
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -40,7 +41,7 @@ export const Blog = memo(() => {
         <PostsContainer>
           <SwiperWrapper>
             <Swiper slidesPerView={3} onBeforeInit={onBeforeInit} spaceBetween={30}>
-              {dataBlog.map(({ img, date, headline, description, id }) => (
+              {data.map(({ img, date, headline, description, id }) => (
                 <SwiperSlide key={id}>
                   <BlogPost
                     variant="small"

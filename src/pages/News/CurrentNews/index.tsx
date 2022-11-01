@@ -31,13 +31,13 @@ export const CurrentNews: FC<PostProps> = ({ post }) => {
         </InfoBlock>
       </InfoBlockWrapper>
       <Headline size="h3">{headline}</Headline>
-      {blogText.map((el) =>
+      {blogText.map((el, index) =>
         el.paragraph ? (
-          <Paragraph size="p2" color={theme.colors.grey}>
+          <Paragraph size="p2" color={theme.colors.grey} key={index}>
             {el.paragraph}
           </Paragraph>
         ) : (
-          <Quotes>{el.quotes}</Quotes>
+          <Quotes key={index}>{el.quotes}</Quotes>
         )
       )}
       <InfoBlockWrapper>

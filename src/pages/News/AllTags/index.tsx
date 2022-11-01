@@ -1,20 +1,38 @@
-import { PopularNewsContainer, TagsContainer } from '../styled';
+import { TagsSection, TagsContainer } from '../styled';
 
 import { Headline } from '@/components/Headline';
 import { Tag } from '@/components/Tag';
-import { dataBlog } from '@/pages/Home/Blog/data';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import { disableAll, toggleActive } from '@/store/reducers/blogSlice';
 
 export const AllTags = () => {
-  const allTags = [...new Set(dataBlog.map(({ tags }) => tags).flat())];
+  const { filterPosts } = useAppSelector((state) => state.blogSlice);
+  const dispatch = useAppDispatch();
+
+  const clickHandler = (el: string) => () => {
+    dispatch(toggleActive(el));
+  };
+
+  const disableAllHandle = () => {
+    dispatch(disableAll());
+  };
 
   return (
-    <PopularNewsContainer>
+    <TagsSection>
       <Headline size="h4">Tags</Headline>
       <TagsContainer>
-        {allTags.map((el, index) => (
-          <Tag key={index}>{el}</Tag>
+        <Tag
+          isActive={filterPosts.filter(({ isActive }) => isActive).length > 0 ? false : true}
+          onClick={disableAllHandle}
+        >
+          All topics
+        </Tag>
+        {filterPosts.map(({ tag, isActive }, index) => (
+          <Tag key={index} isActive={isActive} onClick={clickHandler(tag)}>
+            {tag}
+          </Tag>
         ))}
       </TagsContainer>
-    </PopularNewsContainer>
+    </TagsSection>
   );
 };

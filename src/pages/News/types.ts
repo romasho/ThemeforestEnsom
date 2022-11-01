@@ -1,4 +1,4 @@
-import { DataBlogType } from '../Home/Blog/data';
+import { DataBlogType } from '@/store/reducers/blogSlice/data';
 
 export interface PostsProps {
   posts: DataBlogType[];

@@ -20,6 +20,10 @@ export const Features = memo(() => {
     navigate(ROUTE_NAMES.SOLUTIONS);
   };
 
+  const navigateToServices = () => {
+    navigate(ROUTE_NAMES.SOLUTIONS);
+  };
+
   return (
     <>
       <Section background="light">
@@ -35,7 +39,9 @@ export const Features = memo(() => {
               laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
               architecto beatae vitae dicta sunt explicabo.
             </Paragraph>
-            <Button variant="fill">Discover more</Button>
+            <Button variant="fill" onClick={navigateToServices}>
+              Discover more
+            </Button>
           </BaseBlock>
         </Container>
       </Section>

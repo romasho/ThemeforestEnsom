@@ -9,7 +9,7 @@ export const NavBar = () => {
         Home
       </NavListItem>
       <NavListItem to={ROUTE_NAMES.SOLUTIONS}>Solutions</NavListItem>
-      <NavListItem to="/pages">Pages</NavListItem>
+      <NavListItem to="/">Pages</NavListItem>
       <NavListItem to={ROUTE_NAMES.SERVICES}>Services</NavListItem>
       <NavListItem to={ROUTE_NAMES.BLOG}>Blog</NavListItem>
       <NavListItem to={ROUTE_NAMES.CONTACTS}>Contacts</NavListItem>
