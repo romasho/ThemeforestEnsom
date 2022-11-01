@@ -13,7 +13,7 @@ import { Container } from '@/layouts/Container';
 import { Subscribe } from '@/components/Subscribe';
 import { testimonialsData } from '@/components/Testimonials/data';
 
-import { TeamContainer, X } from './styled';
+import { TeamContainer, ImageContainer, Link } from './styled';
 
 export const OurTeam = () => {
   return (
@@ -42,16 +42,16 @@ export const OurTeam = () => {
         <Container>
           <TeamContainer>
             {testimonialsData.map(({ avatar, name, position, id }) => (
-              <NavLink to={name} key={id}>
-                <X img={avatar}>
+              <Link to={name} key={id}>
+                <ImageContainer img={avatar}>
                   <Headline size="h5" color={theme.colors.white}>
                     {name}
                   </Headline>
                   <Paragraph size="p2" color={theme.colors.white}>
                     {position}
                   </Paragraph>
-                </X>
-              </NavLink>
+                </ImageContainer>
+              </Link>
             ))}
           </TeamContainer>
         </Container>
