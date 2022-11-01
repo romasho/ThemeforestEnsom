@@ -13,7 +13,7 @@ import { SwiperWrapper } from '@/layouts';
 
 import { PostsContainer } from './styled';
 import 'swiper/css';
-import { data } from './data';
+import { dataBlog } from './data';
 
 SwiperCore.use([Navigation]);
 
@@ -39,12 +39,12 @@ export const Blog = () => {
         <PostsContainer>
           <SwiperWrapper>
             <Swiper slidesPerView={3} onBeforeInit={onBeforeInit} spaceBetween={30}>
-              {data.map(({ img, data, headline, description, id }) => (
+              {dataBlog.map(({ img, date, headline, description, id }) => (
                 <SwiperSlide key={id}>
                   <BlogPost
                     variant="small"
                     img={img}
-                    data={data}
+                    data={date}
                     headline={headline}
                     description={description}
                   />

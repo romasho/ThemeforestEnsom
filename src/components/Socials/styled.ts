@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const SocialItem = styled.li`
-  width: 24px;
-  height: 24px;
-
+  height: auto;
   svg {
     transition: 0.3s;
     fill: ${(props) => props.theme.colors.white};
@@ -13,7 +11,11 @@ export const SocialItem = styled.li`
   }
 `;
 
-export const SocialsContainer = styled.ul`
+interface SocialsContainerProps {
+  small: boolean | undefined;
+}
+
+export const SocialsContainer = styled.ul<SocialsContainerProps>`
   display: flex;
   max-width: 225px;
   padding: 0;
@@ -21,5 +23,10 @@ export const SocialsContainer = styled.ul`
   justify-content: space-between;
   list-style: none;
   margin 0;
-  gap: 15px;
+  gap: ${(props) => (props.small ? '8px' : '15px')};;
+
+  svg {
+    width: ${(props) => (props.small ? '15px' : '25px')};
+    height: ${(props) => (props.small ? '15px' : '25px')};
+  }
 `;

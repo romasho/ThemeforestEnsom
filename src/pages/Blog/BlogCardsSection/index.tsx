@@ -4,10 +4,10 @@ import { SectionColumn } from '@/layouts/Section';
 import { DescriptionPage } from '@/components/DescriptionPage';
 import { Container } from '@/layouts/Container';
 import { BlogPost } from '@/pages/Home/BlogPost';
-import { data } from '@/pages/Home/Blog/data';
+import { dataBlog } from '@/pages/Home/Blog/data';
 import { Buttons } from '@/components/Button';
 
-import { AlignToCenter } from './styled';
+import { AlignToCenter, Link } from './styled';
 
 export const BlogCardsSection = () => {
   const [index, setIndex] = useState(6);
@@ -24,19 +24,20 @@ export const BlogCardsSection = () => {
         }
       />
       <Container>
-        {data.slice(0, index).map(({ img, data, headline, description, id, tags }) => (
-          <BlogPost
-            key={id}
-            variant="medium"
-            img={img}
-            data={data}
-            headline={headline}
-            description={description}
-            tags={tags}
-          />
+        {dataBlog.slice(0, index).map(({ img, date, headline, description, id, tags }) => (
+          <Link key={id} to={headline}>
+            <BlogPost
+              variant="medium"
+              img={img}
+              data={date}
+              headline={headline}
+              description={description}
+              tags={tags}
+            />
+          </Link>
         ))}
         <AlignToCenter>
-          {data.length > index && (
+          {dataBlog.length > index && (
             <Buttons variant="little" onClick={addPosts}>
               More articles
             </Buttons>

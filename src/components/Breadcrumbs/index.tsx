@@ -14,7 +14,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({ position, color = 'black' })
   const pageName = (str: string) => {
     const mas = str.split('/');
     const pageName = mas[mas.length - 1];
-    return (pageName[0].toUpperCase() + pageName.slice(1)).replace('%20', ' ');
+    return (pageName[0].toUpperCase() + pageName.slice(1)).replaceAll('%20', ' ');
   };
 
   return (

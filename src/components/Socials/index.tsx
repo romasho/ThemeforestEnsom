@@ -29,15 +29,16 @@ interface SocialsProps {
     dribbble?: string;
     behance?: string;
   };
+  small?: boolean;
 }
 
-export const Socials: FC<SocialsProps> = ({ socials }) => {
+export const Socials: FC<SocialsProps> = ({ socials, small }) => {
   const { facebook, twitter, linkedin, youtube, dribbble, behance } = socials;
 
   Object.keys(socials).map;
 
   return (
-    <SocialsContainer>
+    <SocialsContainer small={small}>
       {(Object.keys(socials) as Array<keyof typeof socials>).map((el, index) => {
         return (
           <SocialItem key={index}>

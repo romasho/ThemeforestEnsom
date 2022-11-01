@@ -14,6 +14,7 @@ import { AboutUs } from '@/pages/AboutUs';
 import { OurTeam } from '@/pages/OurTeam';
 import { TeamMember } from '@/pages/TeamMember';
 import { FAQs } from '@/pages/FAQs';
+import { News } from '@/pages/News';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path={ROUTE_NAMES.OUR_TEAM} element={<OurTeam />} />
         <Route path={'Our%20Team/:userId'} element={<TeamMember />} />
         <Route path={ROUTE_NAMES.FAQS} element={<FAQs />} />
+        <Route path={ROUTE_NAMES.NEWS} element={<News />} />
       </Routes>
     </BrowserRouter>
   );

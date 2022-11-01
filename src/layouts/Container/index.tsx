@@ -32,6 +32,7 @@ export const CenterAlignContainer = styled(Container)`
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  text-align: center;
 `;
 
 export const WithoutPaddingContainer = styled(Container)`

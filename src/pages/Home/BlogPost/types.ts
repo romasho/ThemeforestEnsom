@@ -4,5 +4,5 @@ export interface BlogPostType {
   headline: string;
   description: string;
   tags?: string[];
-  variant: 'big' | 'medium' | 'small';
+  variant: 'big' | 'medium' | 'small' | 'without_description' | 'right_text';
 }

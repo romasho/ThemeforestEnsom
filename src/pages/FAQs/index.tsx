@@ -25,7 +25,6 @@ export const FAQs = () => {
           ))}
         </Container>
       </Section>
-
       <Contacts />
       <Subscribe />
     </PageLayout>

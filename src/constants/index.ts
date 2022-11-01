@@ -8,4 +8,5 @@ export const ROUTE_NAMES = {
   ABOUT_US: '/About%20Us',
   OUR_TEAM: '/Our%20Team',
   FAQS: '/FAQs',
+  NEWS: '/Blog/:userId',
 };
