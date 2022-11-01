@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { Buttons } from '../Button';
 import { NavBar } from '../Navigation';
 
@@ -7,7 +9,7 @@ import logo from '@/assets/logo_blue.png';
 
 import { Img, HeaderWrapper } from './components.styled';
 
-export const Header = () => {
+export const Header = memo(() => {
   return (
     <HeaderWrapper>
       <HeaderContainer>
@@ -19,4 +21,4 @@ export const Header = () => {
       </HeaderContainer>
     </HeaderWrapper>
   );
-};
+});

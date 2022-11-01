@@ -1,13 +1,14 @@
-import { Headline } from '../Headline';
-import { Paragraph } from '../Paragraph';
+import { memo } from 'react';
 
+import { Headline } from '@/components/Headline';
+import { Paragraph } from '@/components/Paragraph';
 import { SubscribeContainer } from '@/layouts/Container';
 import { SectionWithBorder } from '@/layouts/Section';
 import { BaseBlock } from '@/pages/Home/styled';
 
 import { Input, Button, Form } from './styled';
 
-export const Subscribe = () => {
+export const Subscribe = memo(() => {
   return (
     <SectionWithBorder background="secondary">
       <SubscribeContainer>
@@ -27,4 +28,4 @@ export const Subscribe = () => {
       </SubscribeContainer>
     </SectionWithBorder>
   );
-};
+});

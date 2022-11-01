@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 import { NavigationOptions } from 'swiper/types';
 
 import { ArrowControls } from '../ArrowControls';
@@ -18,7 +18,7 @@ import 'swiper/css';
 
 SwiperCore.use([Navigation]);
 
-export const Testimonials = () => {
+export const Testimonials = memo(() => {
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -56,4 +56,4 @@ export const Testimonials = () => {
       </Container>
     </Section>
   );
-};
+});

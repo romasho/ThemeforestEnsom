@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { PageLayout } from '@/layouts/Pages';
 import { Information } from '@/components/Information';
 import { Features } from '@/pages/Home/Features';
@@ -9,7 +11,7 @@ import { Blog } from '@/pages/Home/Blog';
 import { Contacts } from '@/components/Contacts';
 import { Subscribe } from '@/components/Subscribe';
 
-export const Home = () => {
+export const Home = memo(() => {
   return (
     <PageLayout>
       <Information />
@@ -23,4 +25,4 @@ export const Home = () => {
       <Subscribe />
     </PageLayout>
   );
-};
+});

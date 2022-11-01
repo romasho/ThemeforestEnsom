@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Headline } from '../Headline';
@@ -12,7 +13,7 @@ import img from '@/assets/img/img_11.png';
 
 import { DescriptionWrapper, PositionedButton, BackgroundSection } from './styled';
 
-export const Information = () => {
+export const Information = memo(() => {
   const navigate = useNavigate();
 
   const navigateToServices = () => {
@@ -42,4 +43,4 @@ export const Information = () => {
       <BackgroundSection background="dark" img={img} />
     </>
   );
-};
+});

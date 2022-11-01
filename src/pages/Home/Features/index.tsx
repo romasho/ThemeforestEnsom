@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { memo } from 'react';
 
 import { Button } from '../../../components/Button/styled';
 import { Headline } from '../../../components/Headline';
@@ -12,7 +13,7 @@ import { ROUTE_NAMES } from '@/constants';
 
 import { BackgroundHalfSection } from './styled';
 
-export const Features = () => {
+export const Features = memo(() => {
   const navigate = useNavigate();
 
   const navigateToSolutions = () => {
@@ -56,4 +57,4 @@ export const Features = () => {
       </Section>
     </>
   );
-};
+});

@@ -1,12 +1,13 @@
-import { Headline } from '../Headline';
-import { Paragraph } from '../Paragraph';
-import { Buttons } from '../Button';
+import { memo } from 'react';
 
+import { Headline } from '@/components/Headline';
+import { Paragraph } from '@/components/Paragraph';
+import { Buttons } from '@/components/Button';
 import { CenterAlignContainer } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
 import { BaseBlockCenter } from '@/pages/Home/styled';
 
-export const Contacts = () => {
+export const Contacts = memo(() => {
   return (
     <Section background="dark">
       <CenterAlignContainer>
@@ -23,4 +24,4 @@ export const Contacts = () => {
       </CenterAlignContainer>
     </Section>
   );
-};
+});

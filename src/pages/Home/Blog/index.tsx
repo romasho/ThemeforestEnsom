@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import { useRef } from 'react';
 import { NavigationOptions } from 'swiper/types';
+import { memo } from 'react';
 
 import { BlogPost } from '../BlogPost';
 
@@ -17,7 +18,7 @@ import { dataBlog } from './data';
 
 SwiperCore.use([Navigation]);
 
-export const Blog = () => {
+export const Blog = memo(() => {
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -56,4 +57,4 @@ export const Blog = () => {
       </Container>
     </Section>
   );
-};
+});

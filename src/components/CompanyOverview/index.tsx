@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { CompanyNumbers } from '../CompanyNumbers';
 import { Headline } from '../Headline';
 import { Paragraph } from '../Paragraph';
@@ -8,7 +10,7 @@ import { BaseBlockRow, BaseBlock, BaseBlockRowImages } from '@/pages/Home/styled
 
 import { data, logos } from './data';
 
-export const CompanyOverview = () => {
+export const CompanyOverview = memo(() => {
   return (
     <>
       <Section background="light">
@@ -37,4 +39,4 @@ export const CompanyOverview = () => {
       </Section>
     </>
   );
-};
+});

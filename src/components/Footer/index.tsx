@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { Paragraph } from '../Paragraph';
 import { Img } from '../Header/components.styled';
 import { Socials } from '../Socials';
@@ -17,7 +19,7 @@ import {
   ContactContainer,
 } from './styled';
 
-export const Footer = () => {
+export const Footer = memo(() => {
   return (
     <FooterWrapper>
       <FooterContainer>
@@ -80,4 +82,4 @@ export const Footer = () => {
       </FooterBorder>
     </FooterWrapper>
   );
-};
+});

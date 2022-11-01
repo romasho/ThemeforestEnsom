@@ -1,6 +1,7 @@
-import { Headline } from '../../../components/Headline';
-import { Paragraph } from '../../../components/Paragraph';
+import { memo } from 'react';
 
+import { Headline } from '@/components/Headline';
+import { Paragraph } from '@/components/Paragraph';
 import { BaseBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
@@ -9,7 +10,7 @@ import { Card } from '@/layouts/Card';
 import { benefitsData } from './data';
 import { CardContainer } from './styled';
 
-export const Benefits = () => {
+export const Benefits = memo(() => {
   return (
     <Section background="dark">
       <Container>
@@ -37,4 +38,4 @@ export const Benefits = () => {
       </Container>
     </Section>
   );
-};
+});
