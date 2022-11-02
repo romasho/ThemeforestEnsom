@@ -35,8 +35,8 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-  font: ${(props) => props.theme.font.paragraph.paragraph2};
-  color: ${(props) => props.theme.colors.black};
+  font: ${({ theme }) => theme.font.paragraph.paragraph2};
+  color: ${({ theme }) => theme.colors.black};
   display: flex;
   align-items: center;
   gap: 10px;
@@ -44,7 +44,7 @@ export const Li = styled.li`
   svg {
     width: 25px;
     height: 25px;
-    fill: ${(props) => props.theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
   }
 `;
 

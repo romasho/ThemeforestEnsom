@@ -22,20 +22,20 @@ export const InfoBlock = styled.span`
   display: flex;
   gap: 8px;
   align-items: center;
-  color: ${(props) => props.theme.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
 
   svg {
-    fill: ${(props) => props.theme.colors.grey};
+    fill: ${({ theme }) => theme.colors.grey};
   }
 `;
 
 export const Quotes = styled.div`
   max-width: 540px;
   width: 100%;
-  font: ${(props) => props.theme.font.paragraph.paragraph1};
+  font: ${({ theme }) => theme.font.paragraph.paragraph1};
   letter-spacing: -0.015em;
-  color: ${(props) => props.theme.colors.black};
-  border-left: 4px solid ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => theme.colors.black};
+  border-left: 4px solid ${({ theme }) => theme.colors.primary};
   padding-left: 35px;
   margin-left: 95px;
 `;

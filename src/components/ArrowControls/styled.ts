@@ -11,19 +11,19 @@ export const ArrowButton = styled.button`
   height: 60px;
   border: none;
   border-radius: 20px;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
   cursor: pointer;
   transition: 0.3s;
 
   svg {
     width: 30px;
     height: 30px;
-    fill: ${(props) => props.theme.colors.secondary};
+    fill: ${({ theme }) => theme.colors.secondary};
   }
 
   &:disabled {
     svg {
-      fill: ${(props) => props.theme.colors.helperBlue3};
+      fill: ${({ theme }) => theme.colors.helperBlue3};
     }
   }
 `;

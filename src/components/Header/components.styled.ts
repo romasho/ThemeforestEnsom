@@ -6,5 +6,5 @@ export const Img = styled.img`
 `;
 
 export const HeaderWrapper = styled.header`
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
 `;

@@ -7,9 +7,9 @@ interface Props {
 }
 
 export const Tag = styled.span<Partial<Props>>`
-  border: 1px solid ${(props) => props.theme.colors.background};
+  border: 1px solid ${({ theme }) => theme.colors.background};
   border-radius: 6px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   font-weight: 800;
   font-size: 14px;
   line-height: 24px;
@@ -27,9 +27,9 @@ export const Tag = styled.span<Partial<Props>>`
       : ''};
 
   &:hover {
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 

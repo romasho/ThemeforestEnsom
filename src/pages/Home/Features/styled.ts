@@ -7,7 +7,7 @@ interface BackgroundHalfSectionProps {
 }
 
 export const BackgroundHalfSection = styled(Section)<BackgroundHalfSectionProps>`
-  background-image: url(${(props) => props.img});
+  background-image: url(${({ img }) => img});
   height: 740px;
   width: 48vw;
   margin-right: 45px;

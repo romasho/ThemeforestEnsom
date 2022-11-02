@@ -48,9 +48,9 @@ export const Typography = styled.h6<HeadlineProps>`
         line-height: 110%;`;
     }
   }}
-  color: ${(props) => props.color};
+  color: ${({ color }) => color};
 
   span {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;

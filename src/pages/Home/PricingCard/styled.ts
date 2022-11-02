@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  box-shadow: ${(props) => props.theme.boxShadows.shadowCard3};
+  box-shadow: ${({ theme }) => theme.boxShadows.shadowCard3};
   width: 255px;
   height: 525px;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 6px;
   display: flex;
   row-gap: 30px;
@@ -23,13 +23,13 @@ export const AdvantagesList = styled.ul`
 `;
 
 export const AdvantagesItem = styled.li`
-  font: ${(props) => props.theme.font.paragraph.paragraph3};
-  color: ${(props) => props.theme.colors.black};
+  font: ${({ theme }) => theme.font.paragraph.paragraph3};
+  color: ${({ theme }) => theme.colors.black};
   display: flex;
   align-items: center;
 
   svg {
-    fill: ${(props) => props.theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
     margin-right: 10px;
   }
 `;

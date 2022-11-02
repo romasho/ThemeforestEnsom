@@ -8,7 +8,7 @@ export const NavListItem = styled(NavLink)`
   font-size: 14px;
   line-height: 24px;
   text-decoration: none;
-  color: ${(props) => props.theme.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
 
   &:hover {
     color: ${(props) =>

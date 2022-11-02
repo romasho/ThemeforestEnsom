@@ -15,7 +15,7 @@ export const BaseBlock = styled.div`
   row-gap: 30px;
 
   p {
-    color: ${(props) => props.theme.colors.grey};
+    color: ${({ theme }) => theme.colors.grey};
   }
 `;
 

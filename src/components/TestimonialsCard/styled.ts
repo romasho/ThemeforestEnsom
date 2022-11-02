@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   padding: 35px;
   row-gap: 25px;
-  box-shadow: ${(props) => props.theme.boxShadows.shadowCard3};
+  box-shadow: ${({ theme }) => theme.boxShadows.shadowCard3};
   max-width: 540px;
   margin: 10px;
 `;

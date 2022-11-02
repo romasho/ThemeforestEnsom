@@ -6,7 +6,7 @@ export const HeadlineWrapper = styled.div`
   gap: 7px;
 
   svg {
-    fill: ${(props) => props.theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
   }
 `;
 

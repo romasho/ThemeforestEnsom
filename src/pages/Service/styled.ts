@@ -11,10 +11,10 @@ export const ContainerHeadline = styled(Container)`
 
 export const Link = styled.a`
   text-decoration: none;
-  font: ${(props) => props.theme.font.paragraph.paragraph1};
+  font: ${({ theme }) => theme.font.paragraph.paragraph1};
   padding: 20px 0;
-  border-bottom: 1px solid ${(props) => props.theme.colors.grey};
-  color: ${(props) => props.theme.colors.black};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.black};
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -27,10 +27,10 @@ export const Link = styled.a`
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
 
     svg {
-      fill: ${(props) => props.theme.colors.primary};
+      fill: ${({ theme }) => theme.colors.primary};
     }
   }
 `;

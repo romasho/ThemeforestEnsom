@@ -20,5 +20,5 @@ export const Numbers = styled.h2`
   align-items: center;
   letter-spacing: -0.025em;
   height: 56px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
 `;

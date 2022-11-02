@@ -41,7 +41,7 @@ export const Dropdown: FC<Props> = ({ label, items }) => {
 const Control = styled.button`
   display: flex;
   align-items: center;
-  font: ${(props) => props.theme.font.headline.headline7};
+  font: ${({ theme }) => theme.font.headline.headline7};
   text-decoration: none;
   border: none;
   background: unset;
@@ -65,13 +65,13 @@ const Control = styled.button`
 `;
 
 const Menu = styled.menu`
-  font: ${(props) => props.theme.font.headline.headline7};
+  font: ${({ theme }) => theme.font.headline.headline7};
   margin: 1px 0 0;
   background: white;
   position: absolute;
   z-index: 2;
   border-radius: 6px;
-  ${(props) => props.theme.boxShadows.shadowDropdown};
+  ${({ theme }) => theme.boxShadows.shadowDropdown};
 
   a {
     padding: 10px 20px;

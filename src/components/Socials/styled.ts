@@ -4,9 +4,9 @@ export const SocialItem = styled.li`
   height: auto;
   svg {
     transition: 0.3s;
-    fill: ${(props) => props.theme.colors.white};
+    fill: ${({ theme }) => theme.colors.white};
     &:hover {
-      fill: ${(props) => props.theme.colors.primary};
+      fill: ${({ theme }) => theme.colors.primary};
     }
   }
 `;

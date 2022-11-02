@@ -14,9 +14,9 @@ type LinkProps = {
 
 export const Link = styled.a<LinkProps>`
   text-decoration: none;
-  font: ${(props) => props.theme.font.headline.headline7};
+  font: ${({ theme }) => theme.font.headline.headline7};
   padding: 18px 30px;
-  color: ${(props) => props.theme.colors.black};
-  border-left: 5px solid ${(props) => props.theme.colors.helperBlue3};
+  color: ${({ theme }) => theme.colors.black};
+  border-left: 5px solid ${({ theme }) => theme.colors.helperBlue3};
   ${(props) => (props.active ? `border-left: 5px solid ${props.theme.colors.primary};` : '')}
 `;

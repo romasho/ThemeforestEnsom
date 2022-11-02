@@ -20,8 +20,8 @@ export const Tab = styled.button<TabProps>`
   padding: 4px 10px;
   width: 41px;
   height: 32px;
-  color: ${(props) => props.theme.colors.white};
-  font: ${(props) => props.theme.font.headline.headline7};
+  color: ${({ theme }) => theme.colors.white};
+  font: ${({ theme }) => theme.font.headline.headline7};
   background: ${(props) =>
     props.isActive
       ? props.theme.colors.primary

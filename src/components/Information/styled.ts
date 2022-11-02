@@ -20,7 +20,7 @@ interface BackgroundSectionProps {
 }
 
 export const BackgroundSection = styled(Section)<BackgroundSectionProps>`
-  background-image: url(${(props) => props.img});
+  background-image: url(${({ img }) => img});
   width: 100%;
   height: 590px;
   background-position-x: center;

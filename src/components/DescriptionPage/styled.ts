@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Text = styled.p`
-  font: ${(props) => props.theme.font.paragraph.paragraph1};
-  color: ${(props) => props.theme.colors.grey};
+  font: ${({ theme }) => theme.font.paragraph.paragraph1};
+  color: ${({ theme }) => theme.colors.grey};
   max-width: 730px;
   text-align: center;
   letter-spacing: -0.015em;

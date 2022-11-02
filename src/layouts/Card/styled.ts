@@ -8,10 +8,10 @@ export const CardContainer = styled.div<Partial<CardProps>>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 25px;
   row-gap: 10px;
-  box-shadow: ${(props) => props.theme.boxShadows.shadowCard3};
+  box-shadow: ${({ theme }) => theme.boxShadows.shadowCard3};
   ${(props) => {
     switch (props.variant) {
       case 'big_icon':
@@ -41,7 +41,7 @@ export const CardContainer = styled.div<Partial<CardProps>>`
   max-width: 540px;
 
   p {
-    color: ${(props) => props.theme.colors.grey};
+    color: ${({ theme }) => theme.colors.grey};
   }
 `;
 
@@ -59,6 +59,6 @@ export const IconWrapper = styled.span<Partial<CardProps>>`
           height: 45px;`;
       }
     }}
-    fill: ${(props) => props.theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
   }
 `;

@@ -25,6 +25,6 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   padding-left: 15px;
   padding-bottom: 25px;
-  font: ${(props) => props.theme.font.paragraph.paragraph1};
-  color: ${(props) => props.theme.colors.grey};
+  font: ${({ theme }) => theme.font.paragraph.paragraph1};
+  color: ${({ theme }) => theme.colors.grey};
 `;

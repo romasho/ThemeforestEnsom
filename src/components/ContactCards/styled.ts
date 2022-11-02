@@ -23,13 +23,13 @@ export const ContactCardContainer = styled.div<ContactCardsProps>`
   display: flex;
   gap: 50px;
 
-  ${(props) =>
-    props.direction === 'column'
+  ${({ direction }) =>
+    direction === 'column'
       ? ''
       : `gap: 15px;
   flex-direction: column;`}
 
   svg {
-    fill: ${(props) => props.iconColor};
+    fill: ${({ iconColor }) => iconColor};
   }
 `;

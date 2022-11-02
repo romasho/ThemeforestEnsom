@@ -22,7 +22,7 @@ export const InputElement = styled.input<InputElementProps>`
   padding: 15px 25px;
   outline: none;
   width: ${(props) => (props.fullWidth ? '100%' : '255px')};
-  font: ${(props) => props.theme.font.paragraph.paragraph3bold};
+  font: ${({ theme }) => theme.font.paragraph.paragraph3bold};
   ${(props) => (props.variant === 'textarea' ? ' resize: none; height: 140px' : '')};
 
   &:hover {

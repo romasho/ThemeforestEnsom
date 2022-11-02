@@ -14,7 +14,7 @@ export const Button = styled.button<ButtonPropsType>`
   width: 190px;
   height: 54px;
   padding: 0;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   border-radius: 6px;
   outline: 0;
@@ -24,7 +24,7 @@ export const Button = styled.button<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: ${({ icon }) => (icon ? 'center' : 'space-around')};
-  font: ${(props) => props.theme.font.headline.headline6};
+  font: ${({ theme }) => theme.font.headline.headline6};
 
   &:hover {
     text-decoration: none;
@@ -86,13 +86,13 @@ export const Button = styled.button<ButtonPropsType>`
   }}
 
   &:disabled {
-    background-color: ${(props) => props.theme.colors.grey};
+    background-color: ${({ theme }) => theme.colors.grey};
     box-shadow: none;
   }
 
   svg {
     width: 24px;
     height: 24px;
-    fill: ${(props) => props.theme.colors.white};
+    fill: ${({ theme }) => theme.colors.white};
   }
 `;

@@ -24,7 +24,7 @@ export const FooterContainer = styled(Container)`
 
 export const SubscribeContainer = styled(Container)`
   padding: 80px 0;
-  color: ${(props) => props.theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const CenterAlignContainer = styled(Container)`

@@ -21,6 +21,6 @@ export const BreadcrumbsContainer = styled.div<BreadcrumbsProps>`
       : ''}
 
   svg {
-    fill: ${(props) => props.theme.colors.grey};
+    fill: ${({ theme }) => theme.colors.grey};
   }
 `;

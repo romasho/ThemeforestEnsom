@@ -10,23 +10,23 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 4px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   cursor: pointer;
-  font: ${(props) => props.theme.font.headline.headline7};
+  font: ${({ theme }) => theme.font.headline.headline7};
   letter-spacing: -0.01em;
   transition: 0.3s;
 
   svg {
     width: 20px;
     height: 20px;
-    fill: ${(props) => props.theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.black};
+    color: ${({ theme }) => theme.colors.black};
 
     svg {
-      fill: ${(props) => props.theme.colors.black};
+      fill: ${({ theme }) => theme.colors.black};
     }
   }
 `;
