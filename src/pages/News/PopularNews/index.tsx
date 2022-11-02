@@ -1,17 +1,21 @@
-import { FC } from 'react';
-
-import { PostsProps } from '../types';
 import { AllTags } from '../AllTags';
 import { PopularNewsContainer } from '../styled';
 
 import { Headline } from '@/components/Headline';
 import { BlogPost } from '@/pages/Home/BlogPost';
+import { useAppSelector } from '@/hooks/redux';
 
-export const PopularNews: FC<PostsProps> = ({ posts }) => {
+export const PopularNews = () => {
+  const { data } = useAppSelector((state) => state.blogSlice);
+  const popularNews = data
+    .slice()
+    .sort((a, b) => a.views - b.views)
+    .slice(0, 4);
+
   return (
     <PopularNewsContainer>
       <Headline size="h4">Popular posts</Headline>
-      {posts.map(({ img, date, headline, id }) => (
+      {popularNews.map(({ img, date, headline, id }) => (
         <BlogPost
           key={id}
           img={img}

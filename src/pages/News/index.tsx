@@ -19,8 +19,6 @@ export const News = () => {
 
   const [currentNews] = data.filter((el) => el.headline === userId);
 
-  const popularNews = data.sort((a, b) => b.views - a.views).slice(0, 4);
-
   const { tags } = currentNews;
   const relatedPosts = data
     .filter((elem) => tags.reduce((acc, el) => (elem.tags.includes(el) ? true : acc), false))
@@ -37,7 +35,7 @@ export const News = () => {
       <Section background="light">
         <StyledContainer>
           <CurrentNews post={currentNews} />
-          <PopularNews posts={popularNews} />
+          <PopularNews />
           <RelatedNews posts={relatedPosts} />
         </StyledContainer>
       </Section>
