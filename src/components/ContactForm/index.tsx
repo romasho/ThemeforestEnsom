@@ -23,7 +23,6 @@ export const ContactForm = () => {
   });
 
   function onSubmit(data: IFormData) {
-    console.log(data);
     reset();
   }
 
