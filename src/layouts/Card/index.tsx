@@ -1,17 +1,19 @@
 import { FC, FunctionComponent, SVGProps } from 'react';
 
-import { Headline } from '@/components/Headline';
 import { Icon } from '@/components/Icon';
 import { Paragraph } from '@/components/Paragraph';
 import { Link } from '@/components/Link';
 
-import { CardContainer, IconWrapper } from './styled';
+import { CardContainer, IconWrapper, Typography, Text } from './styled';
 
-export interface CardProps {
+export interface VariantProps {
+  variant: 'right_text' | 'center_text' | 'big_icon' | 'small_card';
+}
+
+export interface CardProps extends VariantProps {
   icon: FunctionComponent<SVGProps<SVGSVGElement>>;
   headline: string;
   description: string;
-  variant: 'right_text' | 'center_text' | 'big_icon' | 'small_card';
 }
 
 export const Card: FC<CardProps> = ({ variant, icon, headline, description }) => {
@@ -20,10 +22,8 @@ export const Card: FC<CardProps> = ({ variant, icon, headline, description }) =>
       <IconWrapper variant={variant}>
         <Icon icon={icon} />
       </IconWrapper>
-      <Headline as="h5" size={variant === 'small_card' ? 'h5' : 'h4'}>
-        {headline}
-      </Headline>
-      <Paragraph size={variant === 'small_card' ? 'p3' : 'p2'}>{description}</Paragraph>
+      <Typography variant={variant}>{headline}</Typography>
+      <Text variant={variant}>{description}</Text>
       {variant === 'big_icon' && <Link to={headline} />}
     </CardContainer>
   );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CardProps } from '.';
+import { CardProps, VariantProps } from '.';
 
 export const CardContainer = styled.div<Partial<CardProps>>`
   width: 255px;
@@ -31,6 +31,12 @@ export const CardContainer = styled.div<Partial<CardProps>>`
         align-items: center;
         text-align: center;
         margin: 10px 0px 10px 10px;
+
+        @media (max-width: 768px) {
+          width: 272px;
+          height: auto;
+          margin: 10px 0px;
+        }
         `;
     }
   }}
@@ -53,8 +59,51 @@ export const IconWrapper = styled.span<Partial<CardProps>>`
           return `    
           width: 45px;
           height: 45px;`;
+        case 'center_text':
+          return `
+          @media (max-width: 768px) {
+            width: 36px;
+            height: 36px;
+          }
+          `;
       }
     }}
     fill: ${({ theme }) => theme.colors.primary};
   }
+`;
+
+export const Typography = styled.h6<VariantProps>`
+  letter-spacing: -0.015em;
+  ${({ variant, theme }) => {
+    switch (variant) {
+      case 'small_card':
+        return `
+        font: ${theme.font.headline.headline5};`;
+      default:
+        return `    
+        font: ${theme.font.headline.headline4};
+        @media (max-width: 768px) {
+          font: ${theme.font.headline.headline5}
+        }
+        `;
+    }
+  }};
+`;
+
+export const Text = styled.p<VariantProps>`
+  letter-spacing: -0.015em;
+  ${({ variant, theme }) => {
+    switch (variant) {
+      case 'small_card':
+        return `
+        font: ${theme.font.paragraph.paragraph3};`;
+      default:
+        return `    
+        font: ${theme.font.paragraph.paragraph2};
+        @media (max-width: 768px) {
+          font: ${theme.font.paragraph.paragraph3}
+        }
+        `;
+    }
+  }};
 `;

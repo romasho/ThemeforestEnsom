@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useMediaQuery } from 'react-responsive';
 
 import { BaseBlock, BaseBlockRow, BaseBlockWidth } from '../Home/styled';
 
@@ -19,11 +19,22 @@ import { servicesData } from '@/pages/Services/ServicesSection/data';
 import { ROUTE_NAMES } from '@/constants';
 import { SwiperWrapper } from '@/layouts';
 
-import { BackgroundSection, Link, ImgWrapper } from './styled';
+import { BackgroundSection, Link, ImgWrapper, WrapSection } from './styled';
 import { Testimonials } from './Testimonials';
 
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 3,
+  },
+};
+
 export const AboutUs = () => {
-  const obj = useLocation();
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
 
   return (
     <PageLayout>
@@ -39,7 +50,7 @@ export const AboutUs = () => {
       <BackgroundSection background="dark" img={img} />
       <Section background="dark">
         <CenterAlignContainer>
-          <Headline as="h2" size="h2">
+          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
             We provide services that guarantee your success
           </Headline>
           <BaseBlockRow>
@@ -48,7 +59,7 @@ export const AboutUs = () => {
             ))}
           </BaseBlockRow>
           <BaseBlock>
-            <Paragraph size="p1">
+            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
               tempor quam, non mollis quam finibus nec.
@@ -56,17 +67,17 @@ export const AboutUs = () => {
           </BaseBlock>
         </CenterAlignContainer>
       </Section>
-      <Section background="light">
+      <WrapSection background="light">
         <CenterAlignContainer>
           <BaseBlockWidth>
-            <Headline size="h2">Why people chosse Ensome?</Headline>
-            <Paragraph size="p1">
+            <Headline size={isDesktopOrLaptop ? 'h3' : 'h2'}>Why people chosse Ensome?</Headline>
+            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.
             </Paragraph>
           </BaseBlockWidth>
           <SwiperWrapper>
-            <Swiper slidesPerView={3} spaceBetween={30}>
+            <Swiper slidesPerView={3} spaceBetween={30} breakpoints={breakpoints}>
               {servicesData.map(({ icon, headline, description, id }) => (
                 <SwiperSlide key={id}>
                   <Link to={ROUTE_NAMES.SERVICE + headline}>
@@ -88,7 +99,7 @@ export const AboutUs = () => {
             <img src={img} key={index} alt={'' + index} />
           ))}
         </ImgWrapper>
-      </Section>
+      </WrapSection>
       <Contacts />
       <Subscribe />
     </PageLayout>

@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { NavigationOptions } from 'swiper/types';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useMediaQuery } from 'react-responsive';
 
 import { HeadlineWrapper, ControlsWrapper } from '../styled';
 
@@ -16,7 +17,19 @@ import { BaseBlock } from '@/pages/Home/styled';
 
 SwiperCore.use([Navigation]);
 
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 2,
+  },
+};
+
 export const Testimonials = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -30,21 +43,22 @@ export const Testimonials = () => {
   return (
     <WithoutPaddingContainer>
       <HeadlineWrapper>
-        <Headline as="h2" size="h2">
+        <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
           Testimonials
         </Headline>
+        {isDesktopOrLaptop && <ArrowControls left={navPrevButton} right={navNextButton} />}
       </HeadlineWrapper>
       <ControlsWrapper>
         <BaseBlock>
-          <Paragraph size="p1">
+          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'}>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium.
           </Paragraph>
         </BaseBlock>
-        <ArrowControls left={navPrevButton} right={navNextButton} />
+        {!isDesktopOrLaptop && <ArrowControls left={navPrevButton} right={navNextButton} />}
       </ControlsWrapper>
       <SwiperWrapper>
-        <Swiper slidesPerView={2} onBeforeInit={onBeforeInit}>
+        <Swiper breakpoints={breakpoints} onBeforeInit={onBeforeInit}>
           {testimonialsData.map(({ avatar, name, position, description }) => (
             <SwiperSlide key={name}>
               <TestimonialCard
