@@ -1,13 +1,14 @@
 import { memo } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
-import { Paragraph } from '../Paragraph';
-import { Img } from '../Header/components.styled';
-import { Socials } from '../Socials';
-
+import { Paragraph } from '@/components/Paragraph';
+import { Img } from '@/components/Header/components.styled';
+import { Socials } from '@/components/Socials';
+import { DropDown } from '@/components/DropDownFooter';
 import logo from '@/assets/Logo.png';
 import { FooterContainer } from '@/layouts/Container';
 import { theme } from '@/theme';
-import { ROUTE_NAMES } from '@/constants';
+import { Link, Service } from '@/constants';
 
 import {
   FooterBorder,
@@ -17,55 +18,76 @@ import {
   NavigationLink,
   FooterHeadline,
   ContactContainer,
+  Text,
+  SocialsContainer,
 } from './styled';
 
 export const Footer = memo(() => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <FooterWrapper>
       <FooterContainer>
         <SocialWrapper>
           <Img src={logo} alt="" />
-          <Paragraph size={'p3'} color={theme.colors.grey}>
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-            laboriosam, nisi ut aliquid ex ea commodi.
-          </Paragraph>
-          <Socials
-            socials={{
-              facebook: undefined,
-              twitter: undefined,
-              linkedin: undefined,
-              youtube: undefined,
-              dribbble: undefined,
-              behance: undefined,
-            }}
-          />
+          {!isDesktopOrLaptop && (
+            <Paragraph size={'p3'} color={theme.colors.grey}>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid ex ea commodi.
+            </Paragraph>
+          )}
+          {isDesktopOrLaptop && (
+            <>
+              <DropDown title={'Quick link'} answer={Link} />
+              <DropDown title={'Service'} answer={Service} />
+              <DropDown title={'Contact info'} answer={Service} />
+            </>
+          )}
+          <SocialsContainer>
+            {isDesktopOrLaptop && <Text>Follow us</Text>}
+            <Socials
+              socials={{
+                facebook: undefined,
+                twitter: undefined,
+                linkedin: undefined,
+                youtube: undefined,
+                dribbble: undefined,
+                behance: undefined,
+              }}
+            />
+          </SocialsContainer>
         </SocialWrapper>
-        <ContactContainer>
-          <FooterHeadline>Quick link</FooterHeadline>
-          <NavigationLink to={ROUTE_NAMES.HOME}>Home</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.SOLUTIONS}>Solutions</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.BLOG}>Blog</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Contacts</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.OUR_TEAM}>Our team</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.ABOUT_US}>About us</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.SERVICES}>Services</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.FAQS}>FAQ</NavigationLink>
-        </ContactContainer>
-        <ContactContainer>
-          <FooterHeadline>Service</FooterHeadline>
-          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Pages</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Pricing</NavigationLink>
-          <NavigationLink to={ROUTE_NAMES.CONTACTS}>Site map</NavigationLink>
-        </ContactContainer>
-        <ContactContainer>
-          <FooterHeadline>Contact info</FooterHeadline>
-          <ContactLink href="mailto:ensome@info.co.us">ensome@info.co.us</ContactLink>
-          <ContactLink href="tel:+1 601-201-5580">+1 601-201-5580</ContactLink>
-          <ContactLink>
-            1642 Washington Avenue, Jackson,
-            <br /> MS, Mississippi, 39201
-          </ContactLink>
-        </ContactContainer>
+        {!isDesktopOrLaptop && (
+          <>
+            <ContactContainer>
+              <FooterHeadline>Quick link</FooterHeadline>
+              {Link.map(({ name, link }) => (
+                <NavigationLink key={name} to={link}>
+                  {name}
+                </NavigationLink>
+              ))}
+            </ContactContainer>
+            <ContactContainer>
+              <FooterHeadline>Service</FooterHeadline>
+              {Service.map(({ name, link }) => (
+                <NavigationLink key={name} to={link}>
+                  {name}
+                </NavigationLink>
+              ))}
+            </ContactContainer>
+            <ContactContainer>
+              <FooterHeadline>Contact info</FooterHeadline>
+              <ContactLink href="mailto:ensome@info.co.us">ensome@info.co.us</ContactLink>
+              <ContactLink href="tel:+1 601-201-5580">+1 601-201-5580</ContactLink>
+              <ContactLink>
+                1642 Washington Avenue, Jackson,
+                <br /> MS, Mississippi, 39201
+              </ContactLink>
+            </ContactContainer>
+          </>
+        )}
       </FooterContainer>
       <FooterBorder>
         <Paragraph size={'p3'} color={theme.colors.helperBlue2}>

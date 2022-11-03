@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const HeadlineWrapper = styled.div`
   width: 50%;
   margin: -50px 0 -30px 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
 `;
 
 export const BaseBlock = styled.div`
@@ -16,6 +21,12 @@ export const BaseBlock = styled.div`
 
   p {
     color: ${({ theme }) => theme.colors.grey};
+  }
+
+  @media (max-width: 768px) {
+    row-gap: 20px;
+    max-width: 328px;
+    margin: 0 auto;
   }
 `;
 
@@ -35,6 +46,10 @@ export const BaseBlockCenter = styled(BaseBlock)`
 
   p {
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
   }
 `;
 

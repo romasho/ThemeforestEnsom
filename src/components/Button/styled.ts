@@ -35,17 +35,20 @@ export const Button = styled.button<ButtonPropsType>`
     box-shadow: none;
   }
 
-  ${(props) => {
-    switch (props.variant) {
+  ${({ variant, theme }) => {
+    switch (variant) {
       case 'fill':
-        return '';
+        return `
+        @media (max-width: 768px) {
+          width: 100%;
+        }`;
       case 'withIcon':
         return `
         width: 168px;
         height: 45px;
         padding: 10px 14px;
         box-shadow: none;
-        font: ${props.theme.font.headline.headline7};`;
+        font: ${theme.font.headline.headline7};`;
       case 'circle':
         return `
         width: 140px;
@@ -53,7 +56,7 @@ export const Button = styled.button<ButtonPropsType>`
         border-radius: 100%;
         border: 9px solid #185CFF;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-        font: ${props.theme.font.headline.headline7};
+        font: ${theme.font.headline.headline7};
 
         &:hover {
           border: 9px solid #467dff;
@@ -62,23 +65,38 @@ export const Button = styled.button<ButtonPropsType>`
         &::before {
           content: '';
           position: absolute;
-          left: -20px;
-          top: -20px;
-          right: -20px;
-          bottom: -20px;
+          left: -19px;
+          top: -19px;
+          right: -19px;
+          bottom: -19px;
           border: 10px solid white;
           border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100px;
+          height: 100px;
+          border: 5px solid #185CFF;
+          font: ${theme.font.headline.headline8};
+
+          &::before {
+            left: -9px;
+            top: -9px;
+            right: -9px;
+            bottom: -9px;
+            border: 5px solid white;
+          }
         }
           `;
       case 'little':
         return `width: 137px;
         height: auto;
         padding: 10px 14px; 
-        font: ${props.theme.font.headline.headline7};
+        font: ${theme.font.headline.headline7};
         box-shadow: none;
         letter-spacing: -0.01em;
         &:hover {
-          background-color: ${props.theme.colors.primary};
+          background-color: ${theme.colors.primary};
           box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.18);;
         }
         `;

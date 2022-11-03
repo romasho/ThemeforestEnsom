@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import { useRef } from 'react';
 import { NavigationOptions } from 'swiper/types';
+import { useMediaQuery } from 'react-responsive';
 import { memo } from 'react';
 
 import { BlogPost } from '../BlogPost';
@@ -12,14 +13,27 @@ import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { SwiperWrapper } from '@/layouts';
 import { useAppSelector } from '@/hooks/redux';
+import { Buttons } from '@/components/Button';
 
 import { PostsContainer } from './styled';
 import 'swiper/css';
 
 SwiperCore.use([Navigation]);
 
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 3,
+  },
+};
+
 export const Blog = memo(() => {
   const { data } = useAppSelector((state) => state.blogSlice);
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -34,26 +48,42 @@ export const Blog = memo(() => {
   return (
     <Section background="light">
       <Container>
-        <Headline as="h2" size="h2">
+        <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
           Our Blog
         </Headline>
-        <ArrowControls left={navPrevButton} right={navNextButton} />
+        {!isDesktopOrLaptop && <ArrowControls left={navPrevButton} right={navNextButton} />}
         <PostsContainer>
-          <SwiperWrapper>
-            <Swiper slidesPerView={3} onBeforeInit={onBeforeInit} spaceBetween={30}>
-              {data.map(({ img, date, headline, description, id }) => (
-                <SwiperSlide key={id}>
-                  <BlogPost
-                    variant="small"
-                    img={img}
-                    data={date}
-                    headline={headline}
-                    description={description}
-                  />
-                </SwiperSlide>
+          {!isDesktopOrLaptop && (
+            <SwiperWrapper>
+              <Swiper breakpoints={breakpoints} onBeforeInit={onBeforeInit} spaceBetween={30}>
+                {data.map(({ img, date, headline, description, id }) => (
+                  <SwiperSlide key={id}>
+                    <BlogPost
+                      variant={isDesktopOrLaptop ? 'without_description' : 'small'}
+                      img={img}
+                      data={date}
+                      headline={headline}
+                      description={description}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </SwiperWrapper>
+          )}
+          {isDesktopOrLaptop &&
+            data
+              .slice(0, 3)
+              .map(({ img, date, headline, description, id }) => (
+                <BlogPost
+                  key={id}
+                  variant={isDesktopOrLaptop ? 'without_description' : 'small'}
+                  img={img}
+                  data={date}
+                  headline={headline}
+                  description={description}
+                />
               ))}
-            </Swiper>
-          </SwiperWrapper>
+          {isDesktopOrLaptop && <Buttons variant="fill">Learn more</Buttons>}
         </PostsContainer>
       </Container>
     </Section>

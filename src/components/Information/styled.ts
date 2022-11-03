@@ -8,11 +8,20 @@ export const DescriptionWrapper = styled.div`
   position: relative;
   max-width: 350px;
   margin: -50px 0 -30px 0;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const PositionedButton = styled(Button)`
   position: absolute;
   bottom: -150%;
+
+  @media (max-width: 768px) {
+    bottom: -100%;
+    right: 5%;
+  }
 `;
 
 interface BackgroundSectionProps {
@@ -26,4 +35,8 @@ export const BackgroundSection = styled(Section)<BackgroundSectionProps>`
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    height: 230px;
+  }
 `;

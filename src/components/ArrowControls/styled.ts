@@ -4,6 +4,10 @@ export const ArrowContainer = styled.div`
   width: 235px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    width: 104px;
+  }
 `;
 
 export const ArrowButton = styled.button`
@@ -14,6 +18,9 @@ export const ArrowButton = styled.button`
   background-color: ${({ theme }) => theme.colors.background};
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   svg {
     width: 30px;
@@ -24,6 +31,18 @@ export const ArrowButton = styled.button`
   &:disabled {
     svg {
       fill: ${({ theme }) => theme.colors.helperBlue3};
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 48px;
+    height: 40px;
+    border-radius: 14px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: ${({ theme }) => theme.colors.secondary};
     }
   }
 `;

@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { CompanyNumbers } from '../CompanyNumbers';
 import { Headline } from '../Headline';
@@ -9,13 +10,18 @@ import { Section } from '@/layouts/Section';
 import { BaseBlockRow, BaseBlock, BaseBlockRowImages } from '@/pages/Home/styled';
 
 import { data, logos } from './data';
+import { Img } from './styled';
 
 export const CompanyOverview = memo(() => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <>
       <Section background="light">
         <CenterAlignContainer>
-          <Headline as="h2" size="h2">
+          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
             We provide services that guarantee your success
           </Headline>
           <BaseBlockRow>
@@ -24,7 +30,7 @@ export const CompanyOverview = memo(() => {
             ))}
           </BaseBlockRow>
           <BaseBlock>
-            <Paragraph size="p1">
+            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
               tempor quam, non mollis quam finibus nec.
@@ -32,7 +38,7 @@ export const CompanyOverview = memo(() => {
           </BaseBlock>
           <BaseBlockRowImages>
             {logos.map((img, index) => (
-              <img src={img} key={index} alt={'' + index} />
+              <Img src={img} key={index} alt={'' + index} />
             ))}
           </BaseBlockRowImages>
         </CenterAlignContainer>

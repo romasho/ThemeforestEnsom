@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   padding: 35px 20px;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const AdvantagesList = styled.ul`

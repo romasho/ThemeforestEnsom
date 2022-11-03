@@ -15,29 +15,18 @@ export const Typography = styled.p<TypographyType>`
   align-items: center;
   letter-spacing: -0.015em;
   color: ${(props) => (props.color ? props.color : 'none')};
-  ${(props) => {
-    switch (props.size) {
+  ${({ size, theme }) => {
+    switch (size) {
       case 'p1':
-        return `font-weight: 400;
-        font-size: 20px;
-        line-height: 33px;`;
+        return `font: ${theme.font.paragraph.paragraph1};`;
       case 'p2':
-        return `font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;`;
+        return `font: ${theme.font.paragraph.paragraph2};`;
       case 'p2b':
-        return `font-weight: 700;
-        font-size: 16px;
-        line-height: 28px;
-        `;
+        return `font: ${theme.font.paragraph.paragraph2bold};`;
       case 'p3':
-        return `font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;`;
+        return `font: ${theme.font.paragraph.paragraph3};`;
       case 'p3b':
-        return `font-weight: 600;
-        font-size: 14px;
-        line-height: 24px;`;
+        return `font: ${theme.font.paragraph.paragraph3bold};`;
     }
   }};
 `;

@@ -1,7 +1,9 @@
 import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
-import { Headline } from '../Headline';
-import { Paragraph } from '../Paragraph';
+import { Headline } from '@/components/Headline';
+import { Paragraph } from '@/components/Paragraph';
+import { theme } from '@/theme';
 
 import { Avatar, CardContainer, HeadContainer } from './styled';
 
@@ -18,18 +20,26 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
   position,
   description,
 }) => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <CardContainer>
       <HeadContainer>
         <Avatar src={avatar} alt="avatar" />
         <div>
-          <Headline size="h6" as="h6">
+          <Headline size={isDesktopOrLaptop ? 'h7' : 'h6'} as="h6">
             {name}
           </Headline>
-          <Headline size="h7m">{position}</Headline>
+          <Headline size="h7m" color={theme.colors.grey}>
+            {position}
+          </Headline>
         </div>
       </HeadContainer>
-      <Paragraph size="p2">{description}</Paragraph>
+      <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'} color={theme.colors.grey}>
+        {description}
+      </Paragraph>
     </CardContainer>
   );
 };

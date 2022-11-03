@@ -22,13 +22,9 @@ export const CardContainer = styled.div<Partial<CardProps>>`
         gap: 20px;
         padding: 20px 35px;`;
       case 'small_card':
-        return `  &:nth-child(2) {
-          margin-top: 55px;
-        }
-      
-        &:nth-child(3) {
-          margin-top: -50px;
-        }`;
+        return `
+        width: 255px;
+        height: 248px;`;
       case 'center_text':
         return `width: 350px;
         height: 353px;

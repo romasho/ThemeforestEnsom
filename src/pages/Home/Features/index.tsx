@@ -1,20 +1,23 @@
 import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import { memo } from 'react';
 
-import { Button } from '../../../components/Button/styled';
-import { Headline } from '../../../components/Headline';
-import { Paragraph } from '../../../components/Paragraph';
-
+import { Button } from '@/components/Button/styled';
+import { Headline } from '@/components/Headline';
+import { Paragraph } from '@/components/Paragraph';
 import { HeadlineWrapper, BaseBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import img from '@/assets/img/02_img_10.png';
 import { ROUTE_NAMES } from '@/constants';
 
-import { BackgroundHalfSection } from './styled';
+import { BackgroundHalfSection, Wrapper, StyledBaseBlock } from './styled';
 
 export const Features = memo(() => {
   const navigate = useNavigate();
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
 
   const navigateToSolutions = () => {
     navigate(ROUTE_NAMES.SOLUTIONS);
@@ -29,12 +32,12 @@ export const Features = memo(() => {
       <Section background="light">
         <Container>
           <HeadlineWrapper>
-            <Headline as="h1" size="h1">
+            <Headline as="h1" size={isDesktopOrLaptop ? 'h3' : 'h1'}>
               The <span>newest</span> business analytics platform
             </Headline>
           </HeadlineWrapper>
           <BaseBlock>
-            <Paragraph size="p1">
+            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
               architecto beatae vitae dicta sunt explicabo.
@@ -46,12 +49,21 @@ export const Features = memo(() => {
         </Container>
       </Section>
       <Section background="dark">
+        {isDesktopOrLaptop && (
+          <Wrapper>
+            <Headline as="h2" size="h3">
+              Radically new solutions for data
+            </Headline>
+          </Wrapper>
+        )}
         <BackgroundHalfSection background="dark" img={img} />
-        <BaseBlock>
-          <Headline as="h2" size="h2">
-            Radically new solutions for data
-          </Headline>
-          <Paragraph size="p1">
+        <StyledBaseBlock>
+          {!isDesktopOrLaptop && (
+            <Headline as="h2" size="h2">
+              Radically new solutions for data
+            </Headline>
+          )}
+          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'}>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
             architecto beatae vitae dicta sunt explicabo.
@@ -59,7 +71,7 @@ export const Features = memo(() => {
           <Button variant="fill" onClick={navigateToSolutions}>
             Learn more
           </Button>
-        </BaseBlock>
+        </StyledBaseBlock>
       </Section>
     </>
   );

@@ -8,7 +8,7 @@ export const Section = styled.section<SectionProps>`
   width: 100%;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: ${(props) => {
     switch (props.background) {
       case 'dark':
@@ -19,10 +19,19 @@ export const Section = styled.section<SectionProps>`
         return props.theme.colors.secondary;
     }
   }};
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const SectionWithBorder = styled(Section)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.helperBlue2};
+  text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const SectionColumn = styled(Section)`

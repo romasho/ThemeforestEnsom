@@ -12,6 +12,11 @@ export const FooterBorder = styled(Container)`
   border-top: solid 1px ${({ theme }) => theme.colors.helperBlue2};
   padding-top: 35px;
   padding-bottom: 30px;
+
+  @media (max-width: 768px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 `;
 
 export const SocialWrapper = styled.div`
@@ -20,6 +25,11 @@ export const SocialWrapper = styled.div`
   flex-wrap: nowrap;
   max-width: 285px;
   row-gap: 20px;
+
+  @media (max-width: 768px) {
+    max-width: none;
+    width: 100%;
+  }
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -44,4 +54,19 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+`;
+
+export const Text = styled.h6`
+  font: ${({ theme }) => theme.font.headline.headline6};
+  color: ${({ theme }) => theme.colors.white};
+  letter-spacing: -0.015em;
+`;
+
+export const SocialsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding-top: 10px;
+  }
 `;

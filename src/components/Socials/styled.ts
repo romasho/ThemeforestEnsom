@@ -29,4 +29,8 @@ export const SocialsContainer = styled.ul<SocialsContainerProps>`
     width: ${(props) => (props.small ? '15px' : '25px')};
     height: ${(props) => (props.small ? '15px' : '25px')};
   }
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 `;

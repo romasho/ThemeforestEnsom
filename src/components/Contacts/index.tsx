@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import { Headline } from '@/components/Headline';
 import { Paragraph } from '@/components/Paragraph';
@@ -10,6 +11,9 @@ import { BaseBlockCenter } from '@/pages/Home/styled';
 import { ROUTE_NAMES } from '@/constants';
 
 export const Contacts = memo(() => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const navigate = useNavigate();
 
   const navigateToContacts = () => {
@@ -20,10 +24,10 @@ export const Contacts = memo(() => {
     <Section background="dark">
       <CenterAlignContainer>
         <BaseBlockCenter>
-          <Headline as="h2" size="h2">
+          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
             Do you need help?
           </Headline>
-          <Paragraph size="p2">
+          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>
             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.
           </Paragraph>

@@ -7,43 +7,36 @@ export const Typography = styled.h6<HeadlineProps>`
   font-style: normal;
   font-weight: 800;
   letter-spacing: -0.015em;
-  ${(props) => {
-    switch (props.size) {
+  ${({ size, theme }) => {
+    switch (size) {
       case 'h1':
         return `
-        font-size: 46px;
-        line-height: 60px;`;
+        font: ${theme.font.headline.headline1};`;
       case 'h2':
         return `
-        font-size: 38px;
-        line-height: 56px;`;
+        font: ${theme.font.headline.headline2};`;
       case 'h3':
         return `
-        font-size: 30px;
-        line-height: 40px;
-        `;
+        font: ${theme.font.headline.headline3};`;
       case 'h4':
-        return `font-weight: 700;
-        font-size: 22px;
-        line-height: 33px;`;
+        return `
+        font: ${theme.font.headline.headline4};`;
       case 'h5':
-        return `font-weight: 700;
-        font-size: 20px;
-        line-height: 30px;`;
+        return `
+        font: ${theme.font.headline.headline5};`;
       case 'h6':
-        return `font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;`;
+        return `
+        font: ${theme.font.headline.headline6};
+        `;
       case 'h7':
-        return `font-weight: 600;
-          font-size: 14px;
-          line-height: 24px;`;
+        return `
+        font: ${theme.font.headline.headline7};`;
       case 'h7m':
-        return `font-weight: 500;
-            font-size: 14px;
-            line-height: 24px;`;
+        return `
+        font: ${theme.font.headline.headline8semiBold};`;
       case 'extraLarge':
-        return `font-weight: 800;
+        return `
+        font-weight: 800;
         font-size: 80px;
         line-height: 110%;`;
     }

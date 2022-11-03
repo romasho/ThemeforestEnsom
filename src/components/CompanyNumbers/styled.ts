@@ -8,6 +8,13 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    width: 104px;
+    height: 121px;
+    align-items: center;
+    gap: 0;
+  }
 `;
 
 export const Numbers = styled.h2`
@@ -21,4 +28,9 @@ export const Numbers = styled.h2`
   letter-spacing: -0.025em;
   height: 56px;
   color: ${({ theme }) => theme.colors.primary};
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    line-height: 70px;
+  }
 `;

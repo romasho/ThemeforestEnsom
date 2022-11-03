@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { Paragraph } from '../Paragraph';
 
@@ -10,10 +11,14 @@ interface CompanyNumbersProps {
 }
 
 export const CompanyNumbers: FC<CompanyNumbersProps> = ({ number, description }) => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <Container>
       <Numbers>{number}</Numbers>
-      <Paragraph size="p2">{description}</Paragraph>
+      <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>{description}</Paragraph>
     </Container>
   );
 };

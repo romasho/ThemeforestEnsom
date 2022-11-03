@@ -38,7 +38,8 @@ const font = {
     headline5: 'normal 700 20px/30px Manrope, sans-serif',
     headline6: 'normal 700 16px/24px Manrope, sans-serif',
     headline7: 'normal 600 14px/24px Manrope, sans-serif',
-    headline8: 'normal 500 14px/24px Manrope, sans-serif',
+    headline8semiBold: 'normal 500 14px/24px Manrope, sans-serif',
+    headline8: 'normal 600 12px/24px Manrope, sans-serif',
   },
   paragraph: {
     paragraph1: 'normal 400 20px/33px Open Sans, sans-serif',

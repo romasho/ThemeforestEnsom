@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import { useRef, memo } from 'react';
 import { NavigationOptions } from 'swiper/types';
+import { useMediaQuery } from 'react-responsive';
 
 import { ArrowControls } from '../ArrowControls';
 import { Headline } from '../Headline';
@@ -18,7 +19,19 @@ import 'swiper/css';
 
 SwiperCore.use([Navigation]);
 
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 3,
+  },
+};
+
 export const Testimonials = memo(() => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -33,13 +46,13 @@ export const Testimonials = memo(() => {
   return (
     <Section background="light">
       <Container>
-        <Headline as="h2" size="h2">
+        <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
           Testimonials
         </Headline>
         <ArrowControls left={navPrevButton} right={navNextButton} />
         <TestimonialsWrapper>
           <SwiperWrapper>
-            <Swiper slidesPerView={3} onBeforeInit={onBeforeInit}>
+            <Swiper onBeforeInit={onBeforeInit} breakpoints={breakpoints}>
               {testimonialsData.map(({ avatar, name, position, description }) => (
                 <SwiperSlide key={name}>
                   <TestimonialCard

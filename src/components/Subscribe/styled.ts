@@ -2,6 +2,14 @@ import styled from 'styled-components';
 
 export const Form = styled.form`
   position: relative;
+  max-width: 445px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const Button = styled.button`
@@ -14,12 +22,18 @@ export const Button = styled.button`
   height: 54px;
   width: 125px;
   font: ${({ theme }) => theme.font.headline.headline6};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position: static;
+  }
 `;
 
 export const Input = styled.input`
   background: ${({ theme }) => theme.colors.helperBlue3};
   border-radius: 6px;
-  width: 445px;
+  max-width: 445px;
+  width: 100%;
   height: 54px;
   border: 0;
   outline: none;
@@ -27,4 +41,13 @@ export const Input = styled.input`
   font: ${({ theme }) => theme.font.paragraph.paragraph3bold};
   padding: 25px 15px;
   color: ${({ theme }) => theme.colors.black};
+
+  &::-webkit-input-placeholder {
+    color: ${({ theme }) => theme.colors.helperBlue2};
+  }
+
+  @media (max-width: 768px) {
+    background: transparent;
+    border: 1px solid #607d94;
+  }
 `;
