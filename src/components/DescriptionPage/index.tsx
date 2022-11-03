@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { Breadcrumbs } from '../Breadcrumbs';
 import { Headline } from '../Headline';
@@ -12,6 +13,10 @@ interface DescriptionPageProps {
 }
 
 export const DescriptionPage: FC<DescriptionPageProps> = ({ page, headline, description }) => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <PageDescriptionContainer>
       <Breadcrumbs />
@@ -19,7 +24,7 @@ export const DescriptionPage: FC<DescriptionPageProps> = ({ page, headline, desc
         <Headline size="h6">
           <span>{page}</span>
         </Headline>
-        <Headline as="h1" size="h1">
+        <Headline as="h1" size={isDesktopOrLaptop ? 'h3' : 'h1'}>
           {headline}
         </Headline>
         <Text>{description}</Text>

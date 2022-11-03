@@ -23,4 +23,8 @@ export const BreadcrumbsContainer = styled.div<BreadcrumbsProps>`
   svg {
     fill: ${({ theme }) => theme.colors.grey};
   }
+
+  @media (max-width: 768px) {
+    top: 10px;
+  }
 `;

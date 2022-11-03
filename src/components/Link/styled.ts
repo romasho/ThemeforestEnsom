@@ -29,4 +29,11 @@ export const Button = styled.button`
       fill: ${({ theme }) => theme.colors.black};
     }
   }
+
+  @media (max-width: 768px) {
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
 `;

@@ -6,6 +6,11 @@ export const Text = styled.p`
   max-width: 730px;
   text-align: center;
   letter-spacing: -0.015em;
+
+  @media (max-width: 768px) {
+    font: ${({ theme }) => theme.font.paragraph.paragraph3};
+    max-width: 328px;
+  }
 `;
 
 export const PageDescriptionWrapper = styled.div`
@@ -16,6 +21,11 @@ export const PageDescriptionWrapper = styled.div`
   gap: 15px;
   padding-bottom: 0;
   padding-top: 100px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    padding-top: 70px;
+  }
 `;
 
 export const PageDescriptionContainer = styled.div`
