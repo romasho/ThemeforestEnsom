@@ -13,3 +13,12 @@ export const Img = styled.img`
 export const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.background};
 `;
+
+export const Burger = styled.button`
+  border: none;
+  background: none;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`;

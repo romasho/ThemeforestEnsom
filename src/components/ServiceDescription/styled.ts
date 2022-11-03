@@ -10,6 +10,12 @@ export const ServiceDescriptionContainer = styled.div`
   &:last-child {
     padding-bottom: 0;
   }
+
+  @media (max-width: 768px) {
+    max-width: 328px;
+    gap: 25px;
+    padding-bottom: 35px;
+  }
 `;
 
 interface ImgProps {
@@ -26,12 +32,20 @@ export const Img = styled.img<ImgProps>`
       ? `width: 350px;
   height: 160px;`
       : ''}
+  @media (max-width: 768px) {
+    max-width: 329px;
+    height: 160px;
+  }
 `;
 
 export const Ul = styled.ul`
   display: flex;
   gap: 15px;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    gap: 12.5px;
+  }
 `;
 
 export const Li = styled.li`
@@ -46,9 +60,23 @@ export const Li = styled.li`
     height: 25px;
     fill: ${({ theme }) => theme.colors.primary};
   }
+
+  @media (max-width: 768px) {
+    font: ${({ theme }) => theme.font.paragraph.paragraph3};
+  }
 `;
 
 export const Box = styled.div`
   display: flex;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+`;
+
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;

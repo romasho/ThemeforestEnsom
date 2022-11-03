@@ -9,4 +9,10 @@ export const Container = styled.div`
   justify-content: flex-start;
   padding: 120px 0;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    max-width: 360px;
+    padding: 50px 0;
+  }
 `;

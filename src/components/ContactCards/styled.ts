@@ -10,7 +10,8 @@ export const ContactCard = styled.div<ContactCardsProps>`
     props.direction === 'column'
       ? ''
       : `flex-direction: row;
-      gap: 15px;`}
+      gap: 15px;
+      align-items: center;`}
 `;
 
 export const ContactCardInnerWrapper = styled.div`

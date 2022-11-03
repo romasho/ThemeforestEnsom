@@ -7,6 +7,11 @@ export const ContainerHeadline = styled(Container)`
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    padding-bottom: 35px;
+    padding-top: 90px;
+  }
 `;
 
 export const Link = styled.a`
@@ -32,6 +37,11 @@ export const Link = styled.a`
     svg {
       fill: ${({ theme }) => theme.colors.primary};
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 0;
+    font: ${({ theme }) => theme.font.headline.headline6};
   }
 `;
 

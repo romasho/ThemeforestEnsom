@@ -19,7 +19,7 @@ export const PositionedButton = styled(Button)`
   bottom: -150%;
 
   @media (max-width: 768px) {
-    bottom: -100%;
+    bottom: -105%;
     right: 5%;
   }
 `;
