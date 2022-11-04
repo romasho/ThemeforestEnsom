@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
@@ -12,8 +13,12 @@ import { StyledContainer } from './styled';
 import { CurrentNews } from './CurrentNews';
 import { PopularNews } from './PopularNews';
 import { RelatedNews } from './RelatedNews';
+import { AllTags } from './AllTags';
 
 export const News = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const { data } = useAppSelector((state) => state.blogSlice);
   const { userId } = useParams();
 
@@ -28,15 +33,16 @@ export const News = () => {
     <PageLayout>
       <Section background="dark">
         <CenterAlignContainer>
-          <Headline size="h1">{userId}</Headline>
+          <Headline size={isDesktopOrLaptop ? 'h3' : 'h1'}>{userId}</Headline>
           <Breadcrumbs position="bottom" />
         </CenterAlignContainer>
       </Section>
       <Section background="light">
         <StyledContainer>
           <CurrentNews post={currentNews} />
-          <PopularNews />
+          {!isDesktopOrLaptop && <PopularNews />}
           <RelatedNews posts={relatedPosts} />
+          {isDesktopOrLaptop && <AllTags />}
         </StyledContainer>
       </Section>
       <Subscribe />

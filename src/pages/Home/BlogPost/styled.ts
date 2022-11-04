@@ -44,7 +44,7 @@ export const PostContainer = styled.div<Partial<BlogPostType>>`
 
          @media (max-width: 768px) {
             max-width: 328px;
-            width: calc(100% - 32px);
+            width: 100%;
 
             img {
               width: 160px;

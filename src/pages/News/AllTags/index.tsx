@@ -1,3 +1,5 @@
+import { useMediaQuery } from 'react-responsive';
+
 import { TagsSection, TagsContainer } from '../styled';
 
 import { Headline } from '@/components/Headline';
@@ -6,6 +8,9 @@ import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { disableAll, toggleActive } from '@/store/reducers/blogSlice';
 
 export const AllTags = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const { filterPosts } = useAppSelector((state) => state.blogSlice);
   const dispatch = useAppDispatch();
 
@@ -19,7 +24,7 @@ export const AllTags = () => {
 
   return (
     <TagsSection>
-      <Headline size="h4">Tags</Headline>
+      {!isDesktopOrLaptop && <Headline size="h4">Tags</Headline>}
       <TagsContainer>
         <Tag
           isActive={filterPosts.filter(({ isActive }) => isActive).length > 0 ? false : true}

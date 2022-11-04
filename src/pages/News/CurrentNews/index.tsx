@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { InfoBlock, InfoBlockWrapper, NewsContainer, Quotes } from '../styled';
 import { PostProps } from '../types';
@@ -16,6 +17,10 @@ import { Headline } from '@/components/Headline';
 import { Tag } from '@/components/Tag';
 
 export const CurrentNews: FC<PostProps> = ({ post }) => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   const { img, date, author, headline, views, tags, blogText } = post;
   return (
     <NewsContainer>
@@ -33,7 +38,7 @@ export const CurrentNews: FC<PostProps> = ({ post }) => {
       <Headline size="h3">{headline}</Headline>
       {blogText.map((el, index) =>
         el.paragraph ? (
-          <Paragraph size="p2" color={theme.colors.grey} key={index}>
+          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'} color={theme.colors.grey} key={index}>
             {el.paragraph}
           </Paragraph>
         ) : (
@@ -60,8 +65,12 @@ export const CurrentNews: FC<PostProps> = ({ post }) => {
           />
         </InfoBlock>
         <InfoBlock>
-          <Icon icon={tag} />
-          <Paragraph size="p3">Tags:</Paragraph>
+          {!isDesktopOrLaptop && (
+            <>
+              <Icon icon={tag} />
+              <Paragraph size="p3">Tags:</Paragraph>
+            </>
+          )}
           {tags.map((el, index) => (
             <Tag key={index}>{el}</Tag>
           ))}

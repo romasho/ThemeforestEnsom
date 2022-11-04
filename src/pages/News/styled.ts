@@ -10,12 +10,33 @@ export const NewsContainer = styled.div`
   flex-wrap: nowrap;
   gap: 30px;
   align-items: stretch;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 `;
 
 export const InfoBlockWrapper = styled.div`
   display: inline-flex;
   gap: 30px;
   margin: -5px 0 10px 0;
+
+  @media (max-width: 768px) {
+    gap: 17px 24px;
+    flex-wrap: wrap;
+
+    span:nth-child(1) {
+      order: 1;
+    }
+
+    span:nth-child(2) {
+      order: 3;
+    }
+
+    span:nth-child(3) {
+      order: 2;
+    }
+  }
 `;
 
 export const InfoBlock = styled.span`
@@ -38,6 +59,12 @@ export const Quotes = styled.div`
   border-left: 4px solid ${({ theme }) => theme.colors.primary};
   padding-left: 35px;
   margin-left: 95px;
+
+  @media (max-width: 768px) {
+    font: ${({ theme }) => theme.font.paragraph.paragraph2};
+    margin-left: 0px;
+    padding-left: 28px;
+  }
 `;
 
 export const PopularNewsContainer = styled.div`
