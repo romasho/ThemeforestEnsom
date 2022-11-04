@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const TeamContainer = styled.div`
   display: flex;
@@ -29,11 +29,38 @@ export const TeamContainer = styled.div`
       margin: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    gap: 12px 8px;
+    margin-top: 60px;
+
+    a {
+      &:nth-child(n) {
+        margin-top: 0;
+      }
+
+      &:nth-child(2n) {
+        margin-top: -60px;
+      }
+
+      
+  }
 `;
 
 interface BackgroundHalfSectionProps {
   img: string;
 }
+
+const rotate = keyframes`
+    0% {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+`;
 
 export const ImageContainer = styled.div<BackgroundHalfSectionProps>`
   background: linear-gradient(180deg, rgba(40, 50, 66, 0) 26.37%, #283850 103.66%),
@@ -46,11 +73,20 @@ export const ImageContainer = styled.div<BackgroundHalfSectionProps>`
   align-items: flex-start;
   justify-content: flex-end;
   padding: 25px;
+  border-radius: 6px;
   transition: all 0.3s;
+  animation: ${rotate} 1s forwards;
 
   &:hover {
     filter: none;
     transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    width: 160px;
+    height: 220px;
+    background-size: cover;
+    padding: 6px 15px;
   }
 `;
 

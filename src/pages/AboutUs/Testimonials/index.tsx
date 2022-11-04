@@ -39,13 +39,16 @@ export const Testimonials = () => {
       navigation.nextEl = navNextButton.current;
     }
   };
+
+  const arrow = <ArrowControls left={navPrevButton} right={navNextButton} />;
+
   return (
     <WithoutPaddingContainer>
       <HeadlineWrapper>
         <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
           Testimonials
         </Headline>
-        {isMobile && <ArrowControls left={navPrevButton} right={navNextButton} />}
+        {isMobile && arrow}
       </HeadlineWrapper>
       <ControlsWrapper>
         <BaseBlock>
@@ -54,7 +57,7 @@ export const Testimonials = () => {
             laudantium.
           </Paragraph>
         </BaseBlock>
-        {!isMobile && <ArrowControls left={navPrevButton} right={navNextButton} />}
+        {!isMobile && arrow}
       </ControlsWrapper>
       <SwiperWrapper>
         <Swiper breakpoints={breakpoints} onBeforeInit={onBeforeInit}>

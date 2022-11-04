@@ -25,6 +25,12 @@ export const Features = memo(() => {
     navigate(ROUTE_NAMES.SOLUTIONS);
   };
 
+  const TitleSolution = (
+    <Headline as="h2" size="h3">
+      Radically new solutions for data
+    </Headline>
+  );
+
   return (
     <>
       <Section background="light">
@@ -47,20 +53,10 @@ export const Features = memo(() => {
         </Container>
       </Section>
       <Section background="dark">
-        {isMobile && (
-          <Wrapper>
-            <Headline as="h2" size="h3">
-              Radically new solutions for data
-            </Headline>
-          </Wrapper>
-        )}
+        {isMobile && <Wrapper>{TitleSolution}</Wrapper>}
         <BackgroundHalfSection background="dark" img={img} />
         <StyledBaseBlock>
-          {!isMobile && (
-            <Headline as="h2" size="h2">
-              Radically new solutions for data
-            </Headline>
-          )}
+          {!isMobile && TitleSolution}
           <Paragraph size={isMobile ? 'p3' : 'p1'}>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi

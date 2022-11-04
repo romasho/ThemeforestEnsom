@@ -121,4 +121,116 @@ export const testimonialsData = [
       '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
     id: '9',
   },
+  {
+    avatar: avatar,
+    name: 'Sargis Grigor',
+    position: 'Data analyst ',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      facebook: 'https://www.facebook.com/TheElonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '10',
+  },
+  {
+    avatar: avatar2,
+    name: 'Bagrat Leo',
+    position: 'Data engineer',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '20',
+  },
+  {
+    avatar: avatar3,
+    name: 'Gor Sargis',
+    position: 'Data analyst',
+    socials: {
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '30',
+  },
+  {
+    avatar: avatar4,
+    name: 'Maral Mari',
+    position: 'Data analyst',
+    socials: {
+      facebook: 'https://www.facebook.com/TheElonmusk',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '40',
+  },
+  {
+    avatar: avatar5,
+    name: 'Eva Vosgi',
+    position: 'Data scientist',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      facebook: 'https://www.facebook.com/TheElonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '50',
+  },
+  {
+    avatar: avatar6,
+    name: 'Eduard Vosgi',
+    position: 'Data scientist',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      facebook: 'https://www.facebook.com/TheElonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '60',
+  },
+  {
+    avatar: avatar7,
+    name: 'Kohar Marine',
+    position: 'Data scientist',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      facebook: 'https://www.facebook.com/TheElonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '70',
+  },
+  {
+    avatar: avatar8,
+    name: 'Hakob Jirair',
+    position: 'Data engineer',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      facebook: 'https://www.facebook.com/TheElonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '80',
+  },
+  {
+    avatar: avatar9,
+    name: 'Ararat Ohannes',
+    position: 'Data analyst',
+    socials: {
+      twitter: 'https://twitter.com/elonmusk',
+      facebook: 'https://www.facebook.com/TheElonmusk',
+      linkedin: 'https://www.linkedin.com/in/elon-musk-b8721949/',
+    },
+    description:
+      '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+    id: '90',
+  },
 ];
