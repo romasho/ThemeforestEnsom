@@ -14,9 +14,7 @@ import { Buttons } from '@/components/Button';
 import { ROUTE_NAMES } from '@/constants';
 
 export const ServiceContacts = () => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   const navigate = useNavigate();
 
@@ -28,14 +26,14 @@ export const ServiceContacts = () => {
     <Section background="dark">
       <Container>
         <Box>
-          <Headline size={isDesktopOrLaptop ? 'h3' : 'h2'}>Contact information</Headline>
-          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'} color={theme.colors.grey}>
+          <Headline size={isMobile ? 'h3' : 'h2'}>Contact information</Headline>
+          <Paragraph size={isMobile ? 'p3' : 'p2'} color={theme.colors.grey}>
             Fill up the form and our Team will get back to you with 25 hours.
           </Paragraph>
           <ContactCards direction="row" iconColor={theme.colors.primary} />
         </Box>
-        {!isDesktopOrLaptop && <ContactForm />}
-        {isDesktopOrLaptop && (
+        {!isMobile && <ContactForm />}
+        {isMobile && (
           <Buttons variant="fill" onClick={navigateToContacts}>
             Contact us
           </Buttons>

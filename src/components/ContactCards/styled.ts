@@ -11,7 +11,8 @@ export const ContactCard = styled.div<ContactCardsProps>`
       ? ''
       : `flex-direction: row;
       gap: 15px;
-      align-items: center;`}
+      align-items: center;
+      `}
 `;
 
 export const ContactCardInnerWrapper = styled.div`
@@ -32,5 +33,10 @@ export const ContactCardContainer = styled.div<ContactCardsProps>`
 
   svg {
     fill: ${({ iconColor }) => iconColor};
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    flex-direction: column;
   }
 `;

@@ -11,14 +11,12 @@ interface CompanyNumbersProps {
 }
 
 export const CompanyNumbers: FC<CompanyNumbersProps> = ({ number, description }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <Container>
       <Numbers>{number}</Numbers>
-      <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>{description}</Paragraph>
+      <Paragraph size={isMobile ? 'p3' : 'p2'}>{description}</Paragraph>
     </Container>
   );
 };

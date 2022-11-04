@@ -8,9 +8,7 @@ import { Headline } from '@/components/Headline';
 import { BlogPost } from '@/pages/Home/BlogPost';
 
 export const RelatedNews: FC<PostsProps> = ({ posts }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <NewsContainer>
@@ -23,7 +21,7 @@ export const RelatedNews: FC<PostsProps> = ({ posts }) => {
           headline={headline}
           description={description}
           tags={undefined}
-          variant={isDesktopOrLaptop ? 'without_description' : 'right_text'}
+          variant={isMobile ? 'without_description' : 'right_text'}
         />
       ))}
     </NewsContainer>

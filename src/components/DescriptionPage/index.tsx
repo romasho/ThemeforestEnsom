@@ -13,9 +13,7 @@ interface DescriptionPageProps {
 }
 
 export const DescriptionPage: FC<DescriptionPageProps> = ({ page, headline, description }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <PageDescriptionContainer>
@@ -24,7 +22,7 @@ export const DescriptionPage: FC<DescriptionPageProps> = ({ page, headline, desc
         <Headline size="h6">
           <span>{page}</span>
         </Headline>
-        <Headline as="h1" size={isDesktopOrLaptop ? 'h3' : 'h1'}>
+        <Headline as="h1" size={isMobile ? 'h3' : 'h1'}>
           {headline}
         </Headline>
         <Text>{description}</Text>

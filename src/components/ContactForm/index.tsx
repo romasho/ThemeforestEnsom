@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { useMediaQuery } from 'react-responsive';
 
 import { Buttons } from '../Button';
 
@@ -12,6 +13,8 @@ type IFormData = {
 };
 
 export const ContactForm = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const {
     register,
     handleSubmit,
@@ -28,8 +31,8 @@ export const ContactForm = () => {
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <InputElement placeholder="Your email" {...register('email')} />
-      <InputElement placeholder="Your name" {...register('name')} />
+      <InputElement fullWidth={isMobile} placeholder="Your email" {...register('email')} />
+      <InputElement fullWidth={isMobile} placeholder="Your name" {...register('name')} />
       <InputElement fullWidth placeholder="Theme" {...register('theme')} />
       <InputElement
         as="textarea"
@@ -38,7 +41,7 @@ export const ContactForm = () => {
         placeholder="Your message"
         {...register('message')}
       />
-      <Buttons variant="little" onClick={handleSubmit(onSubmit)}>
+      <Buttons variant={isMobile ? 'fill' : 'little'} onClick={handleSubmit(onSubmit)}>
         Send
       </Buttons>
     </FormWrapper>

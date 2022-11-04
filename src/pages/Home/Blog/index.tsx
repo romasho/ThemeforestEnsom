@@ -31,9 +31,8 @@ const breakpoints = {
 
 export const Blog = memo(() => {
   const { data } = useAppSelector((state) => state.blogSlice);
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -48,18 +47,18 @@ export const Blog = memo(() => {
   return (
     <Section background="light">
       <Container>
-        <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+        <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
           Our Blog
         </Headline>
-        {!isDesktopOrLaptop && <ArrowControls left={navPrevButton} right={navNextButton} />}
+        {!isMobile && <ArrowControls left={navPrevButton} right={navNextButton} />}
         <PostsContainer>
-          {!isDesktopOrLaptop && (
+          {!isMobile && (
             <SwiperWrapper>
               <Swiper breakpoints={breakpoints} onBeforeInit={onBeforeInit} spaceBetween={30}>
                 {data.map(({ img, date, headline, description, id }) => (
                   <SwiperSlide key={id}>
                     <BlogPost
-                      variant={isDesktopOrLaptop ? 'without_description' : 'small'}
+                      variant={isMobile ? 'without_description' : 'small'}
                       img={img}
                       data={date}
                       headline={headline}
@@ -70,13 +69,13 @@ export const Blog = memo(() => {
               </Swiper>
             </SwiperWrapper>
           )}
-          {isDesktopOrLaptop &&
+          {isMobile &&
             data
               .slice(0, 3)
               .map(({ img, date, headline, description, id }) => (
                 <BlogPost
                   key={id}
-                  variant={isDesktopOrLaptop ? 'without_description' : 'small'}
+                  variant={isMobile ? 'without_description' : 'small'}
                   img={img}
                   data={date}
                   headline={headline}
@@ -84,7 +83,7 @@ export const Blog = memo(() => {
                 />
               ))}
         </PostsContainer>
-        {isDesktopOrLaptop && <Buttons variant="fill">Learn more</Buttons>}
+        {isMobile && <Buttons variant="fill">Learn more</Buttons>}
       </Container>
     </Section>
   );

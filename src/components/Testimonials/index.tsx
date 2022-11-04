@@ -29,9 +29,8 @@ const breakpoints = {
 };
 
 export const Testimonials = memo(() => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -46,7 +45,7 @@ export const Testimonials = memo(() => {
   return (
     <Section background="light">
       <Container>
-        <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+        <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
           Testimonials
         </Headline>
         <ArrowControls left={navPrevButton} right={navNextButton} />

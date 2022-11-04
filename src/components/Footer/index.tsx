@@ -23,22 +23,20 @@ import {
 } from './styled';
 
 export const Footer = memo(() => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <FooterWrapper>
       <FooterContainer>
         <SocialWrapper>
           <Img src={logo} alt="" />
-          {!isDesktopOrLaptop && (
+          {!isMobile && (
             <Paragraph size={'p3'} color={theme.colors.grey}>
               Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
               laboriosam, nisi ut aliquid ex ea commodi.
             </Paragraph>
           )}
-          {isDesktopOrLaptop && (
+          {isMobile && (
             <>
               <DropDown title={'Quick link'} answer={Link} />
               <DropDown title={'Service'} answer={Service} />
@@ -46,7 +44,7 @@ export const Footer = memo(() => {
             </>
           )}
           <SocialsContainer>
-            {isDesktopOrLaptop && <Text>Follow us</Text>}
+            {isMobile && <Text>Follow us</Text>}
             <Socials
               socials={{
                 facebook: undefined,
@@ -59,7 +57,7 @@ export const Footer = memo(() => {
             />
           </SocialsContainer>
         </SocialWrapper>
-        {!isDesktopOrLaptop && (
+        {!isMobile && (
           <>
             <ContactContainer>
               <FooterHeadline>Quick link</FooterHeadline>

@@ -32,9 +32,7 @@ const breakpoints = {
 };
 
 export const AboutUs = () => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <PageLayout>
@@ -50,7 +48,7 @@ export const AboutUs = () => {
       <BackgroundSection background="dark" img={img} />
       <Section background="dark">
         <CenterAlignContainer>
-          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+          <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
             We provide services that guarantee your success
           </Headline>
           <BaseBlockRow>
@@ -59,7 +57,7 @@ export const AboutUs = () => {
             ))}
           </BaseBlockRow>
           <BaseBlock>
-            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>
+            <Paragraph size={isMobile ? 'p3' : 'p2'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
               tempor quam, non mollis quam finibus nec.
@@ -70,8 +68,8 @@ export const AboutUs = () => {
       <WrapSection background="light">
         <CenterAlignContainer>
           <BaseBlockWidth>
-            <Headline size={isDesktopOrLaptop ? 'h3' : 'h2'}>Why people chosse Ensome?</Headline>
-            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>
+            <Headline size={isMobile ? 'h3' : 'h2'}>Why people chosse Ensome?</Headline>
+            <Paragraph size={isMobile ? 'p3' : 'p2'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.
             </Paragraph>

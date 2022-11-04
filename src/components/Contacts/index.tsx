@@ -11,9 +11,8 @@ import { BaseBlockCenter } from '@/pages/Home/styled';
 import { ROUTE_NAMES } from '@/constants';
 
 export const Contacts = memo(() => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const navigate = useNavigate();
 
   const navigateToContacts = () => {
@@ -24,10 +23,10 @@ export const Contacts = memo(() => {
     <Section background="dark">
       <CenterAlignContainer>
         <BaseBlockCenter>
-          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+          <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
             Do you need help?
           </Headline>
-          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'}>
+          <Paragraph size={isMobile ? 'p3' : 'p2'}>
             Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.
           </Paragraph>

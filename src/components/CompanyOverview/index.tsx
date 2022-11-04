@@ -13,15 +13,13 @@ import { data, logos } from './data';
 import { Img } from './styled';
 
 export const CompanyOverview = memo(() => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <>
       <Section background="light">
         <CenterAlignContainer>
-          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+          <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
             We provide services that guarantee your success
           </Headline>
           <BaseBlockRow>
@@ -30,7 +28,7 @@ export const CompanyOverview = memo(() => {
             ))}
           </BaseBlockRow>
           <BaseBlock>
-            <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'}>
+            <Paragraph size={isMobile ? 'p3' : 'p1'}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
               tempor quam, non mollis quam finibus nec.

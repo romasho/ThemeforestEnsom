@@ -27,9 +27,8 @@ const breakpoints = {
 };
 
 export const Testimonials = () => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);
 
@@ -43,19 +42,19 @@ export const Testimonials = () => {
   return (
     <WithoutPaddingContainer>
       <HeadlineWrapper>
-        <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+        <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
           Testimonials
         </Headline>
-        {isDesktopOrLaptop && <ArrowControls left={navPrevButton} right={navNextButton} />}
+        {isMobile && <ArrowControls left={navPrevButton} right={navNextButton} />}
       </HeadlineWrapper>
       <ControlsWrapper>
         <BaseBlock>
-          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'}>
+          <Paragraph size={isMobile ? 'p3' : 'p1'}>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium.
           </Paragraph>
         </BaseBlock>
-        {!isDesktopOrLaptop && <ArrowControls left={navPrevButton} right={navNextButton} />}
+        {!isMobile && <ArrowControls left={navPrevButton} right={navNextButton} />}
       </ControlsWrapper>
       <SwiperWrapper>
         <Swiper breakpoints={breakpoints} onBeforeInit={onBeforeInit}>

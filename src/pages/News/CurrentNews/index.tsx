@@ -17,9 +17,7 @@ import { Headline } from '@/components/Headline';
 import { Tag } from '@/components/Tag';
 
 export const CurrentNews: FC<PostProps> = ({ post }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   const { img, date, author, headline, views, tags, blogText } = post;
   return (
@@ -38,7 +36,7 @@ export const CurrentNews: FC<PostProps> = ({ post }) => {
       <Headline size="h3">{headline}</Headline>
       {blogText.map((el, index) =>
         el.paragraph ? (
-          <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'} color={theme.colors.grey} key={index}>
+          <Paragraph size={isMobile ? 'p3' : 'p2'} color={theme.colors.grey} key={index}>
             {el.paragraph}
           </Paragraph>
         ) : (
@@ -65,7 +63,7 @@ export const CurrentNews: FC<PostProps> = ({ post }) => {
           />
         </InfoBlock>
         <InfoBlock>
-          {!isDesktopOrLaptop && (
+          {!isMobile && (
             <>
               <Icon icon={tag} />
               <Paragraph size="p3">Tags:</Paragraph>

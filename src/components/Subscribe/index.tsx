@@ -10,18 +10,16 @@ import { BaseBlock } from '@/pages/Home/styled';
 import { Input, Button, Form } from './styled';
 
 export const Subscribe = memo(() => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <SectionWithBorder background="secondary">
       <SubscribeContainer>
         <BaseBlock>
-          <Headline as="h2" size={isDesktopOrLaptop ? 'h3' : 'h2'}>
+          <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
             Subscribe to our newsletter
           </Headline>
-          {!isDesktopOrLaptop && (
+          {!isMobile && (
             <Paragraph size="p1">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium.

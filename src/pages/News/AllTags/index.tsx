@@ -8,9 +8,8 @@ import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { disableAll, toggleActive } from '@/store/reducers/blogSlice';
 
 export const AllTags = () => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const { filterPosts } = useAppSelector((state) => state.blogSlice);
   const dispatch = useAppDispatch();
 
@@ -24,7 +23,7 @@ export const AllTags = () => {
 
   return (
     <TagsSection>
-      {!isDesktopOrLaptop && <Headline size="h4">Tags</Headline>}
+      {!isMobile && <Headline size="h4">Tags</Headline>}
       <TagsContainer>
         <Tag
           isActive={filterPosts.filter(({ isActive }) => isActive).length > 0 ? false : true}

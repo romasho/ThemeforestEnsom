@@ -16,9 +16,8 @@ import { RelatedNews } from './RelatedNews';
 import { AllTags } from './AllTags';
 
 export const News = () => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const { data } = useAppSelector((state) => state.blogSlice);
   const { userId } = useParams();
 
@@ -33,16 +32,16 @@ export const News = () => {
     <PageLayout>
       <Section background="dark">
         <CenterAlignContainer>
-          <Headline size={isDesktopOrLaptop ? 'h3' : 'h1'}>{userId}</Headline>
+          <Headline size={isMobile ? 'h3' : 'h1'}>{userId}</Headline>
           <Breadcrumbs position="bottom" />
         </CenterAlignContainer>
       </Section>
       <Section background="light">
         <StyledContainer>
           <CurrentNews post={currentNews} />
-          {!isDesktopOrLaptop && <PopularNews />}
+          {!isMobile && <PopularNews />}
           <RelatedNews posts={relatedPosts} />
-          {isDesktopOrLaptop && <AllTags />}
+          {isMobile && <AllTags />}
         </StyledContainer>
       </Section>
       <Subscribe />

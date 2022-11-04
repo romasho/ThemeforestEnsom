@@ -16,15 +16,13 @@ export const ServiceDescription: FC<ServiceDescriptionProps> = ({
   img,
   marks,
 }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <ServiceDescriptionContainer id={headline}>
       <TextWrapper>
-        <Headline size={isDesktopOrLaptop ? 'h4' : 'h2'}>{headline}</Headline>
-        <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p1'} color={theme.colors.grey}>
+        <Headline size={isMobile ? 'h4' : 'h2'}>{headline}</Headline>
+        <Paragraph size={isMobile ? 'p3' : 'p1'} color={theme.colors.grey}>
           {paragraph}
         </Paragraph>
       </TextWrapper>

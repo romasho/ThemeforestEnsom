@@ -16,16 +16,14 @@ interface ServicesCardProps {
 }
 
 export const ServicesCard: FC<ServicesCardProps> = ({ icon, headline, description }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <ServicesCardContainer>
       <Icon icon={icon} />
       <TextWrapper>
-        <Headline size={isDesktopOrLaptop ? 'h5' : 'h4'}>{headline}</Headline>
-        <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'} color={theme.colors.grey}>
+        <Headline size={isMobile ? 'h5' : 'h4'}>{headline}</Headline>
+        <Paragraph size={isMobile ? 'p3' : 'p2'} color={theme.colors.grey}>
           {description}
         </Paragraph>
       </TextWrapper>

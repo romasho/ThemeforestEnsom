@@ -12,9 +12,7 @@ import { BlogInfo, PostContainer, TagContainer, Typography } from './styled';
 import { BlogPostType } from './types';
 
 export const BlogPost: FC<BlogPostType> = ({ img, data, headline, description, variant, tags }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <PostContainer variant={variant}>
@@ -24,7 +22,7 @@ export const BlogPost: FC<BlogPostType> = ({ img, data, headline, description, v
           {data}
         </Paragraph>
         <Typography variant={variant}>{headline}</Typography>
-        {variant !== 'without_description' && !isDesktopOrLaptop && (
+        {variant !== 'without_description' && !isMobile && (
           <Paragraph size="p2">{description}</Paragraph>
         )}
         {!tags && variant !== 'right_text' && <Link to={ROUTE_NAMES.BLOG + '/' + headline} />}

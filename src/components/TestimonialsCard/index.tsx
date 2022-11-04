@@ -20,16 +20,14 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
   position,
   description,
 }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(max-width: 768px)',
-  });
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   return (
     <CardContainer>
       <HeadContainer>
         <Avatar src={avatar} alt="avatar" />
         <div>
-          <Headline size={isDesktopOrLaptop ? 'h7' : 'h6'} as="h6">
+          <Headline size={isMobile ? 'h7' : 'h6'} as="h6">
             {name}
           </Headline>
           <Headline size="h7m" color={theme.colors.grey}>
@@ -37,7 +35,7 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
           </Headline>
         </div>
       </HeadContainer>
-      <Paragraph size={isDesktopOrLaptop ? 'p3' : 'p2'} color={theme.colors.grey}>
+      <Paragraph size={isMobile ? 'p3' : 'p2'} color={theme.colors.grey}>
         {description}
       </Paragraph>
     </CardContainer>
