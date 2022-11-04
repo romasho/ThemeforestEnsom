@@ -18,7 +18,14 @@ export const PostContainer = styled.div<Partial<BlogPostType>>`
         width: 540px;
         gap: 30px;
         box-shadow: ${props.theme.boxShadows.shadowCard3};
-        padding-bottom: 30px;`;
+        padding-bottom: 30px;
+        
+        @media (max-width: 768px) {
+          max-width: 328px;
+          gap: 20px;
+          padding-bottom: 20px;
+        }
+        `;
       case 'small':
         return `    
         width: 350px;
@@ -36,7 +43,8 @@ export const PostContainer = styled.div<Partial<BlogPostType>>`
         }
 
          @media (max-width: 768px) {
-            width: 328px;
+            max-width: 328px;
+            width: calc(100% - 32px);
 
             img {
               width: 160px;
@@ -67,7 +75,13 @@ export const BlogInfo = styled.div<Partial<BlogPostType>>`
       case 'medium':
         return `
         gap: 17px;
-        padding: 0 35px;`;
+        padding: 0 35px;
+
+        @media (max-width: 768px) {
+          gap: 12px;
+          padding: 0 20px;
+        } 
+        `;
       case 'small':
         return `    
         gap: 12px;`;
@@ -99,7 +113,12 @@ export const Typography = styled.h6<VariantProps>`
         font: ${theme.font.headline.headline4};`;
       case 'medium':
         return `    
-        font: ${theme.font.headline.headline4};`;
+        font: ${theme.font.headline.headline4};
+        
+        @media (max-width: 768px) {
+          font: ${theme.font.headline.headline6};
+      }
+        `;
       case 'small':
         return `
         font: ${theme.font.headline.headline6};

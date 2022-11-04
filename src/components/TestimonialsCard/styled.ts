@@ -10,7 +10,8 @@ export const CardContainer = styled.div`
   margin: 10px;
 
   @media (max-width: 768px) {
-    max-width: 328px;
+    max-width: 360px;
+    width: calc(100% - 32px);
   }
 `;
 

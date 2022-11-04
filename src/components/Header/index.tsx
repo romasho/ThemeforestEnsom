@@ -24,9 +24,11 @@ export const Header = memo(() => {
             Watch the demo
           </Buttons>
         )}
-        <Burger>
-          <Icon icon={burger} />
-        </Burger>
+        {isTabletOrMobile && (
+          <Burger>
+            <Icon icon={burger} />
+          </Burger>
+        )}
       </HeaderContainer>
     </HeaderWrapper>
   );

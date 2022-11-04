@@ -83,8 +83,8 @@ export const Blog = memo(() => {
                   description={description}
                 />
               ))}
-          {isDesktopOrLaptop && <Buttons variant="fill">Learn more</Buttons>}
         </PostsContainer>
+        {isDesktopOrLaptop && <Buttons variant="fill">Learn more</Buttons>}
       </Container>
     </Section>
   );

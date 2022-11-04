@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const DropDownContainer = styled.div`
-  width: 328px;
+  max-width: 328px;
   color: ${({ theme }) => theme.colors.white};
   border-bottom: 1px solid ${({ theme }) => theme.colors.helperBlue2};
   padding-bottom: 15px;

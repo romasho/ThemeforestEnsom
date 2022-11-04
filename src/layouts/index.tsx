@@ -5,5 +5,6 @@ export const SwiperWrapper = styled.div`
 
   @media (max-width: 768px) {
     max-width: 340px;
+    width: calc(100% - 32px);
   }
 `;
