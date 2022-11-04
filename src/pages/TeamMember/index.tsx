@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
@@ -12,46 +13,42 @@ import { Paragraph } from '@/components/Paragraph';
 import { theme } from '@/theme';
 import { Socials } from '@/components/Socials';
 
-import { ContactContainer, TeamMemberInfo, Block } from './styled';
+import { ContactContainer, TeamMemberInfo, Block, Img, EmployeeSection } from './styled';
 
 export const TeamMember = () => {
   const { userId } = useParams();
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   const [currenMember] = testimonialsData.filter(({ name }) => name === userId);
   const { avatar, name, position, description, socials } = currenMember;
+  const names = [
+    { title: 'Name', data: name },
+    { title: 'Position', data: position },
+    { title: 'Description', data: description },
+  ];
 
   return (
     <PageLayout>
       <Section background="dark">
         <CenterAlignContainer>
-          <Headline size="h1">{userId}</Headline>
+          <Headline size={isMobile ? 'h3' : 'h1'}>{userId}</Headline>
           <Breadcrumbs position="bottom" />
         </CenterAlignContainer>
       </Section>
-      <Section background="light">
+      <EmployeeSection background="light">
         <Container>
-          <img src={avatar} />
+          <Img src={avatar} />
           <TeamMemberInfo>
+            {names.map(({ title, data }) => (
+              <Block key={title}>
+                <Headline size={isMobile ? 'h7' : 'h6'} color={theme.colors.primary}>
+                  {title}
+                </Headline>
+                <Paragraph size={isMobile ? 'p3' : 'p1'}>{data}</Paragraph>
+              </Block>
+            ))}
             <Block>
-              <Headline size="h6" color={theme.colors.primary}>
-                Name
-              </Headline>
-              <Paragraph size="p1">{name}</Paragraph>
-            </Block>
-            <Block>
-              <Headline size="h6" color={theme.colors.primary}>
-                Position
-              </Headline>
-              <Paragraph size="p1">{position}</Paragraph>
-            </Block>
-            <Block>
-              <Headline size="h6" color={theme.colors.primary}>
-                Description
-              </Headline>
-              <Paragraph size="p1">{description}</Paragraph>
-            </Block>
-            <Block>
-              <Headline size="h6" color={theme.colors.primary}>
+              <Headline size={isMobile ? 'h7' : 'h6'} color={theme.colors.primary}>
                 Social networks
               </Headline>
               <Socials socials={socials} />
@@ -59,10 +56,12 @@ export const TeamMember = () => {
           </TeamMemberInfo>
         </Container>
         <ContactContainer>
-          <Headline size="h2">Want {name} to share his expertise with you?</Headline>
+          <Headline size={isMobile ? 'h4' : 'h2'}>
+            Want {name} to share his expertise with you?
+          </Headline>
           <ContactForm />
         </ContactContainer>
-      </Section>
+      </EmployeeSection>
       <Subscribe />
     </PageLayout>
   );

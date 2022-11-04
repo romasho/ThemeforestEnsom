@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { Icon } from '@/components/Icon';
 import { ReactComponent as minus } from '@/assets/svg/icon_minus.svg';
@@ -15,6 +16,7 @@ interface DropDownListProps {
 }
 
 export const DropDownList: FC<DropDownListProps> = ({ question, answer }) => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const [isOpen, setOpen] = useState(false);
 
   const handleClick = () => setOpen((prev) => !prev);
@@ -22,7 +24,10 @@ export const DropDownList: FC<DropDownListProps> = ({ question, answer }) => {
   return (
     <ListWrapper onClick={handleClick}>
       <QuestionWrapper>
-        <Headline size="h4" color={isOpen ? theme.colors.primary : theme.colors.black}>
+        <Headline
+          size={isMobile ? 'h6' : 'h4'}
+          color={isOpen ? theme.colors.primary : theme.colors.black}
+        >
           {question}
         </Headline>
         <Button open={isOpen}>
@@ -31,7 +36,7 @@ export const DropDownList: FC<DropDownListProps> = ({ question, answer }) => {
       </QuestionWrapper>
       {isOpen && (
         <Animation>
-          <Paragraph size="p1" color={theme.colors.grey}>
+          <Paragraph size={isMobile ? 'p3' : 'p1'} color={theme.colors.grey}>
             {answer}
           </Paragraph>
         </Animation>

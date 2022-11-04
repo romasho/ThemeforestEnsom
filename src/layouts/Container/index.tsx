@@ -16,7 +16,7 @@ export const Container = styled.div`
     max-width: 360px;
     width: calc(100% - 32px);
     padding: 50px 0px;
-    gap: 20px;
+    gap: 40px;
   }
 `;
 

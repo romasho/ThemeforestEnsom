@@ -52,8 +52,8 @@ export const Testimonials = memo(() => {
         <TestimonialsWrapper>
           <SwiperWrapper>
             <Swiper onBeforeInit={onBeforeInit} breakpoints={breakpoints}>
-              {testimonialsData.map(({ avatar, name, position, description }) => (
-                <SwiperSlide key={name}>
+              {testimonialsData.map(({ avatar, name, position, description, id }) => (
+                <SwiperSlide key={id}>
                   <TestimonialCard
                     avatar={avatar}
                     name={name}

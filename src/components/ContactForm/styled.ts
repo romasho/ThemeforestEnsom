@@ -9,6 +9,10 @@ export const FormWrapper = styled.form`
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-top: 16px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 interface InputElementProps {

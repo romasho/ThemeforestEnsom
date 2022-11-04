@@ -20,6 +20,11 @@ export const ListWrapper = styled.div`
   border-radius: 6px;
   padding: 35px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 22px 15px;
+    margin-bottom: -5px;
+  }
 `;
 
 export const Animation = styled.div`
@@ -44,5 +49,9 @@ export const Button = styled.button<ButtonProps>`
 
   svg {
     fill: ${(props) => (props.open ? props.theme.colors.primary : props.theme.colors.black)};
+    @media (max-width: 768px) {
+      width: 24px;
+      height: 24px;
+    }
   }
 `;
