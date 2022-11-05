@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CardProps, VariantProps } from '.';
+import { CardProps, VariantProps } from './types';
 
 export const CardContainer = styled.div<Partial<CardProps>>`
   width: 255px;
@@ -20,7 +20,12 @@ export const CardContainer = styled.div<Partial<CardProps>>`
         height: auto;
         display: flex;
         gap: 20px;
-        padding: 20px 35px;`;
+        padding: 20px 35px;
+        
+        @media (max-width: 768px) {
+          gap: 16px;
+        }
+        `;
       case 'small_card':
         return `
         width: 255px;
@@ -48,13 +53,20 @@ export const CardContainer = styled.div<Partial<CardProps>>`
 `;
 
 export const IconWrapper = styled.span<Partial<CardProps>>`
+  display: flex;
   svg {
     ${(props) => {
       switch (props.variant) {
         case 'big_icon':
           return `
           width: 60px;
-          height: 60px;`;
+          height: 60px;
+          
+          @media (max-width: 768px) {
+            width: 42px;
+            height: 42px;
+          }
+          `;
         case 'small_card':
           return `    
           width: 45px;
@@ -97,6 +109,15 @@ export const Text = styled.p<VariantProps>`
       case 'small_card':
         return `
         font: ${theme.font.paragraph.paragraph3};`;
+      case 'big_icon':
+        return `      
+          font: ${theme.font.paragraph.paragraph2};
+        
+          @media (max-width: 768px) {
+            margin-top: -6px;
+            font: ${theme.font.paragraph.paragraph3};
+          }
+          `;
       default:
         return `    
         font: ${theme.font.paragraph.paragraph2};

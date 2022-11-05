@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
@@ -13,6 +14,7 @@ import { SolutionSection } from './SolutionSection';
 
 export const Solution = () => {
   const { userId } = useParams();
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   const [currentSolution] = DataAnalyticsSolutions.filter((el) => el.title === userId);
   const { solutionDescription } = currentSolution;
@@ -21,7 +23,7 @@ export const Solution = () => {
     <PageLayout>
       <Section background="dark">
         <CenterAlignContainer>
-          <Headline size="h1">{userId}</Headline>
+          <Headline size={isMobile ? 'h3' : 'h1'}>{userId}</Headline>
           <Breadcrumbs position="bottom" />
         </CenterAlignContainer>
       </Section>

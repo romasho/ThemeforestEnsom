@@ -1,5 +1,3 @@
-import { BaseBlock } from '../Home/styled';
-
 import { DescriptionPage } from '@/components/DescriptionPage';
 import { Testimonials } from '@/components/Testimonials';
 import { PageLayout } from '@/layouts/Pages';

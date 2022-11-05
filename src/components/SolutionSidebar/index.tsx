@@ -4,22 +4,14 @@ import { Aside, Link } from './styled';
 
 interface SolutionSidebarProps {
   data: { headline: string }[];
+  active: string;
 }
 
-export const SolutionSidebar: FC<SolutionSidebarProps> = ({ data }) => {
-  const [active, setActive] = useState(0);
-
-  const handleClick = (id: number) => () => setActive(id);
-
+export const SolutionSidebar: FC<SolutionSidebarProps> = ({ data, active }) => {
   return (
     <Aside>
       {data.map(({ headline }, index) => (
-        <Link
-          href={'#' + headline}
-          key={index}
-          active={active === index}
-          onClick={handleClick(index)}
-        >
+        <Link href={'#' + headline} key={index} active={active === headline}>
           {headline}
         </Link>
       ))}

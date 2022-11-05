@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { Headline } from '@/components/Headline';
 import { Paragraph } from '@/components/Paragraph';
@@ -13,12 +14,14 @@ export const SolutionDescription: FC<SolutionDescriptionProps> = ({
   img,
   types,
 }) => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   return (
-    <SolutionDescriptionContainer id={headline}>
-      <Headline size="h2">{headline}</Headline>
+    <>
+      <Headline size={isMobile ? 'h4' : 'h2'}>{headline}</Headline>
       {img && <img src={img} />}
       {paragraph.map((el, index) => (
-        <Paragraph size="p1" key={index} color={theme.colors.grey}>
+        <Paragraph size={isMobile ? 'p3' : 'p1'} key={index} color={theme.colors.grey}>
           {el}
         </Paragraph>
       ))}
@@ -29,6 +32,6 @@ export const SolutionDescription: FC<SolutionDescriptionProps> = ({
           ))}
         </Ul>
       )}
-    </SolutionDescriptionContainer>
+    </>
   );
 };

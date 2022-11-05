@@ -1,20 +1,10 @@
-import { FC, FunctionComponent, SVGProps } from 'react';
+import { FC } from 'react';
 
 import { Icon } from '@/components/Icon';
-import { Paragraph } from '@/components/Paragraph';
 import { Link } from '@/components/Link';
 
 import { CardContainer, IconWrapper, Typography, Text } from './styled';
-
-export interface VariantProps {
-  variant: 'right_text' | 'center_text' | 'big_icon' | 'small_card';
-}
-
-export interface CardProps extends VariantProps {
-  icon: FunctionComponent<SVGProps<SVGSVGElement>>;
-  headline: string;
-  description: string;
-}
+import { CardProps } from './types';
 
 export const Card: FC<CardProps> = ({ variant, icon, headline, description }) => {
   return (

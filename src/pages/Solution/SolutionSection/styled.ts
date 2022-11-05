@@ -16,3 +16,7 @@ export const Container = styled.div`
     padding: 50px 0;
   }
 `;
+
+export const SolutionDescriptionWrapper = styled.div`
+  width: 100%;
+`;
