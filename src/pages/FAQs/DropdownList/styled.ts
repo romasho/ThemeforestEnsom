@@ -21,7 +21,7 @@ export const ListWrapper = styled.div`
   padding: 35px;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding: 22px 15px;
     margin-bottom: -5px;
   }
@@ -49,7 +49,7 @@ export const Button = styled.button<ButtonProps>`
 
   svg {
     fill: ${(props) => (props.open ? props.theme.colors.primary : props.theme.colors.black)};
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
       width: 24px;
       height: 24px;
     }

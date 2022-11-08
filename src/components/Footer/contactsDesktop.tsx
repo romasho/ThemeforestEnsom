@@ -1,11 +1,12 @@
 import { useMediaQuery } from 'react-responsive';
 
 import { Link, Service } from '@/constants';
+import { theme } from '@/theme';
 
 import { ContactContainer, FooterHeadline, NavigationLink, ContactLink } from './styled';
 
 export const ContactsDesktop = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const render = isMobile ? null : (
     <>

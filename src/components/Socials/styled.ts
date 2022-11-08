@@ -30,7 +30,7 @@ export const SocialsContainer = styled.ul<SocialsContainerProps>`
     height: ${(props) => (props.small ? '15px' : '25px')};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 12px;
   }
 `;

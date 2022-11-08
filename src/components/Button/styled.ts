@@ -40,7 +40,7 @@ export const Button = styled.button<ButtonPropsType>`
     switch (variant) {
       case 'fill':
         return `
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           width: 100%;
         }`;
       case 'withIcon':
@@ -74,7 +74,7 @@ export const Button = styled.button<ButtonPropsType>`
           border-radius: 50%;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           width: 100px;
           height: 100px;
           border: 5px solid #185CFF;

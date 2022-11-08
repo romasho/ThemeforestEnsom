@@ -16,7 +16,7 @@ import { ServiceContacts } from './ServiceContacts';
 
 export const Service = () => {
   const { userId } = useParams();
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const [currentService] = servicesData.filter(({ headline }) => headline === userId);
   const { serviceInformation } = currentService;
@@ -28,7 +28,7 @@ export const Service = () => {
           <Breadcrumbs />
           <Headline size={isMobile ? 'h3' : 'h1'}>{userId}</Headline>
           {!isMobile && (
-            <div style={{ width: '350px' }}>
+            <div style={{ width: '${({ theme }) => theme.width.middleBlock}' }}>
               <Paragraph size="p3" color={theme.colors.grey}>
                 {currentService.description}
               </Paragraph>

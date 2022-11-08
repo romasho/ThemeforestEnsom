@@ -11,6 +11,7 @@ import { SectionWithBorder } from '@/layouts/Section';
 import { BaseBlock } from '@/pages/Home/styled';
 import { emailJs } from '@/constants/email';
 import { schemaShort } from '@/schema';
+import { theme } from '@/theme';
 
 import { Input, Button, Form } from './styled';
 
@@ -20,7 +21,7 @@ type IFormData = {
 
 export const Subscribe = memo(() => {
   const form = useRef(null);
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const {
     register,

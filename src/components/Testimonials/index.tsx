@@ -9,6 +9,7 @@ import { Headline } from '@/components/Headline';
 import { TestimonialCard } from '@/components/TestimonialsCard';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
+import { theme } from '@/theme';
 import { SwiperWrapper } from '@/layouts';
 
 import { testimonialsData } from './data';
@@ -31,7 +32,7 @@ const breakpoints = {
 };
 
 export const Testimonials = memo(() => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);

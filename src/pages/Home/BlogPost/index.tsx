@@ -12,7 +12,7 @@ import { BlogInfo, PostContainer, TagContainer, Typography } from './styled';
 import { BlogPostType } from './types';
 
 export const BlogPost: FC<BlogPostType> = ({ img, data, headline, description, variant, tags }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <PostContainer variant={variant}>

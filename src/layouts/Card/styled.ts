@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { CardProps, VariantProps } from './types';
 
 export const CardContainer = styled.div<Partial<CardProps>>`
-  width: 255px;
+  width: ${({ theme }) => theme.width.slimBlock};
   height: 248px;
   display: flex;
   flex-direction: column;
@@ -12,32 +12,32 @@ export const CardContainer = styled.div<Partial<CardProps>>`
   padding: 25px;
   row-gap: 10px;
   box-shadow: ${({ theme }) => theme.boxShadows.shadowCard3};
-  ${(props) => {
-    switch (props.variant) {
+  ${({ variant, theme }) => {
+    switch (variant) {
       case 'big_icon':
-        return `max-width: 540px;
+        return `max-width: ${theme.width.wideBlock};
         width: auto;
         height: auto;
         display: flex;
         gap: 20px;
         padding: 20px 35px;
         
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           gap: 16px;
         }
         `;
       case 'small_card':
         return `
-        width: 255px;
+        width: ${theme.width.slimBlock};
         height: 248px;`;
       case 'center_text':
-        return `width: 350px;
+        return `width: ${theme.width.middleBlock};
         height: 353px;
         align-items: center;
         text-align: center;
         margin: 10px 0px 10px 10px;
 
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           width: 272px;
           height: auto;
           margin: 10px 0px;
@@ -45,7 +45,7 @@ export const CardContainer = styled.div<Partial<CardProps>>`
         `;
     }
   }}
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
 
   p {
     color: ${({ theme }) => theme.colors.grey};
@@ -55,14 +55,14 @@ export const CardContainer = styled.div<Partial<CardProps>>`
 export const IconWrapper = styled.span<Partial<CardProps>>`
   display: flex;
   svg {
-    ${(props) => {
-      switch (props.variant) {
+    ${({ variant, theme }) => {
+      switch (variant) {
         case 'big_icon':
           return `
           width: 60px;
           height: 60px;
           
-          @media (max-width: 768px) {
+          @media (max-width: ${theme.breakPoints.mobile}) {
             width: 42px;
             height: 42px;
           }
@@ -73,7 +73,7 @@ export const IconWrapper = styled.span<Partial<CardProps>>`
           height: 45px;`;
         case 'center_text':
           return `
-          @media (max-width: 768px) {
+          @media (max-width: ${theme.breakPoints.mobile}) {
             width: 36px;
             height: 36px;
           }
@@ -94,7 +94,7 @@ export const Typography = styled.h6<VariantProps>`
       default:
         return `    
         font: ${theme.font.headline.headline4};
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           font: ${theme.font.headline.headline5}
         }
         `;
@@ -113,7 +113,7 @@ export const Text = styled.p<VariantProps>`
         return `      
           font: ${theme.font.paragraph.paragraph2};
         
-          @media (max-width: 768px) {
+          @media (max-width: ${theme.breakPoints.mobile}) {
             margin-top: -6px;
             font: ${theme.font.paragraph.paragraph3};
           }
@@ -121,7 +121,7 @@ export const Text = styled.p<VariantProps>`
       default:
         return `    
         font: ${theme.font.paragraph.paragraph2};
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           font: ${theme.font.paragraph.paragraph3}
         }
         `;

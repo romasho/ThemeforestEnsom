@@ -17,7 +17,7 @@ export const BackgroundHalfSection = styled(Section)<BackgroundHalfSectionProps>
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 100vw;
     height: 180px;
     background-position: center;

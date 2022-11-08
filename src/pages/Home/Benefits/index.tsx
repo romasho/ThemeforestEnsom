@@ -7,12 +7,13 @@ import { BaseBlock } from '@/pages/Home/styled';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { Card } from '@/layouts/Card';
+import { theme } from '@/theme';
 
 import { benefitsData } from './data';
 import { CardContainer, StyledContainer } from './styled';
 
 export const Benefits = memo(() => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <Section background="dark">

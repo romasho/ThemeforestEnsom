@@ -20,7 +20,7 @@ export const Section = styled.section<SectionProps>`
     }
   }};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     flex-wrap: wrap;
   }
 `;
@@ -29,7 +29,7 @@ export const SectionWithBorder = styled(Section)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.helperBlue2};
   text-align: left;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     text-align: center;
   }
 `;

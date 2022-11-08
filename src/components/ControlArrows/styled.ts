@@ -5,7 +5,7 @@ export const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 104px;
   }
 `;
@@ -34,7 +34,7 @@ export const ArrowButton = styled.button`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 48px;
     height: 40px;
     border-radius: 14px;

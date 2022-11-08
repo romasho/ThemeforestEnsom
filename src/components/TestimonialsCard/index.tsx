@@ -20,7 +20,7 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
   position,
   description,
 }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <CardContainer>

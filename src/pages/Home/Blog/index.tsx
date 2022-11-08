@@ -14,6 +14,7 @@ import { Container } from '@/layouts/Container';
 import { SwiperWrapper } from '@/layouts';
 import { useAppSelector } from '@/hooks/redux';
 import { Buttons } from '@/components/Button';
+import { theme } from '@/theme';
 
 import { PostsContainer } from './styled';
 import 'swiper/css';
@@ -34,7 +35,7 @@ const breakpoints = {
 
 export const Blog = memo(() => {
   const { data } = useAppSelector((state) => state.blogSlice);
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);

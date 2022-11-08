@@ -16,12 +16,12 @@ export const SolutionDescriptionContainer = styled.div`
     height: 250px;
     object-fit: cover;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
       height: 150px;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 20px;
     padding-bottom: 40px;
   }
@@ -50,7 +50,7 @@ export const Li = styled.li`
     top: 11px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     font: ${({ theme }) => theme.font.paragraph.paragraph3};
     padding-bottom: 20px;
 

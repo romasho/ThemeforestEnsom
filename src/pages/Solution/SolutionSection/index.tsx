@@ -6,12 +6,13 @@ import { SolutionDescriptionContainer } from '../SolutionDescription/styled';
 import { SolutionDescription } from '@/pages/Solution/SolutionDescription';
 import { SolutionSidebar } from '@/pages/Solution/SolutionSidebar';
 import { Section } from '@/layouts/Section';
+import { theme } from '@/theme';
 
 import { Container, SolutionDescriptionWrapper } from './styled';
 import { SolutionSectionProps } from './types';
 
 export const SolutionSection: FC<SolutionSectionProps> = ({ solutionDescription }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
   const observer = useRef<IntersectionObserver | null>(null);
   const itemEls = useRef<HTMLElement[]>([]);
   const [active, setActive] = useState('');

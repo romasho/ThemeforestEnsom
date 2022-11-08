@@ -4,7 +4,7 @@ export const Img = styled.img`
   width: 141px;
   height: 46px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 90px;
     height: 30px;
   }
@@ -51,7 +51,7 @@ export const BurgerMenu = styled.div<BurgerMenuProps>`
 `;
 
 export const Block = styled.div`
-  max-width: 328px;
+  max-width: ${({ theme }) => theme.width.containerMobile};
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -69,9 +69,9 @@ export const Block = styled.div`
 export const Video = styled.video`
   position: absolute;
   z-index: 20;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.width.container};
   width: calc(100% - 50%);
-  min-width: 328px;
+  min-width: ${({ theme }) => theme.width.containerMobile};
   height: auto;
   margin: auto;
   top: 0;

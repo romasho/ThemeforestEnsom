@@ -18,7 +18,7 @@ export const FooterBorder = styled(Container)`
   padding-top: 35px;
   padding-bottom: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -31,7 +31,7 @@ export const SocialWrapper = styled.div`
   max-width: 285px;
   row-gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     max-width: none;
     width: 100%;
   }
@@ -71,7 +71,7 @@ export const SocialsContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding-top: 10px;
   }
 `;

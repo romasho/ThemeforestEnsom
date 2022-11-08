@@ -16,7 +16,7 @@ export const ServiceDescription: FC<ServiceDescriptionProps> = ({
   img,
   marks,
 }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <ServiceDescriptionContainer id={headline}>

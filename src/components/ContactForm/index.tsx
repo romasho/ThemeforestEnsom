@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Buttons } from '@/components/Button';
 import { schema } from '@/schema';
 import { emailJs } from '@/constants/email';
+import { theme } from '@/theme';
 
 import { FormWrapper, InputElement, Error, Label } from './styled';
 
@@ -19,7 +20,7 @@ type IFormData = {
 
 export const ContactForm = () => {
   const form = useRef(null);
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const {
     register,

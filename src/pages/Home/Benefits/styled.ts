@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
 
   div:nth-child(2) {
     margin-top: 55px;
@@ -19,7 +19,7 @@ export const CardContainer = styled.div`
     margin-top: -50px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     div:nth-child(n) {
       margin-top: 0;
     }
@@ -33,7 +33,7 @@ export const StyledContainer = styled(Container)`
   justify-content: flex-start;
   padding: 6px 0;
   overflow-x: scroll;
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
 
   &::-webkit-scrollbar {
     width: 0 !important;

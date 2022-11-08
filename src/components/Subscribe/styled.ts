@@ -5,7 +5,7 @@ export const Form = styled.form`
   max-width: 445px;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -23,7 +23,7 @@ export const Button = styled.button`
   width: 125px;
   font: ${({ theme }) => theme.font.headline.headline6};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 100%;
     position: static;
   }
@@ -46,7 +46,7 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.colors.helperBlue2};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     background: transparent;
     border: 1px solid #607d94;
     color: ${({ theme }) => theme.colors.white};

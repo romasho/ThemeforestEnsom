@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import { DefaultTheme } from 'styled-components';
 
 export const palette = {
@@ -59,11 +58,29 @@ const size = {
   large: 1200,
 };
 
+const breakPoints = {
+  mobile: '768px',
+};
+
+export type breakPointsType = typeof breakPoints;
+
+const width = {
+  container: '1110px',
+  containerMobile: '328px',
+  wideBlock: '540px',
+  middleBlock: '350px',
+  slimBlock: '255px',
+};
+
+export type widthType = typeof width;
+
 export const theme: DefaultTheme = {
   boxShadows,
   font,
+  width,
   spaces: [0, 4, 8, 16, 32, 64, 128],
   fontSizes: [46, 38, 30, 22, 20, 16, 14],
+  breakPoints,
   colors: {
     ...palette,
   },

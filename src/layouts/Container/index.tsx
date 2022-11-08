@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.width.container};
   width: calc(100% - 32px);
   margin: 0 auto;
   padding: 120px 0;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   row-gap: 50px;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     max-width: 360px;
     width: calc(100% - 32px);
     padding: 50px 0px;
@@ -29,7 +29,7 @@ export const CardContainer = styled(Container)`
 export const HeaderContainer = styled(Container)`
   padding: 40px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding: 20px 0;
   }
 `;
@@ -38,7 +38,7 @@ export const FooterContainer = styled(Container)`
   padding: 50px 0;
   align-items: flex-start;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding: 40px 0 30px 0;
   }
 `;
@@ -47,7 +47,7 @@ export const SubscribeContainer = styled(Container)`
   padding: 80px 0;
   color: ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding: 50px 0;
     gap: 30px;
   }

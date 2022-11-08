@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Aside = styled.aside`
-  width: 255px;
+  width: ${({ theme }) => theme.width.slimBlock};
   display: flex;
   flex-direction: column;
   position: sticky;

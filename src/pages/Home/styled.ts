@@ -4,14 +4,14 @@ export const HeadlineWrapper = styled.div`
   width: 50%;
   margin: -50px 0 -30px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 100%;
     margin: 0 0 0 0;
   }
 `;
 
 export const BaseBlock = styled.div`
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -23,9 +23,9 @@ export const BaseBlock = styled.div`
     color: ${({ theme }) => theme.colors.grey};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     row-gap: 20px;
-    max-width: 328px;
+    max-width: ${({ theme }) => theme.width.containerMobile};
     margin: 0 auto;
   }
 `;
@@ -48,7 +48,7 @@ export const BaseBlockCenter = styled(BaseBlock)`
     text-align: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     margin: 0 auto;
   }
 `;

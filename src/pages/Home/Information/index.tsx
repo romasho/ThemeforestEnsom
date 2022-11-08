@@ -15,7 +15,7 @@ import img from '@/assets/img/img_11.png';
 import { DescriptionWrapper, PositionedButton, BackgroundSection } from './styled';
 
 export const Information = memo(() => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const navigate = useNavigate();
 

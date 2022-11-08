@@ -6,7 +6,7 @@ import { DropDownMenu } from '@/components/DropDownMenu';
 import { Paragraph } from '@/components/Paragraph';
 
 export const ContactsMobile = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const render = isMobile ? (
     <>

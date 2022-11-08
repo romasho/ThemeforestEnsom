@@ -17,7 +17,7 @@ import { ContactContainer, TeamMemberInfo, Block, Img, EmployeeSection } from '.
 
 export const TeamMember = () => {
   const { userId } = useParams();
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const [currenMember] = testimonialsData.filter(({ name }) => name === userId);
   const { avatar, name, position, description, socials } = currenMember;

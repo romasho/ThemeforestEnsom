@@ -16,7 +16,7 @@ interface ServicesCardProps {
 }
 
 export const ServicesCard: FC<ServicesCardProps> = ({ icon, headline, description }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <ServicesCardContainer>

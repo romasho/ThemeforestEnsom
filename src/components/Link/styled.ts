@@ -30,7 +30,7 @@ export const Button = styled.button`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     svg {
       width: 20px !important;
       height: 20px !important;

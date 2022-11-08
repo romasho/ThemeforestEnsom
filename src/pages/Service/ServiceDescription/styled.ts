@@ -11,8 +11,8 @@ export const ServiceDescriptionContainer = styled.div`
     padding-bottom: 0;
   }
 
-  @media (max-width: 768px) {
-    max-width: 328px;
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+    max-width: ${({ theme }) => theme.width.containerMobile};
     gap: 25px;
     padding-bottom: 35px;
   }
@@ -27,12 +27,12 @@ export const Img = styled.img<ImgProps>`
   width: 100%;
   object-fit: cover;
   border-radius: 6px;
-  ${(props) =>
-    props.marks
-      ? `width: 350px;
+  ${({ marks, theme }) =>
+    marks
+      ? `width: ${theme.width.middleBlock};
   height: 160px;`
       : ''}
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     max-width: 329px;
     height: 160px;
   }
@@ -43,7 +43,7 @@ export const Ul = styled.ul`
   gap: 15px;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 12.5px;
   }
 `;
@@ -61,7 +61,7 @@ export const Li = styled.li`
     fill: ${({ theme }) => theme.colors.primary};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     font: ${({ theme }) => theme.font.paragraph.paragraph3};
   }
 `;
@@ -70,7 +70,7 @@ export const Box = styled.div`
   display: flex;
   gap: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     flex-direction: column-reverse;
   }
 `;

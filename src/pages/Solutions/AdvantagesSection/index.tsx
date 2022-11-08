@@ -8,11 +8,12 @@ import { Section } from '@/layouts/Section';
 import img from '@/assets/img/img_0011.png';
 import { BaseBlock } from '@/pages/Home/styled';
 import { BackgroundHalfSection } from '@/pages/Home/Features/styled';
+import { theme } from '@/theme';
 
 import { AdvantagesContainer } from './styled';
 
 export const AdvantagesSection = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <Section background={isMobile ? 'light' : 'dark'}>

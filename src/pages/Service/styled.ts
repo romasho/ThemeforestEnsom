@@ -8,7 +8,7 @@ export const ContainerHeadline = styled(Container)`
   flex-wrap: nowrap;
   align-items: flex-start;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding-bottom: 35px;
     padding-top: 90px;
   }
@@ -39,7 +39,7 @@ export const Link = styled.a`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding: 15px 0;
     font: ${({ theme }) => theme.font.headline.headline6};
   }

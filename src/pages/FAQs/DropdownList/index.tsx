@@ -16,7 +16,7 @@ interface DropDownListProps {
 }
 
 export const DropDownList: FC<DropDownListProps> = ({ question, answer }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
   const [isOpen, setOpen] = useState(false);
 
   const handleClick = () => setOpen((prev) => !prev);

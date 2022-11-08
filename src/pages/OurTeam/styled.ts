@@ -9,7 +9,7 @@ export const TeamContainer = styled.div`
   gap: 30px;
 
   gap: 30px;
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.width.container};
 
   a {
     &:nth-child(1) {
@@ -30,7 +30,7 @@ export const TeamContainer = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 12px 8px;
     margin-top: 60px;
 
@@ -66,7 +66,7 @@ export const ImageContainer = styled.div<BackgroundHalfSectionProps>`
   background: linear-gradient(180deg, rgba(40, 50, 66, 0) 26.37%, #283850 103.66%),
     url(${({ img }) => img});
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  width: 350px;
+  width: ${({ theme }) => theme.width.middleBlock};
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -82,7 +82,7 @@ export const ImageContainer = styled.div<BackgroundHalfSectionProps>`
     transform: scale(1.05);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 160px;
     height: 220px;
     background-size: cover;

@@ -14,7 +14,7 @@ export const SolutionDescription: FC<SolutionDescriptionProps> = ({
   img,
   types,
 }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <>

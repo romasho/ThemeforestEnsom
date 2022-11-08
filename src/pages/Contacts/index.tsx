@@ -10,9 +10,10 @@ import { Headline } from '@/components/Headline';
 import { ContactForm } from '@/components/ContactForm';
 import { MapboxMap } from '@/pages/Contacts/MapBox';
 import { ContactCards } from '@/components/ContactCards';
+import { theme } from '@/theme';
 
 export const Contacts = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <PageLayout>

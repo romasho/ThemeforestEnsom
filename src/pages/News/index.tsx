@@ -8,6 +8,7 @@ import { CenterAlignContainer } from '@/layouts/Container';
 import { Headline } from '@/components/Headline';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { useAppSelector } from '@/hooks/redux';
+import { theme } from '@/theme';
 
 import { StyledContainer } from './styled';
 import { CurrentNews } from './CurrentNews';
@@ -16,7 +17,7 @@ import { RelatedNews } from './RelatedNews';
 import { AllTags } from './AllTags';
 
 export const News = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const { data } = useAppSelector((state) => state.blogSlice);
   const { userId } = useParams();

@@ -11,7 +11,7 @@ export const NewsContainer = styled.div`
   gap: 30px;
   align-items: stretch;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 20px;
   }
 `;
@@ -21,7 +21,7 @@ export const InfoBlockWrapper = styled.div`
   gap: 30px;
   margin: -5px 0 10px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 17px 24px;
     flex-wrap: wrap;
 
@@ -51,7 +51,7 @@ export const InfoBlock = styled.span`
 `;
 
 export const Quotes = styled.div`
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
   width: 100%;
   font: ${({ theme }) => theme.font.paragraph.paragraph1};
   letter-spacing: -0.015em;
@@ -60,7 +60,7 @@ export const Quotes = styled.div`
   padding-left: 35px;
   margin-left: 95px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     font: ${({ theme }) => theme.font.paragraph.paragraph2};
     margin-left: 0px;
     padding-left: 28px;

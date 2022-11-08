@@ -6,10 +6,10 @@ import { Section } from '@/layouts/Section';
 
 export const DescriptionWrapper = styled.div`
   position: relative;
-  max-width: 350px;
+  max-width: ${({ theme }) => theme.width.middleBlock};
   margin: -50px 0 -30px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     margin: 0;
   }
 `;
@@ -18,7 +18,7 @@ export const PositionedButton = styled(Button)`
   position: absolute;
   bottom: -150%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     bottom: -105%;
     right: 5%;
   }
@@ -36,7 +36,7 @@ export const BackgroundSection = styled(Section)<BackgroundSectionProps>`
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     height: 230px;
   }
 `;

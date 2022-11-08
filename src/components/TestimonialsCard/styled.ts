@@ -6,10 +6,10 @@ export const CardContainer = styled.div`
   padding: 35px;
   row-gap: 25px;
   box-shadow: ${({ theme }) => theme.boxShadows.shadowCard3};
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
   margin: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     max-width: 360px;
     width: calc(100% - 32px);
   }
@@ -31,7 +31,7 @@ export const Avatar = styled.img`
   object-position: center;
   border-radius: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 50px;
     height: 50px;
   }

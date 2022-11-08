@@ -55,7 +55,7 @@ export const ImgWrapper = styled(WithoutPaddingContainer)`
   gap: 0;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding-top: 50px;
     img {
       width: 92px;

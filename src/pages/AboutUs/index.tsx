@@ -17,6 +17,7 @@ import { Card } from '@/layouts/Card';
 import { servicesData } from '@/pages/Services/ServicesSection/data';
 import { ROUTE_NAMES } from '@/constants';
 import { SwiperWrapper } from '@/layouts';
+import { theme } from '@/theme';
 
 import { BackgroundSection, Link, ImgWrapper, WrapSection } from './styled';
 import { Testimonials } from './Testimonials';
@@ -32,7 +33,7 @@ const breakpoints = {
 };
 
 export const AboutUs = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <PageLayout>

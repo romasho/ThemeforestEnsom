@@ -6,9 +6,10 @@ import { PostsProps } from '../types';
 
 import { Headline } from '@/components/Headline';
 import { BlogPost } from '@/pages/Home/BlogPost';
+import { theme } from '@/theme';
 
 export const RelatedNews: FC<PostsProps> = ({ posts }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <NewsContainer>

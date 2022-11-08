@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: flex-start;
   gap: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 104px;
     height: 121px;
     align-items: center;
@@ -29,7 +29,7 @@ export const Numbers = styled.h2`
   height: 56px;
   color: ${({ theme }) => theme.colors.primary};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     font-size: 30px;
     line-height: 70px;
   }

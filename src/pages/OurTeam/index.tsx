@@ -17,7 +17,7 @@ import { testimonialsData } from '@/components/Testimonials/data';
 import { TeamContainer, ImageContainer, Link } from './styled';
 
 export const OurTeam = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
   const numberCardsToRender = isMobile ? 8 : 9;
   const [employees, setEmployees] = useState<typeof testimonialsData>([]);
   const [currentCountEmployees, setCurrenCountEmployees] = useState(0);

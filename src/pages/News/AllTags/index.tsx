@@ -6,9 +6,10 @@ import { Headline } from '@/components/Headline';
 import { Tag } from '@/components/Tag';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { disableAll, toggleActive } from '@/store/reducers/blogSlice';
+import { theme } from '@/theme';
 
 export const AllTags = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const { filterPosts } = useAppSelector((state) => state.blogSlice);
   const dispatch = useAppDispatch();

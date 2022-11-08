@@ -18,7 +18,7 @@ export const ListItem = styled.li`
   flex-direction: column;
   margin-top: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 10px;
   }
 `;

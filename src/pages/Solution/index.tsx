@@ -9,12 +9,13 @@ import { CenterAlignContainer } from '@/layouts/Container';
 import { Headline } from '@/components/Headline';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { DataAnalyticsSolutions } from '@/pages/Solutions/SolutionsCards/data';
+import { theme } from '@/theme';
 
 import { SolutionSection } from './SolutionSection';
 
 export const Solution = () => {
   const { userId } = useParams();
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const [currentSolution] = DataAnalyticsSolutions.filter((el) => el.title === userId);
   const { solutionDescription } = currentSolution;

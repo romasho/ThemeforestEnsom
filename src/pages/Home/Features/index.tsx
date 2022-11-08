@@ -10,12 +10,13 @@ import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import img from '@/assets/img/02_img_10.png';
 import { ROUTE_NAMES } from '@/constants';
+import { theme } from '@/theme';
 
 import { BackgroundHalfSection, Wrapper, StyledBaseBlock } from './styled';
 
 export const Features = memo(() => {
   const navigate = useNavigate();
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const navigateToSolutions = () => {
     navigate(ROUTE_NAMES.SOLUTIONS);

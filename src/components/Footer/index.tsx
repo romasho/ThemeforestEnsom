@@ -5,6 +5,7 @@ import { Img } from '@/components/Header/components.styled';
 import { Socials } from '@/components/Socials';
 import logo from '@/assets/Logo.png';
 import { FooterContainer } from '@/layouts/Container';
+import { theme } from '@/theme';
 
 import { FooterWrapper, SocialWrapper, Text, SocialsContainer } from './styled';
 import { Rights } from './rights';
@@ -12,7 +13,7 @@ import { ContactsDesktop } from './contactsDesktop';
 import { ContactsMobile } from './contactsMobile';
 
 export const Footer = memo(() => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <FooterWrapper>

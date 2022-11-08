@@ -14,7 +14,7 @@ import { Buttons } from '@/components/Button';
 import { ROUTE_NAMES } from '@/constants';
 
 export const ServiceContacts = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const navigate = useNavigate();
 

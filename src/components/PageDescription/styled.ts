@@ -7,9 +7,9 @@ export const Text = styled.p`
   text-align: center;
   letter-spacing: -0.015em;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     font: ${({ theme }) => theme.font.paragraph.paragraph3};
-    max-width: 328px;
+    max-width: ${({ theme }) => theme.width.containerMobile};
   }
 `;
 
@@ -22,14 +22,14 @@ export const PageDescriptionWrapper = styled.div`
   padding-bottom: 0;
   padding-top: 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     text-align: center;
     padding-top: 70px;
   }
 `;
 
 export const PageDescriptionContainer = styled.div`
-  max-width: 1110px;
+  max-width: ${({ theme }) => theme.width.container};
   width: calc(100% - 32px);
   margin: 0 auto;
   position: relative;

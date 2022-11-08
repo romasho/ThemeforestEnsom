@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   box-shadow: ${({ theme }) => theme.boxShadows.shadowCard3};
-  width: 255px;
+  width: ${({ theme }) => theme.width.slimBlock};
   height: 525px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 6px;

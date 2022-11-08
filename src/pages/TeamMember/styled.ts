@@ -9,14 +9,14 @@ export const ContactContainer = styled(Container)`
   padding-top: 0;
   gap: 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     flex-direction: column;
     gap: 30px;
   }
 `;
 
 export const TeamMemberInfo = styled.div`
-  width: 540px;
+  width: ${({ theme }) => theme.width.wideBlock};
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -37,7 +37,7 @@ export const Block = styled.div`
     fill: grey;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     margin-top: -5px;
   }
 `;
@@ -45,7 +45,7 @@ export const Block = styled.div`
 export const Img = styled.img`
   margin: 0 auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     width: 100%;
   }
 `;

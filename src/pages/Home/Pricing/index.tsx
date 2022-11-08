@@ -3,12 +3,13 @@ import { useMediaQuery } from 'react-responsive';
 
 import { Headline } from '@/components/Headline';
 import { PricingCard } from '@/pages/Home/PricingCard/Index';
+import { theme } from '@/theme';
 
 import { data } from './data';
 import { CardContainer, StyledContainer, StyledSection } from './styled';
 
 export const Pricing = memo(() => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <StyledSection background="light">

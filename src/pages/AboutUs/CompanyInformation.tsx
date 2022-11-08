@@ -7,9 +7,10 @@ import { Headline } from '@/components/Headline';
 import { Paragraph } from '@/components/Paragraph';
 import { CenterAlignContainer } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
+import { theme } from '@/theme';
 
 export const CompanyInformation = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <Section background="dark">

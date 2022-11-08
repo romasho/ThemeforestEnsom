@@ -9,7 +9,13 @@ export const Rights = () => {
       <Paragraph size={'p3'} color={theme.colors.helperBlue2}>
         Ensome© 2022 All Rights Reserved
       </Paragraph>
-      <div style={{ display: 'flex', maxWidth: '255px', flexGrow: 1 }}>
+      <div
+        style={{
+          display: 'flex',
+          maxWidth: '255px',
+          flexGrow: 1,
+        }}
+      >
         <Paragraph size={'p3'} color={theme.colors.helperBlue2}>
           Privacy policy
         </Paragraph>

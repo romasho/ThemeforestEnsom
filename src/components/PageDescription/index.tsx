@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Headline } from '@/components/Headline';
+import { theme } from '@/theme';
 
 import { Text, PageDescriptionWrapper, PageDescriptionContainer } from './styled';
 
@@ -13,7 +14,7 @@ interface PageDescriptionProps {
 }
 
 export const PageDescription: FC<PageDescriptionProps> = ({ page, headline, description }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <PageDescriptionContainer>

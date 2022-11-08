@@ -11,24 +11,24 @@ export const PostContainer = styled.div<Partial<BlogPostType>>`
     object-fit: cover;
   }
 
-  ${(props) => {
-    switch (props.variant) {
+  ${({ variant, theme }) => {
+    switch (variant) {
       case 'medium':
         return `
-        width: 540px;
+        width: ${theme.width.wideBlock};
         gap: 30px;
-        box-shadow: ${props.theme.boxShadows.shadowCard3};
+        box-shadow: ${theme.boxShadows.shadowCard3};
         padding-bottom: 30px;
         
-        @media (max-width: 768px) {
-          max-width: 328px;
+        @media (max-width: ${theme.breakPoints.mobile}) {
+          max-width: ${theme.width.containerMobile};
           gap: 20px;
           padding-bottom: 20px;
         }
         `;
       case 'small':
         return `    
-        width: 350px;
+        width: ${theme.width.middleBlock};
         gap: 20px;`;
       case 'without_description':
         return `    
@@ -42,8 +42,8 @@ export const PostContainer = styled.div<Partial<BlogPostType>>`
           height: 114px;
         }
 
-         @media (max-width: 768px) {
-            max-width: 328px;
+         @media (max-width: ${theme.breakPoints.mobile}) {
+            max-width: ${theme.width.containerMobile};
             width: 100%;
 
             img {
@@ -70,14 +70,14 @@ export const PostContainer = styled.div<Partial<BlogPostType>>`
 export const BlogInfo = styled.div<Partial<BlogPostType>>`
   display: flex;
   flex-direction: column;
-  ${({ variant }) => {
+  ${({ variant, theme }) => {
     switch (variant) {
       case 'medium':
         return `
         gap: 17px;
         padding: 0 35px;
 
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           gap: 12px;
           padding: 0 20px;
         } 
@@ -88,7 +88,7 @@ export const BlogInfo = styled.div<Partial<BlogPostType>>`
       case 'without_description':
         return `gap: 15px;
         
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           gap: 6px;
       }
         `;
@@ -115,7 +115,7 @@ export const Typography = styled.h6<VariantProps>`
         return `    
         font: ${theme.font.headline.headline4};
         
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           font: ${theme.font.headline.headline6};
       }
         `;
@@ -123,7 +123,7 @@ export const Typography = styled.h6<VariantProps>`
         return `
         font: ${theme.font.headline.headline6};
         
-        @media (max-width: 768px) {
+        @media (max-width: ${theme.breakPoints.mobile}) {
           font: ${theme.font.headline.headline7}
         }
         `;
@@ -131,7 +131,7 @@ export const Typography = styled.h6<VariantProps>`
         return `
           font: ${theme.font.headline.headline6};
           
-          @media (max-width: 768px) {
+          @media (max-width: ${theme.breakPoints.mobile}) {
             font: ${theme.font.headline.headline7}
           }
           `;

@@ -14,6 +14,7 @@ import { TestimonialCard } from '@/components/TestimonialsCard';
 import { SwiperWrapper } from '@/layouts';
 import { Paragraph } from '@/components/Paragraph';
 import { BaseBlock } from '@/pages/Home/styled';
+import { theme } from '@/theme';
 
 SwiperCore.use([Navigation]);
 
@@ -27,7 +28,7 @@ const breakpoints = {
 };
 
 export const Testimonials = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const navPrevButton = useRef<HTMLButtonElement>(null);
   const navNextButton = useRef<HTMLButtonElement>(null);

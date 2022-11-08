@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import { Paragraph } from '@/components/Paragraph';
+import { theme } from '@/theme';
 
 import { Container, Numbers } from './styled';
 
@@ -11,7 +12,7 @@ interface CompanyNumbersProps {
 }
 
 export const CompanyNumbers: FC<CompanyNumbersProps> = ({ number, description }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <Container>

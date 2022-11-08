@@ -35,7 +35,7 @@ export const ContactCardContainer = styled.div<ContactCardsProps>`
     fill: ${({ iconColor }) => iconColor};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     gap: 20px;
     flex-direction: column;
   }

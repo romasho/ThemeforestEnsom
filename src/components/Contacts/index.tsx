@@ -9,9 +9,10 @@ import { CenterAlignContainer } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
 import { BaseBlockCenter } from '@/pages/Home/styled';
 import { ROUTE_NAMES } from '@/constants';
+import { theme } from '@/theme';
 
 export const Contacts = memo(() => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
   const navigate = useNavigate();
 
   const navigateToContacts = () => {

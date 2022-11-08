@@ -15,7 +15,7 @@ interface AdvantagesProps {
 }
 
 export const Advantages: FC<AdvantagesProps> = ({ title, description }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <ListItem>

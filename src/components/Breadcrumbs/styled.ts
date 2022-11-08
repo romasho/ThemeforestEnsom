@@ -24,7 +24,7 @@ export const BreadcrumbsContainer = styled.div<BreadcrumbsProps>`
     fill: ${({ theme }) => theme.colors.grey};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     top: 10px;
   }
 `;

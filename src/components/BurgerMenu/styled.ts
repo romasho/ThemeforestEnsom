@@ -26,7 +26,7 @@ export const BurgerMenuWrapper = styled.div<BurgerMenuProps>`
 `;
 
 export const Block = styled.div`
-  max-width: 328px;
+  max-width: ${({ theme }) => theme.width.containerMobile};
   margin: 0 auto;
   width: 100%;
   display: flex;

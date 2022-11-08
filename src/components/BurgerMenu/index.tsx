@@ -5,6 +5,7 @@ import { ROUTE_NAMES } from '@/constants';
 import { DropDownMenu } from '@/components/DropDownMenu';
 import { Headline } from '@/components/Headline';
 import { Socials } from '@/components/Socials';
+import { theme } from '@/theme';
 
 import { BurgerMenuWrapper, Block } from './styled';
 
@@ -14,7 +15,7 @@ interface BurgerMenuProps {
 }
 
 export const BurgerMenu: FC<BurgerMenuProps> = ({ open, burgerMenu }) => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isTabletOrMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   return (
     <>

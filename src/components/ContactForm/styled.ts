@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FormWrapper = styled.form`
-  max-width: 540px;
+  max-width: ${({ theme }) => theme.width.wideBlock};
   display: flex;
   flex-grow: 1;
   flex-direction: row;
@@ -10,7 +10,7 @@ export const FormWrapper = styled.form`
   justify-content: flex-end;
   margin-top: 16px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     margin-top: 0;
   }
 `;
@@ -26,7 +26,7 @@ export const InputElement = styled.input<InputElementProps>`
   border-radius: 6px;
   padding: 15px 25px;
   outline: none;
-  width: ${(props) => (props.fullWidth ? '100%' : '255px')};
+  width: ${(props) => (props.fullWidth ? '100%' : '${({ theme }) => theme.width.slimBlock}')};
   font: ${({ theme }) => theme.font.paragraph.paragraph3bold};
   ${(props) => (props.variant === 'textarea' ? ' resize: none; height: 140px' : '')};
 
@@ -46,5 +46,5 @@ export const Error = styled.p`
 `;
 
 export const Label = styled.label<Partial<InputElementProps>>`
-  width: ${(props) => (props.fullWidth ? '100%' : '255px')};
+  width: ${(props) => (props.fullWidth ? '100%' : '${({ theme }) => theme.width.slimBlock}')};
 `;

@@ -17,7 +17,7 @@ import { Headline } from '@/components/Headline';
 import { Tag } from '@/components/Tag';
 
 export const CurrentNews: FC<PostProps> = ({ post }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: `(max-width: ${theme.breakPoints.mobile})` });
 
   const { img, date, author, headline, views, tags, blogText } = post;
   return (
