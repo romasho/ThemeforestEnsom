@@ -1,8 +1,9 @@
+import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 export const DropDownContainer = styled.div`
-  max-width: 100%;
-  color: ${({ theme }) => theme.colors.white};
+  width: 100%;
+  color: inherit;
   border-bottom: 1px solid ${({ theme }) => theme.colors.helperBlue2};
   padding-bottom: 15px;
   display: flex;
@@ -10,16 +11,12 @@ export const DropDownContainer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
-
-  svg {
-    fill: ${({ theme }) => theme.colors.white};
-  }
 `;
 
 export const Button = styled.button`
   border: none;
   background: none;
-  color: ${({ theme }) => theme.colors.white};
+  color: inherit;
   font: ${({ theme }) => theme.font.headline.headline6};
 `;
 
@@ -41,4 +38,19 @@ export const LinkContainer = styled.div`
   flex-direction: column;
   animation: ${rotate} 0.3s forwards;
   gap: 15px;
+`;
+
+export const DropDownLink = styled(NavLink)`
+  text-decoration: none;
+  font: ${({ theme }) => theme.font.headline.headline7};
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
+
+export const Controls = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;

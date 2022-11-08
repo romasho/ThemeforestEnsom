@@ -6,6 +6,11 @@ import { Container } from '@/layouts/Container';
 export const FooterWrapper = styled.footer`
   padding: 10px 0;
   background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.white};
+
+  svg {
+    fill: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const FooterBorder = styled(Container)`

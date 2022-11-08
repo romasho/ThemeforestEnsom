@@ -27,5 +27,6 @@ export const Nav = styled.nav`
   max-width: 510px;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
   flex-grow: 1;
 `;

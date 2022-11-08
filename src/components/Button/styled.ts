@@ -25,6 +25,7 @@ export const Button = styled.button<ButtonPropsType>`
   align-items: center;
   justify-content: ${({ icon }) => (icon ? 'center' : 'space-around')};
   font: ${({ theme }) => theme.font.headline.headline6};
+  cursor: pointer;
 
   &:hover {
     text-decoration: none;

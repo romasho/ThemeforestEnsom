@@ -38,9 +38,9 @@ export const Footer = memo(() => {
           )}
           {isMobile && (
             <>
-              <DropDown title={'Quick link'} answer={Link} />
-              <DropDown title={'Service'} answer={Service} />
-              <DropDown title={'Contact info'} answer={Service} />
+              <DropDown title={'Quick link'} dropDownItems={Link} />
+              <DropDown title={'Service'} dropDownItems={Service} />
+              <DropDown title={'Contact info'} dropDownItems={Service} />
             </>
           )}
           <SocialsContainer>
