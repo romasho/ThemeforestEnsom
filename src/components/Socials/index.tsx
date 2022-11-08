@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
-import { Icon } from '../Icon';
-
+import { Icon } from '@/components/Icon';
 import { ReactComponent as facebookIcon } from '@/assets/svg/socials/icon_facebook.svg';
 import { ReactComponent as twitterIcon } from '@/assets/svg/socials/icon_twitter.svg';
 import { ReactComponent as linkedinIcon } from '@/assets/svg/socials/icon_linkedin.svg';
@@ -11,7 +10,7 @@ import { ReactComponent as behanceIcon } from '@/assets/svg/socials/icon_behance
 
 import { SocialItem, SocialsContainer } from './styled';
 
-const s = {
+const Icons = {
   facebook: facebookIcon,
   twitter: twitterIcon,
   linkedin: linkedinIcon,
@@ -33,17 +32,13 @@ interface SocialsProps {
 }
 
 export const Socials: FC<SocialsProps> = ({ socials, small }) => {
-  const { facebook, twitter, linkedin, youtube, dribbble, behance } = socials;
-
-  Object.keys(socials).map;
-
   return (
     <SocialsContainer small={small}>
       {(Object.keys(socials) as Array<keyof typeof socials>).map((el, index) => {
         return (
           <SocialItem key={index}>
             <a href={socials[el]}>
-              <Icon icon={s[el]} />
+              <Icon icon={Icons[el]} />
             </a>
           </SocialItem>
         );

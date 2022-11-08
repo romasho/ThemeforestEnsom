@@ -31,7 +31,7 @@ interface BurgerMenuProps {
 
 export const BurgerMenu = styled.div<BurgerMenuProps>`
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-200%)')};
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   position: absolute;
   left: 0;
   width: 100%;
@@ -64,4 +64,18 @@ export const Block = styled.div`
   a > svg {
     fill: ${({ theme }) => theme.colors.primary};
   }
+`;
+
+export const Video = styled.video`
+  position: absolute;
+  z-index: 20;
+  max-width: 1110px;
+  width: calc(100% - 50%);
+  min-width: 328px;
+  height: auto;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 `;

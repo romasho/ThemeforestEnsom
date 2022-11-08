@@ -1,18 +1,17 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useMediaQuery } from 'react-responsive';
 
-import { BaseBlock, BaseBlockRow, BaseBlockWidth } from '../Home/styled';
+import { BaseBlockWidth } from '../Home/styled';
 
-import { DescriptionPage } from '@/components/DescriptionPage';
+import { PageDescription } from '@/components/PageDescription';
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
 import { Contacts } from '@/components/Contacts';
 import { Subscribe } from '@/components/Subscribe';
 import img from '@/assets/img/02_img_10.png';
-import { data, logos } from '@/components/CompanyOverview/data';
+import { logos } from '@/components/CompanyOverview/data';
 import { CenterAlignContainer } from '@/layouts/Container';
 import { Headline } from '@/components/Headline';
-import { CompanyNumbers } from '@/components/CompanyNumbers';
 import { Paragraph } from '@/components/Paragraph';
 import { Card } from '@/layouts/Card';
 import { servicesData } from '@/pages/Services/ServicesSection/data';
@@ -21,6 +20,7 @@ import { SwiperWrapper } from '@/layouts';
 
 import { BackgroundSection, Link, ImgWrapper, WrapSection } from './styled';
 import { Testimonials } from './Testimonials';
+import { CompanyInformation } from './CompanyInformation';
 
 const breakpoints = {
   320: {
@@ -37,7 +37,7 @@ export const AboutUs = () => {
   return (
     <PageLayout>
       <Section background="light">
-        <DescriptionPage
+        <PageDescription
           page={'About Us'}
           headline={'We work with 15 years of experience'}
           description={
@@ -46,25 +46,7 @@ export const AboutUs = () => {
         />
       </Section>
       <BackgroundSection background="dark" img={img} />
-      <Section background="dark">
-        <CenterAlignContainer>
-          <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
-            We provide services that guarantee your success
-          </Headline>
-          <BaseBlockRow>
-            {data.map(({ description, number }) => (
-              <CompanyNumbers number={number} description={description} key={description} />
-            ))}
-          </BaseBlockRow>
-          <BaseBlock>
-            <Paragraph size={isMobile ? 'p3' : 'p2'}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
-              laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
-              tempor quam, non mollis quam finibus nec.
-            </Paragraph>
-          </BaseBlock>
-        </CenterAlignContainer>
-      </Section>
+      <CompanyInformation />
       <WrapSection background="light">
         <CenterAlignContainer>
           <BaseBlockWidth>

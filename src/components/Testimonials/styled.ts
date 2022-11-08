@@ -5,6 +5,7 @@ export const TestimonialsWrapper = styled.div`
   gap: 10px;
   padding-top: 50px;
   max-width: 1110px;
+  width: calc(100% - 32px);
   margin-left: 4px;
 
   @media (max-width: 768px) {

@@ -1,10 +1,9 @@
 import { memo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { CompanyNumbers } from '../CompanyNumbers';
-import { Headline } from '../Headline';
-import { Paragraph } from '../Paragraph';
-
+import { CompanyNumbers } from '@/components/CompanyNumbers';
+import { Headline } from '@/components/Headline';
+import { Paragraph } from '@/components/Paragraph';
 import { CenterAlignContainer } from '@/layouts/Container';
 import { Section } from '@/layouts/Section';
 import { BaseBlockRow, BaseBlock, BaseBlockRowImages } from '@/pages/Home/styled';

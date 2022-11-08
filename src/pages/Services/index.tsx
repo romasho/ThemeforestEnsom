@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-import { DescriptionPage } from '@/components/DescriptionPage';
+import { PageDescription } from '@/components/PageDescription';
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
 import { Contacts } from '@/components/Contacts';
@@ -14,7 +14,7 @@ export const Services = () => {
   return (
     <PageLayout>
       <Section background="light">
-        <DescriptionPage
+        <PageDescription
           page={'Services'}
           headline={'Data Analytics Services'}
           description={

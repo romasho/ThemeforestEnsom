@@ -12,7 +12,6 @@ import { ROUTE_NAMES } from '@/constants';
 
 export const Contacts = memo(() => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
   const navigate = useNavigate();
 
   const navigateToContacts = () => {

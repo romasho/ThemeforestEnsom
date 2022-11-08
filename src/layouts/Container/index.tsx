@@ -20,6 +20,12 @@ export const Container = styled.div`
   }
 `;
 
+export const CardContainer = styled(Container)`
+  @media (max-width: 1135px) {
+    justify-content: center;
+  }
+`;
+
 export const HeaderContainer = styled(Container)`
   padding: 40px 0;
 

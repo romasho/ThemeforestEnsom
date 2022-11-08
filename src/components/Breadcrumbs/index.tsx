@@ -1,8 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { FC } from 'react';
 
-import { NavListItem } from '../Navigation/components.styled';
-
+import { NavListItem } from '@/components/Header/Navigation/components.styled';
 import { ReactComponent as Divider } from '@/assets/svg/icon_divider.svg';
 
 import { BreadcrumbsContainer } from './styled';

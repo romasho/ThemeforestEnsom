@@ -1,12 +1,8 @@
-import { FC } from 'react';
 import styled from 'styled-components';
 
-interface Props {
-  tag: string;
-  isActive: boolean;
-}
+import { TagProps } from './types';
 
-export const Tag = styled.span<Partial<Props>>`
+export const Tag = styled.span<Partial<TagProps>>`
   border: 1px solid ${({ theme }) => theme.colors.background};
   border-radius: 6px;
   color: ${({ theme }) => theme.colors.primary};
@@ -32,7 +28,3 @@ export const Tag = styled.span<Partial<Props>>`
     color: ${({ theme }) => theme.colors.white};
   }
 `;
-
-export const Tags: FC<Props> = ({ tag, isActive }) => {
-  return <Tag isActive={isActive}>{tag}</Tag>;
-};

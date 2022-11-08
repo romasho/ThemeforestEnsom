@@ -8,7 +8,7 @@ import { Contacts } from '@/components/Contacts';
 import { CenterAlignContainer } from '@/layouts/Container';
 import { Headline } from '@/components/Headline';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { DataAnalyticsSolutions } from '@/components/SolutionsCards/data';
+import { DataAnalyticsSolutions } from '@/pages/Solutions/SolutionsCards/data';
 
 import { SolutionSection } from './SolutionSection';
 

@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import { HeadlineWrapper, ControlsWrapper } from '../styled';
 
-import { ArrowControls } from '@/components/ArrowControls';
+import { ControlArrows } from '@/components/ControlArrows';
 import { Headline } from '@/components/Headline';
 import { WithoutPaddingContainer } from '@/layouts/Container';
 import { testimonialsData } from '@/components/Testimonials/data';
@@ -40,7 +40,7 @@ export const Testimonials = () => {
     }
   };
 
-  const arrow = <ArrowControls left={navPrevButton} right={navNextButton} />;
+  const arrow = <ControlArrows left={navPrevButton} right={navNextButton} />;
 
   return (
     <WithoutPaddingContainer>

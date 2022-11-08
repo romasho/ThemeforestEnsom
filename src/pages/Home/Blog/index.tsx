@@ -7,7 +7,7 @@ import { memo } from 'react';
 
 import { BlogPost } from '../BlogPost';
 
-import { ArrowControls } from '@/components/ArrowControls';
+import { ControlArrows } from '@/components/ControlArrows';
 import { Headline } from '@/components/Headline';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
@@ -25,6 +25,9 @@ const breakpoints = {
     slidesPerView: 1,
   },
   768: {
+    slidesPerView: 2,
+  },
+  1130: {
     slidesPerView: 3,
   },
 };
@@ -50,7 +53,7 @@ export const Blog = memo(() => {
         <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
           Our Blog
         </Headline>
-        {!isMobile && <ArrowControls left={navPrevButton} right={navNextButton} />}
+        {!isMobile && <ControlArrows left={navPrevButton} right={navNextButton} />}
         <PostsContainer>
           {!isMobile && (
             <SwiperWrapper>

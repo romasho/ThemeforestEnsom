@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import { SectionColumn } from '@/layouts/Section';
-import { DescriptionPage } from '@/components/DescriptionPage';
-import { Container, WithoutPaddingContainer } from '@/layouts/Container';
+import { PageDescription } from '@/components/PageDescription';
+import { CardContainer, WithoutPaddingContainer } from '@/layouts/Container';
 import { BlogPost } from '@/pages/Home/BlogPost';
 import { Buttons } from '@/components/Button';
 import { AllTags } from '@/pages/News/AllTags';
@@ -24,14 +24,14 @@ export const BlogCardsSection = () => {
 
   return (
     <SectionColumn background="light">
-      <DescriptionPage
+      <PageDescription
         page={'Blog'}
         headline={'Discover new things with Ensome blog'}
         description={
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.'
         }
       />
-      <Container>
+      <CardContainer>
         <WithoutPaddingContainer>
           <AllTags />
         </WithoutPaddingContainer>
@@ -56,7 +56,7 @@ export const BlogCardsSection = () => {
             </Buttons>
           )}
         </AlignToCenter>
-      </Container>
+      </CardContainer>
     </SectionColumn>
   );
 };

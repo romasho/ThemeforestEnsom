@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 import { PageLayout } from '@/layouts/Pages';
-import { Information } from '@/components/Information';
+import { Information } from '@/pages/Home/Information';
 import { Features } from '@/pages/Home/Features';
 import { CompanyOverview } from '@/components/CompanyOverview';
 import { Benefits } from '@/pages/Home/Benefits';

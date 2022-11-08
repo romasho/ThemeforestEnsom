@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 import { WithoutPaddingContainer } from '@/layouts/Container/index';
-import { BackgroundSection as BSection } from '@/components/Information/styled';
+import { BackgroundSection as BSection } from '@/pages/Home/Information/styled';
 import { Section } from '@/layouts/Section';
 
 export const BackgroundSection = styled(BSection)`

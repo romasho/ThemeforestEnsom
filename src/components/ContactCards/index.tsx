@@ -11,36 +11,26 @@ import { theme } from '@/theme';
 import { ContactCard, ContactCardInnerWrapper, ContactCardContainer } from './styled';
 import { ContactCardsProps } from './types';
 
+const data = [
+  { icon: mail, headline: 'Email', data: 'ensome@info.co.us', id: '1' },
+  { icon: call, headline: 'Phone', data: '+1 601-201-5580', id: '2' },
+  { icon: location, headline: 'Address', data: '1642 Washington Ave, Jackson, MS', id: '3' },
+];
+
 export const ContactCards: FC<ContactCardsProps> = ({ direction, iconColor }) => {
   return (
     <ContactCardContainer direction={direction} iconColor={iconColor}>
-      <ContactCard direction={direction}>
-        <ContactCardInnerWrapper>
-          <Icon icon={mail} />
-          {!iconColor && <Headline size="h7">Email</Headline>}
-        </ContactCardInnerWrapper>
-        <Paragraph size="p2" color={theme.colors.grey}>
-          ensome@info.co.us
-        </Paragraph>
-      </ContactCard>
-      <ContactCard direction={direction}>
-        <ContactCardInnerWrapper>
-          <Icon icon={call} />
-          {!iconColor && <Headline size="h7">Phone</Headline>}
-        </ContactCardInnerWrapper>
-        <Paragraph size="p2" color={theme.colors.grey}>
-          +1 601-201-5580
-        </Paragraph>
-      </ContactCard>
-      <ContactCard direction={direction}>
-        <ContactCardInnerWrapper>
-          <Icon icon={location} />
-          {!iconColor && <Headline size="h7">Address</Headline>}
-        </ContactCardInnerWrapper>
-        <Paragraph size="p2" color={theme.colors.grey}>
-          1642 Washington Ave, Jackson, MS
-        </Paragraph>
-      </ContactCard>
+      {data.map(({ icon, headline, data, id }) => (
+        <ContactCard direction={direction} key={id}>
+          <ContactCardInnerWrapper>
+            <Icon icon={icon} />
+            {!iconColor && <Headline size="h7">{headline}</Headline>}
+          </ContactCardInnerWrapper>
+          <Paragraph size="p2" color={theme.colors.grey}>
+            {data}
+          </Paragraph>
+        </ContactCard>
+      ))}
     </ContactCardContainer>
   );
 };

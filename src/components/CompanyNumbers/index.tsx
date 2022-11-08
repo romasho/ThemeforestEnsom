@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { Paragraph } from '../Paragraph';
+import { Paragraph } from '@/components/Paragraph';
 
 import { Container, Numbers } from './styled';
 

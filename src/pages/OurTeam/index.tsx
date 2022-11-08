@@ -34,7 +34,6 @@ export const OurTeam = () => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '20px',
       threshold: 1.0,
     };
 

@@ -1,4 +1,4 @@
-import { DescriptionPage } from '@/components/DescriptionPage';
+import { PageDescription } from '@/components/PageDescription';
 import { PageLayout } from '@/layouts/Pages';
 import { Section } from '@/layouts/Section';
 import { Contacts } from '@/components/Contacts';
@@ -12,7 +12,7 @@ export const FAQs = () => {
   return (
     <PageLayout>
       <Section background="light">
-        <DescriptionPage
+        <PageDescription
           page="FAQs"
           headline="Frequently asked questions"
           description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam."

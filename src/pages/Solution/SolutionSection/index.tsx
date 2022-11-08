@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import { SolutionDescriptionContainer } from '../SolutionDescription/styled';
 
 import { SolutionDescription } from '@/pages/Solution/SolutionDescription';
-import { SolutionSidebar } from '@/components/SolutionSidebar';
+import { SolutionSidebar } from '@/pages/Solution/SolutionSidebar';
 import { Section } from '@/layouts/Section';
 
 import { Container, SolutionDescriptionWrapper } from './styled';

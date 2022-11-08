@@ -8,7 +8,7 @@ import { PageLayout } from '@/layouts/Pages';
 import { SectionColumn } from '@/layouts/Section';
 import { Headline } from '@/components/Headline';
 import { ContactForm } from '@/components/ContactForm';
-import { MapboxMap } from '@/components/MapBox';
+import { MapboxMap } from '@/pages/Contacts/MapBox';
 import { ContactCards } from '@/components/ContactCards';
 
 export const Contacts = () => {

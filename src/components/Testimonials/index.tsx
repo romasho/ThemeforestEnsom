@@ -4,10 +4,9 @@ import { useRef, memo } from 'react';
 import { NavigationOptions } from 'swiper/types';
 import { useMediaQuery } from 'react-responsive';
 
-import { ArrowControls } from '../ArrowControls';
-import { Headline } from '../Headline';
-import { TestimonialCard } from '../TestimonialsCard';
-
+import { ControlArrows } from '@/components/ControlArrows';
+import { Headline } from '@/components/Headline';
+import { TestimonialCard } from '@/components/TestimonialsCard';
 import { Section } from '@/layouts/Section';
 import { Container } from '@/layouts/Container';
 import { SwiperWrapper } from '@/layouts';
@@ -24,6 +23,9 @@ const breakpoints = {
     slidesPerView: 1,
   },
   768: {
+    slidesPerView: 2,
+  },
+  1130: {
     slidesPerView: 3,
   },
 };
@@ -48,7 +50,7 @@ export const Testimonials = memo(() => {
         <Headline as="h2" size={isMobile ? 'h3' : 'h2'}>
           Testimonials
         </Headline>
-        <ArrowControls left={navPrevButton} right={navNextButton} />
+        <ControlArrows left={navPrevButton} right={navNextButton} />
         <TestimonialsWrapper>
           <SwiperWrapper>
             <Swiper onBeforeInit={onBeforeInit} breakpoints={breakpoints}>
