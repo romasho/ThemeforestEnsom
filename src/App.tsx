@@ -17,6 +17,7 @@ const OurTeam = lazy(() => import('@/pages/OurTeam'));
 const TeamMember = lazy(() => import('@/pages/TeamMember'));
 const FAQs = lazy(() => import('@/pages/FAQs'));
 const News = lazy(() => import('@/pages/News'));
+const NotFound = lazy(() => import('@/pages/404'));
 
 function App() {
   return (
@@ -26,16 +27,17 @@ function App() {
         <Routes>
           <Route path={ROUTE_NAMES.HOME} element={<Home />} />
           <Route path={ROUTE_NAMES.SOLUTIONS} element={<Solutions />} />
-          <Route path="solutions/:userId" element={<Solution />} />
+          <Route path={ROUTE_NAMES.SOLUTION} element={<Solution />} />
           <Route path={ROUTE_NAMES.SERVICES} element={<Services />} />
-          <Route path="services/:userId" element={<Service />} />
+          <Route path={ROUTE_NAMES.SERVICE} element={<Service />} />
           <Route path={ROUTE_NAMES.CONTACTS} element={<Contacts />} />
           <Route path={ROUTE_NAMES.BLOG} element={<Blog />} />
           <Route path={ROUTE_NAMES.ABOUT_US} element={<AboutUs />} />
           <Route path={ROUTE_NAMES.OUR_TEAM} element={<OurTeam />} />
-          <Route path={'Our%20Team/:userId'} element={<TeamMember />} />
+          <Route path={ROUTE_NAMES.TEAM_MEMBER} element={<TeamMember />} />
           <Route path={ROUTE_NAMES.FAQS} element={<FAQs />} />
           <Route path={ROUTE_NAMES.NEWS} element={<News />} />
+          <Route path={ROUTE_NAMES.NOT_FOUND} element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 
-import { Link, Service } from '@/constants';
+import { Link, Service, Contacts } from '@/constants';
 import { theme } from '@/theme';
 
 import { ContactContainer, FooterHeadline, NavigationLink, ContactLink } from './styled';

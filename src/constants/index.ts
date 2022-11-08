@@ -2,13 +2,16 @@ export const ROUTE_NAMES = {
   HOME: '/',
   SOLUTIONS: '/Solutions',
   SERVICES: '/Services',
-  SERVICE: '/Services/',
   CONTACTS: '/Contacts',
   BLOG: '/Blog',
   ABOUT_US: '/About%20Us',
   OUR_TEAM: '/Our%20Team',
   FAQS: '/FAQs',
   NEWS: '/Blog/:userId',
+  SOLUTION: 'solutions/:userId',
+  SERVICE: 'services/:userId',
+  TEAM_MEMBER: 'Our%20Team/:userId',
+  NOT_FOUND: '*',
 };
 
 export const Link = [
@@ -27,4 +30,10 @@ export const Service = [
   { name: 'FAQ', link: ROUTE_NAMES.FAQS },
   { name: 'Pricing', link: '/' },
   { name: 'Site map', link: '/' },
+];
+
+export const Contacts = [
+  { name: 'ensome@info.co.us', link: 'mailto:ensome@info.co.us' },
+  { name: '+1 601-201-5580', link: 'tel:+1 601-201-5580' },
+  { name: '1642 Washington Avenue, Jackson, \r MS, Mississippi, 39201', link: '' },
 ];

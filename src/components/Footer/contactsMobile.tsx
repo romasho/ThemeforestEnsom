@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 
-import { Service, Link } from '@/constants';
+import { Service, Link, Contacts } from '@/constants';
 import { theme } from '@/theme';
 import { DropDownMenu } from '@/components/DropDownMenu';
 import { Paragraph } from '@/components/Paragraph';
@@ -16,7 +16,7 @@ export const ContactsMobile = () => {
       </Paragraph>
       <DropDownMenu title={'Quick link'} dropDownItems={Link} />
       <DropDownMenu title={'Service'} dropDownItems={Service} />
-      <DropDownMenu title={'Contact info'} dropDownItems={Service} />
+      <DropDownMenu title={'Contact info'} dropDownItems={Contacts} contact />
     </>
   ) : null;
   return render;
