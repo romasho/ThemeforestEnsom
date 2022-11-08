@@ -34,6 +34,7 @@ export const OurTeam = () => {
   useEffect(() => {
     const options = {
       root: null,
+      rootMargin: '50px',
       threshold: 1.0,
     };
 
@@ -99,3 +100,5 @@ export const OurTeam = () => {
     </PageLayout>
   );
 };
+
+export default OurTeam;

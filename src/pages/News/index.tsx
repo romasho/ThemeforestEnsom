@@ -48,3 +48,5 @@ export const News = () => {
     </PageLayout>
   );
 };
+
+export default News;

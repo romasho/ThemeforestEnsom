@@ -42,3 +42,5 @@ export const Service = () => {
     </PageLayout>
   );
 };
+
+export default Service;

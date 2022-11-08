@@ -33,3 +33,5 @@ export const Solution = () => {
     </PageLayout>
   );
 };
+
+export default Solution;

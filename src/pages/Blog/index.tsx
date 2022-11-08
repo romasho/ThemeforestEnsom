@@ -10,3 +10,5 @@ export const Blog = () => {
     </PageLayout>
   );
 };
+
+export default Blog;

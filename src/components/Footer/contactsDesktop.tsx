@@ -36,5 +36,6 @@ export const ContactsDesktop = () => {
       </ContactContainer>
     </>
   );
+
   return render;
 };

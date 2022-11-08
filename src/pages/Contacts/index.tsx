@@ -32,3 +32,5 @@ export const Contacts = () => {
     </PageLayout>
   );
 };
+
+export default Contacts;

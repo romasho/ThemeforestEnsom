@@ -30,3 +30,5 @@ export const FAQs = () => {
     </PageLayout>
   );
 };
+
+export default FAQs;

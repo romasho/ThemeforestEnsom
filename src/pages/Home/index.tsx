@@ -11,7 +11,7 @@ import { Blog } from '@/pages/Home/Blog';
 import { Contacts } from '@/components/Contacts';
 import { Subscribe } from '@/components/Subscribe';
 
-export const Home = memo(() => {
+const Home = memo(() => {
   return (
     <PageLayout>
       <Information />
@@ -26,3 +26,5 @@ export const Home = memo(() => {
     </PageLayout>
   );
 });
+
+export default Home;

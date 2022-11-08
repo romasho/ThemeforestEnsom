@@ -26,3 +26,5 @@ export const Solutions = () => {
     </PageLayout>
   );
 };
+
+export default Solutions;

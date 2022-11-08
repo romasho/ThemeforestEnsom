@@ -66,3 +66,5 @@ export const TeamMember = () => {
     </PageLayout>
   );
 };
+
+export default TeamMember;

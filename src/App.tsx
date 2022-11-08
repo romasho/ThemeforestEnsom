@@ -1,38 +1,43 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 
-import { Home } from '@/pages/Home';
-import { Solutions } from '@/pages/Solutions';
-import { Services } from '@/pages/Services';
-import { Contacts } from '@/pages/Contacts';
 import { ScrollToTop } from '@/components/ScrollToTop';
-import { Blog } from '@/pages/Blog';
 import { ROUTE_NAMES } from '@/constants';
-import { Solution } from '@/pages/Solution';
-import { Service } from '@/pages/Service';
-import { AboutUs } from '@/pages/AboutUs';
-import { OurTeam } from '@/pages/OurTeam';
-import { TeamMember } from '@/pages/TeamMember';
-import { FAQs } from '@/pages/FAQs';
-import { News } from '@/pages/News';
+import Loader from '@/components/Loader';
+
+const Home = lazy(() => import('@/pages/Home'));
+const Solutions = lazy(() => import('@/pages/Solutions'));
+const Services = lazy(() => import('@/pages/Services'));
+const Contacts = lazy(() => import('@/pages/Contacts'));
+const Blog = lazy(() => import('@/pages/Blog'));
+const Solution = lazy(() => import('@/pages/Solution'));
+const Service = lazy(() => import('@/pages/Service'));
+const AboutUs = lazy(() => import('@/pages/AboutUs'));
+const OurTeam = lazy(() => import('@/pages/OurTeam'));
+const TeamMember = lazy(() => import('@/pages/TeamMember'));
+const FAQs = lazy(() => import('@/pages/FAQs'));
+const News = lazy(() => import('@/pages/News'));
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path={ROUTE_NAMES.SOLUTIONS} element={<Solutions />} />
-        <Route path="solutions/:userId" element={<Solution />} />
-        <Route path={ROUTE_NAMES.SERVICES} element={<Services />} />
-        <Route path="services/:userId" element={<Service />} />
-        <Route path={ROUTE_NAMES.CONTACTS} element={<Contacts />} />
-        <Route path={ROUTE_NAMES.BLOG} element={<Blog />} />
-        <Route path={ROUTE_NAMES.ABOUT_US} element={<AboutUs />} />
-        <Route path={ROUTE_NAMES.OUR_TEAM} element={<OurTeam />} />
-        <Route path={'Our%20Team/:userId'} element={<TeamMember />} />
-        <Route path={ROUTE_NAMES.FAQS} element={<FAQs />} />
-        <Route path={ROUTE_NAMES.NEWS} element={<News />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path={ROUTE_NAMES.HOME} element={<Home />} />
+          <Route path={ROUTE_NAMES.SOLUTIONS} element={<Solutions />} />
+          <Route path="solutions/:userId" element={<Solution />} />
+          <Route path={ROUTE_NAMES.SERVICES} element={<Services />} />
+          <Route path="services/:userId" element={<Service />} />
+          <Route path={ROUTE_NAMES.CONTACTS} element={<Contacts />} />
+          <Route path={ROUTE_NAMES.BLOG} element={<Blog />} />
+          <Route path={ROUTE_NAMES.ABOUT_US} element={<AboutUs />} />
+          <Route path={ROUTE_NAMES.OUR_TEAM} element={<OurTeam />} />
+          <Route path={'Our%20Team/:userId'} element={<TeamMember />} />
+          <Route path={ROUTE_NAMES.FAQS} element={<FAQs />} />
+          <Route path={ROUTE_NAMES.NEWS} element={<News />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
