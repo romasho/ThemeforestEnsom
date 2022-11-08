@@ -18,6 +18,7 @@ export const FormWrapper = styled.form`
 interface InputElementProps {
   fullWidth?: boolean;
   variant?: 'textarea' | 'input';
+  invalid: boolean;
 }
 
 export const InputElement = styled.input<InputElementProps>`
@@ -33,8 +34,17 @@ export const InputElement = styled.input<InputElementProps>`
     border: 1px solid #185cff;
   }
 
-  $:invalid {
-    border: 1px solid #c14040;
-    color: #c14040;
-  }
+  ${({ invalid, theme }) =>
+    invalid
+      ? `border: 1px solid ${theme.colors.error};
+  color: ${theme.colors.error};`
+      : ''}
+`;
+
+export const Error = styled.p`
+  color: ${({ theme }) => theme.colors.error};
+`;
+
+export const Label = styled.label<Partial<InputElementProps>>`
+  width: ${(props) => (props.fullWidth ? '100%' : '255px')};
 `;

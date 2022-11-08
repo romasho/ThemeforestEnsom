@@ -49,5 +49,6 @@ export const Input = styled.input`
   @media (max-width: 768px) {
     background: transparent;
     border: 1px solid #607d94;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
