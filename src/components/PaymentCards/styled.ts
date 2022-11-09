@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   margin-top: 10px;
   overflow: hidden;
-  height: 390px;
   width: 468px;
+  height: 280px;
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     max-width: 320px;
+    height: auto;
   }
 `;
 
@@ -48,6 +49,7 @@ type InputProps = {
 
 export const Input = styled.input<InputProps>`
   border: none;
+  padding: 5px;
   ${({ short, theme }) => {
     switch (short) {
       case 'short':
@@ -119,6 +121,6 @@ export const InfoCardBack = styled(InfoCard)`
   margin-left: 245px;
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
-    margin-left: 225px;
+    margin-left: 205px;
   }
 `;
