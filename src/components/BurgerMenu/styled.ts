@@ -10,7 +10,6 @@ export const BurgerMenuWrapper = styled.div<BurgerMenuProps>`
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(100vh - 44px);
   background: white;
   z-index: 2;
   display: flex;

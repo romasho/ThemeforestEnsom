@@ -26,7 +26,7 @@ export const InputElement = styled.input<InputElementProps>`
   border-radius: 6px;
   padding: 15px 25px;
   outline: none;
-  width: ${(props) => (props.fullWidth ? '100%' : '${({ theme }) => theme.width.slimBlock}')};
+  width: ${({ theme, fullWidth }) => (fullWidth ? '100%' : theme.width.slimBlock)};
   font: ${({ theme }) => theme.font.paragraph.paragraph3bold};
   ${(props) => (props.variant === 'textarea' ? ' resize: none; height: 140px' : '')};
 

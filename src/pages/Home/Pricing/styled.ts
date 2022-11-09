@@ -5,8 +5,7 @@ import { Section } from '@/layouts/Section';
 
 export const CardContainer = styled.div`
   display: flex;
-  column-gap: 30px;
-  padding: 10px;
+  column-gap: 20px;
   margin-top: 30px;
 `;
 

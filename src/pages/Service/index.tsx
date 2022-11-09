@@ -28,7 +28,7 @@ export const Service = () => {
           <Breadcrumbs />
           <Headline size={isMobile ? 'h3' : 'h1'}>{userId}</Headline>
           {!isMobile && (
-            <div style={{ width: '${({ theme }) => theme.width.middleBlock}' }}>
+            <div style={{ width: theme.width.middleBlock }}>
               <Paragraph size="p3" color={theme.colors.grey}>
                 {currentService.description}
               </Paragraph>
