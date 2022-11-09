@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 
 import { Portal } from '@/components/Portal';
 
-import { Close, TranslucentBackground, ModalBox } from './components.styled';
+import { Close, TranslucentBackground, ModalBox, ModalContainer } from './components.styled';
 
 interface IModalProps {
   isOpen: boolean;
@@ -24,7 +24,7 @@ export const Modal: FC<IModalProps> = ({ isOpen, onCancel, children }) => {
           <TranslucentBackground onClick={handleClick}>
             <ModalBox>
               <Close onClick={onCancel}>&#215;</Close>
-              {children}
+              <ModalContainer>{children}</ModalContainer>
             </ModalBox>
           </TranslucentBackground>
         </Portal>

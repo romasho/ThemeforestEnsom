@@ -6,6 +6,7 @@ import { Buttons } from '@/components/Button';
 import { ReactComponent as checkmark } from '@/assets/svg/icon_checkmark.svg';
 import { Icon } from '@/components/Icon';
 import { Modal } from '@/components/Modal';
+import { PaymentCards } from '@/components/PaymentCards';
 
 import {
   AdvantagesItem,
@@ -68,7 +69,24 @@ export const PricingCard: FC<PricingCardProps> = ({ access, price, advantages })
         </AdvantagesList>
       </CardContainer>
       <Modal isOpen={isOpen} onCancel={toggleIsOpen}>
-        Hi
+        <Headline size="h6">{access}</Headline>
+        <PriceContainer>
+          <Headline size="h3">{`${isNaN(+price) ? '' : '$'}${
+            active === 'Month' ? price : isNaN(+price) ? price : +price * 10
+          }`}</Headline>
+          <Tabs firstHandler={setActiveMonth} secondHandler={setActiveYear} currentValue={active} />
+        </PriceContainer>
+        <AdvantagesList>
+          {advantages.map((el, index) => {
+            return (
+              <AdvantagesItem key={index}>
+                <Icon icon={checkmark} />
+                {el}
+              </AdvantagesItem>
+            );
+          })}
+        </AdvantagesList>
+        <PaymentCards />
       </Modal>
     </>
   );

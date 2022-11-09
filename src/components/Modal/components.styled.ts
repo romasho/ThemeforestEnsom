@@ -6,6 +6,17 @@ export const Close = styled.button`
   right: 0.5rem;
   font-size: 2rem;
   line-height: 1rem;
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.primary};
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.grey};
+    border-radius: 100%;
+  }
 `;
 
 export const TranslucentBackground = styled.div`
@@ -23,16 +34,19 @@ export const TranslucentBackground = styled.div`
 
 export const ModalBox = styled.div`
   position: relative;
-  background-color: ghostwhite;
   border-radius: 4px;
   max-width: 600px;
-  width: 100%;
+  width: calc(100% - 32px);
   padding: 3rem;
-  margin: 2rem 2rem 4rem 2rem;
-  background: center/cover, rgba(35, 41, 70, 0.6);
+  background: center/cover, ${({ theme }) => theme.colors.white};
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
+export const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  backdrop-filter: blur(5px);
+  flex-direction: column;
 `;
